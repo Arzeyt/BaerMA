@@ -11,7 +11,7 @@ public class CalculatedEntry {
 
 
     public static String sampleIDString = "sampleID", calculatedGenerationString = "calculatedGeneration", backupCountString = "backupCount",
-        resetCountString = "resetCount";
+        resetCountString = "resetCount", backupNumberString = "backupNumber";
 
 
     SimpleIntegerProperty sampleID;
@@ -46,6 +46,15 @@ public class CalculatedEntry {
     public IntegerProperty resetCountProperty(){
         if(resetCount==null)resetCount=new SimpleIntegerProperty(this,"resetCount");
         return resetCount;
+    }
+
+    SimpleIntegerProperty backupNumber;
+    public void setbackupNumber(Integer value){
+        backupNumberProperty().set(value);}
+    public Integer getbackupNumber(){return backupNumberProperty().getValue();}
+    public IntegerProperty backupNumberProperty(){
+        if(backupNumber ==null) backupNumber =new SimpleIntegerProperty(this,backupNumberString);
+        return backupNumber;
     }
 
 
@@ -173,6 +182,7 @@ public class CalculatedEntry {
 
         int backupCounter = 0;
         int resetCounter = 0;
+
         for(Entry e : entries){
             if(e.experimentalGeneration<=experimentalGeneration){
                 if(e.backupGeneration==0 && e.experimentalGeneration>=3) {

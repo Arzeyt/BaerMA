@@ -1,32 +1,37 @@
 
-2. <COMPLETE> Create a pane that contains a table that displays all the samples in a particular generation 500-999, and includes a column
+<COMPLETE> Create a pane that contains a table that displays all the samples in a particular generation 500-999, and includes a column
 with calclated generation of the sample
     -create a function that calculates the generation of the sample that takes the list of entries as an input.
         It must be able to iterate through the entries and pick the most recent entry, then compare the experimental generation date
         of the entry to the requested experimental generation date that was inputted into the function
-
-3. <COMPLETE> Implement JSON serialization and remove java serialization
-4. <COMPLETE> fix a bug where the calculated entry calculation doesn't ignore the first entry if the experimental generation is smaller than the first
+<COMPLETE> Implement JSON serialization and remove java serialization
+<COMPLETE> fix a bug where the calculated entry calculation doesn't ignore the first entry if the experimental generation is smaller than the first
     entry (like it should).
-6. <Complete> Account for extinctions
+<Complete> Account for extinctions
     perhaps by making generation a number less than 0
-7. Add unique samples in anticipation of the X lines being thrown out.
-    might require an explicit definition of all sample numbers, which are stored in an array that's used to build the sample list
-8. <Complete> add extinction protocol
+<Complete> add extinction protocol
     checkbox "extinct"
     find a way to show extinct samples in the list5. Suggested date for each generation
-5. Suggested date for each generation
+<Complete> Converting to FXML
+
+--Suggested date for each generation
+
+--Add unique samples in anticipation of the X lines being thrown out.
+    might require an explicit definition of all sample numbers, which are stored in an array that's used to build the sample list
+--BAD CODING PRACTICE. Calculated Entry is an object of which hundreds of instances exist, yet each object is instantiated with a complete list of
+entries.
 
 
-9. <Complete> Converting to FXML
-10. Add ability to export all entries in comma delimited format
-11. Add ability to print the Baer MA log that goes into the notebook
+Add ability to export all entries in comma delimited format
+Add ability to print the Baer MA log that goes into the notebook
+
 
 Bug Fixes:
 -fix bug where extinct checkbox doesn't respond appropriately to selection with the keyboard
 -printing lists with the Sample List panel options doesn't actually recalculate the entries in that list. Currently, it bases the generation number
 that appears in the filename on what is currently in the spinner, but it's possible that this isn't what's actually contained in the the
 entries list
+-
 
 NOTES
 
