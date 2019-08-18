@@ -1,0 +1,6034 @@
+[
+  {
+    "id": 784,
+    "experimentalGeneration": 9,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 576,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 507,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 539,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 768,
+    "experimentalGeneration": 9,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 9,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 644,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 9,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 672,
+    "experimentalGeneration": 9,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": "backup date and gen don\u0027t match?"
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 9,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 711,
+    "experimentalGeneration": 9,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 9,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 717,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 727,
+    "experimentalGeneration": 9,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 802,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 850,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 867,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 845,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 782,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 775,
+    "experimentalGeneration": 8,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 8,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 514,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 672,
+    "experimentalGeneration": 8,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 696,
+    "experimentalGeneration": 8,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 831,
+    "experimentalGeneration": 8,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 833,
+    "experimentalGeneration": 8,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 757,
+    "experimentalGeneration": 8,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 771,
+    "experimentalGeneration": 8,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 7,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 733,
+    "experimentalGeneration": 7,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 775,
+    "experimentalGeneration": 7,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 7,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 728,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 770,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 731,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 737,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 7,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 779,
+    "experimentalGeneration": 7,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 787,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 834,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 839,
+    "experimentalGeneration": 7,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 764,
+    "experimentalGeneration": 6,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 6,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 768,
+    "experimentalGeneration": 6,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 844,
+    "experimentalGeneration": 6,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 733,
+    "experimentalGeneration": 6,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": "attempted, but no worms available"
+  },
+  {
+    "id": 953,
+    "experimentalGeneration": 6,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 897,
+    "experimentalGeneration": 6,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 774,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 733,
+    "experimentalGeneration": 5,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 739,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 775,
+    "experimentalGeneration": 5,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 779,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 966,
+    "experimentalGeneration": 5,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 538,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 700,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 738,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 751,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 711,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 812,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 733,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 775,
+    "experimentalGeneration": 4,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 809,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 882,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 888,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 894,
+    "experimentalGeneration": 4,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 622,
+    "experimentalGeneration": 3,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 748,
+    "experimentalGeneration": 3,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 801,
+    "experimentalGeneration": 3,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 950,
+    "experimentalGeneration": 3,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 514,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 576,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 535,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 669,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 641,
+    "experimentalGeneration": 21,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 862,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 847,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 21,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 908,
+    "experimentalGeneration": 21,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 911,
+    "experimentalGeneration": 21,
+    "backupGeneration": 20,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": "Upgrade to 21 because we realized this was misprinted on the plate as an earlier generation"
+  },
+  {
+    "id": 757,
+    "experimentalGeneration": 21,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 765,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 21,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 730,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 781,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 21,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 21,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 789,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 701,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 795,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 797,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 21,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 21,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 798,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 729,
+    "experimentalGeneration": 21,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 735,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 741,
+    "experimentalGeneration": 21,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 743,
+    "experimentalGeneration": 21,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 745,
+    "experimentalGeneration": 21,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 712,
+    "experimentalGeneration": 20,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 736,
+    "experimentalGeneration": 20,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 732,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 20,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 20,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 566,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 572,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 576,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 509,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 585,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 650,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 625,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 641,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 801,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 20,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 798,
+    "experimentalGeneration": 20,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 778,
+    "experimentalGeneration": 20,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 776,
+    "experimentalGeneration": 20,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 20,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 20,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 774,
+    "experimentalGeneration": 20,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 20,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 721,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 757,
+    "experimentalGeneration": 20,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 767,
+    "experimentalGeneration": 20,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 769,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 791,
+    "experimentalGeneration": 20,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 20,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 503,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 506,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 514,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 534,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 592,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 720,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 754,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 768,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 794,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 753,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 757,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 836,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 980,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 552,
+    "experimentalGeneration": 19,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 754,
+    "experimentalGeneration": 19,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 19,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 768,
+    "experimentalGeneration": 19,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 19,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 774,
+    "experimentalGeneration": 19,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 700,
+    "experimentalGeneration": 19,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 19,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 19,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 720,
+    "experimentalGeneration": 19,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 730,
+    "experimentalGeneration": 19,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 738,
+    "experimentalGeneration": 19,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 19,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 782,
+    "experimentalGeneration": 19,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 19,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 689,
+    "experimentalGeneration": 19,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 701,
+    "experimentalGeneration": 19,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 729,
+    "experimentalGeneration": 19,
+    "backupGeneration": 17,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 731,
+    "experimentalGeneration": 19,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 741,
+    "experimentalGeneration": 19,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 743,
+    "experimentalGeneration": 19,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 775,
+    "experimentalGeneration": 19,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 789,
+    "experimentalGeneration": 19,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 19,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 793,
+    "experimentalGeneration": 19,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 10
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 18,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 722,
+    "experimentalGeneration": 18,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 712,
+    "experimentalGeneration": 18,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 18,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 724,
+    "experimentalGeneration": 18,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 734,
+    "experimentalGeneration": 18,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 736,
+    "experimentalGeneration": 18,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 18,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 18,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 774,
+    "experimentalGeneration": 18,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 776,
+    "experimentalGeneration": 18,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 778,
+    "experimentalGeneration": 18,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 652,
+    "experimentalGeneration": 18,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 18,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 733,
+    "experimentalGeneration": 18,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 731,
+    "experimentalGeneration": 18,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 717,
+    "experimentalGeneration": 18,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 675,
+    "experimentalGeneration": 18,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 661,
+    "experimentalGeneration": 18,
+    "backupGeneration": 16,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 877,
+    "experimentalGeneration": 18,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 18,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 18,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 18,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 18,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 18,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 767,
+    "experimentalGeneration": 18,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 18,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 795,
+    "experimentalGeneration": 18,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 791,
+    "experimentalGeneration": 18,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 789,
+    "experimentalGeneration": 18,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 781,
+    "experimentalGeneration": 18,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 793,
+    "experimentalGeneration": 18,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 562,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 598,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 553,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 712,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 722,
+    "experimentalGeneration": 17,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 17,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 730,
+    "experimentalGeneration": 17,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 740,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 17,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 798,
+    "experimentalGeneration": 17,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 17,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 794,
+    "experimentalGeneration": 17,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 17,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 17,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 17,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 782,
+    "experimentalGeneration": 17,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 17,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 917,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 717,
+    "experimentalGeneration": 17,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 715,
+    "experimentalGeneration": 17,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 743,
+    "experimentalGeneration": 17,
+    "backupGeneration": 15,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 741,
+    "experimentalGeneration": 17,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 2
+    },
+    "notes": ""
+  },
+  {
+    "id": 652,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 521,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 565,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 635,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 800,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 16,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 731,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 822,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 741,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 747,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 804,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 754,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 16,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 16,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 16,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 16,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 781,
+    "experimentalGeneration": 16,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 752,
+    "experimentalGeneration": 16,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 774,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 793,
+    "experimentalGeneration": 16,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 795,
+    "experimentalGeneration": 16,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 734,
+    "experimentalGeneration": 16,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 16,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 702,
+    "experimentalGeneration": 16,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 702,
+    "experimentalGeneration": 15,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 15,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 15,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 730,
+    "experimentalGeneration": 15,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 15,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 794,
+    "experimentalGeneration": 15,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 798,
+    "experimentalGeneration": 15,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 567,
+    "experimentalGeneration": 15,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 589,
+    "experimentalGeneration": 15,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 701,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 727,
+    "experimentalGeneration": 15,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 763,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 767,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 791,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 853,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 863,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 865,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 875,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 879,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 856,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 884,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 797,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 896,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 776,
+    "experimentalGeneration": 15,
+    "backupGeneration": 13,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 748,
+    "experimentalGeneration": 15,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 25
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 752,
+    "experimentalGeneration": 14,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 766,
+    "experimentalGeneration": 14,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 14,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 518,
+    "experimentalGeneration": 14,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 722,
+    "experimentalGeneration": 14,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 730,
+    "experimentalGeneration": 14,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 14,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 14,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 748,
+    "experimentalGeneration": 14,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 702,
+    "experimentalGeneration": 14,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 14,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 798,
+    "experimentalGeneration": 14,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 727,
+    "experimentalGeneration": 14,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 715,
+    "experimentalGeneration": 14,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 789,
+    "experimentalGeneration": 14,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 14,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 706,
+    "experimentalGeneration": 14,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 736,
+    "experimentalGeneration": 14,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 14,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 702,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 708,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 726,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 13,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 736,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 770,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 13,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 13,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 13,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 715,
+    "experimentalGeneration": 13,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 717,
+    "experimentalGeneration": 13,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 781,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 793,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 531,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 844,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 874,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 864,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 803,
+    "experimentalGeneration": 13,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 889,
+    "experimentalGeneration": 13,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 570,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 543,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 589,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 700,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 704,
+    "experimentalGeneration": 12,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 706,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 720,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 796,
+    "experimentalGeneration": 12,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 752,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 734,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 736,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 12,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 12,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 12,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 744,
+    "experimentalGeneration": 12,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 748,
+    "experimentalGeneration": 12,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 703,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 727,
+    "experimentalGeneration": 12,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 783,
+    "experimentalGeneration": 12,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 12,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 779,
+    "experimentalGeneration": 12,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 13
+    },
+    "notes": "reset from ancestral control"
+  },
+  {
+    "id": 702,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 989,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 706,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 734,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 746,
+    "experimentalGeneration": 11,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 758,
+    "experimentalGeneration": 11,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 780,
+    "experimentalGeneration": 11,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 784,
+    "experimentalGeneration": 11,
+    "backupGeneration": 1,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 786,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 713,
+    "experimentalGeneration": 11,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 715,
+    "experimentalGeneration": 11,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 11,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 779,
+    "experimentalGeneration": 11,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 908,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 580,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 835,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 918,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 932,
+    "experimentalGeneration": 11,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 889,
+    "experimentalGeneration": 11,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 667,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 768,
+    "experimentalGeneration": 10,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 544,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 564,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 782,
+    "experimentalGeneration": 10,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 568,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 715,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 636,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 727,
+    "experimentalGeneration": 10,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 841,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 759,
+    "experimentalGeneration": 10,
+    "backupGeneration": 5,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 779,
+    "experimentalGeneration": 10,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 781,
+    "experimentalGeneration": 10,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 28
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 772,
+    "experimentalGeneration": 20,
+    "backupGeneration": 14,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 21
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  }
+]
