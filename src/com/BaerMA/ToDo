@@ -20,6 +20,7 @@ with calclated generation of the sample
     might require an explicit definition of all sample numbers, which are stored in an array that's used to build the sample list
 --BAD CODING PRACTICE. Calculated Entry is an object of which hundreds of instances exist, yet each object is instantiated with a complete list of
 entries.
+--BAD CODING. make calculated entries list instead of requiring the calculated entries to build themselves.
 
 
 Add ability to export all entries in comma delimited format

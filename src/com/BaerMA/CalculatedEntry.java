@@ -198,5 +198,12 @@ public class CalculatedEntry {
         return bandr;
     }
 
+    //shouldn't do it this way.
+    public static Integer[] getBackupNumberForEntry(int sampleID, ObservableList<Entry> entries) {
+        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID, entries);
+
+        return new Integer[0];
+    }
+
 
 }
