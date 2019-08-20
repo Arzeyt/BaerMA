@@ -257,7 +257,7 @@ public class Entries {
         System.out.println("Number of entries in calculated entry: "+calculatedEntries.size());
     }
 
-    //sample id and generation for samples 500 to 999
+    //write sample id and generation for samples 500 to 999
     public void writeCalculatedEntriesCommaDelimited(int generation){
 
         try
@@ -291,7 +291,7 @@ public class Entries {
         }
     }
 
-    //sample id, generation, backups, resets for samples 500 to 999
+    //write sample id, generation, backups, resets for samples 500 to 999
     public void writeCalculatedEntriesWithBackupAndResetsCommaDelimited(int generation){
 
         try
@@ -388,7 +388,7 @@ public class Entries {
 
     }
 
-    //sample id and sampleGeneration for each ExperimentalGeneration passed in
+    //write sample id and sampleGeneration for each ExperimentalGeneration passed in
     public void writeBackupHistory(int numberOfGenerations){
 
         try
@@ -523,4 +523,9 @@ public class Entries {
         return true;
     }
 
+    public void calcBackups(){
+        ArrayList<Entry> allEntries = (ArrayList<Entry>) entriesList;
+        //sort by experimental gen.
+        
+    }
 }

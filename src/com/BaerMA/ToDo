@@ -22,7 +22,7 @@ with calclated generation of the sample
 entries.
 --BAD CODING. make calculated entries list instead of requiring the calculated entries to build themselves.
 
-
+Implement Auto BK calculation when Entry is added. Should recalculate the whole list each time for safety
 Add ability to export all entries in comma delimited format
 Add ability to print the Baer MA log that goes into the notebook
 

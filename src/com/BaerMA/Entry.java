@@ -79,6 +79,14 @@ public class Entry implements Serializable{
         return Snotes;
     }
 
+    transient SimpleIntegerProperty backupNumberssp;
+    public void setbackupNumberssp(Integer value){ backupNumbersp().set(value);}
+    public Integer getbackupNumberssp(){return backupNumbersp().getValue();}
+    public IntegerProperty backupNumbersp(){
+        if(backupNumberssp ==null) backupNumberssp =new SimpleIntegerProperty(this,"backupNumberssp");
+        return backupNumberssp;
+    }
+
     public Entry(int sampleID, int experimentalGeneration, LocalDate pickDate, int backupGeneration, LocalDate backupOfDate, String notes){
         this.id=sampleID;
         this.experimentalGeneration=experimentalGeneration;
