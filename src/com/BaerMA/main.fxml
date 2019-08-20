@@ -142,6 +142,7 @@
                   <TableView fx:id="sampleListTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                     <columns>
                       <TableColumn fx:id="SLSampleColumn" prefWidth="75.0" text="Sample" />
+                        <TableColumn fx:id="SLBackupNumberColumn" prefWidth="75.0" text="BK" />
                       <TableColumn fx:id="SLGenerationColumn" prefWidth="75.0" text="Generation" />
                         <TableColumn fx:id="SLBackupCountColumn" prefWidth="75.0" text="Backup #" />
                         <TableColumn fx:id="SLResetCountColumn" prefWidth="75.0" text="Reset #" />

@@ -23,6 +23,7 @@ import java.util.Locale;
 
 public class MainStage{
 
+    //much of this is deprecated due to using SceneBuilding instead. Check the controller class to configure the GUI.
     int sceneWidth=1200, sceneHeight=800;
 
     Text generationText;
@@ -251,6 +252,9 @@ public class MainStage{
 
         TableColumn sampleNumber = new TableColumn("Sample");
         sampleNumber.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.sampleIDString));
+
+        TableColumn backupNumber = new TableColumn("BK");
+        backupNumber.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String >(CalculatedEntry.backupNumberString));
 
         TableColumn sampleGeneration = new TableColumn("Generation");
         sampleGeneration.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.calculatedGenerationString));

@@ -61,6 +61,8 @@ public class CalculatedEntry {
     public CalculatedEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries){
         this.sampleID =new SimpleIntegerProperty(sampleID);
 
+        this.backupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration,entries));
+
         int calculatedGeneration = calculateGeneration(sampleID,experimentalGeneration,entries);
         this.calculatedGeneration =new SimpleIntegerProperty(calculatedGeneration);
 
@@ -137,7 +139,7 @@ public class CalculatedEntry {
         return "sampleID: "+ sampleID.getValue()+" calculated generation: "+ calculatedGeneration.getValue()+" backupCount: "+backupCount.getValue()+" resetCount: "+resetCount.getValue();
     }
 
-    public Integer getBackupNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
+    public Integer getNumberOfBackupsForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
         ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID,oEntries);
         if(entries==null)return 0;
         Collections.sort(entries,new SortByDate());
@@ -198,12 +200,27 @@ public class CalculatedEntry {
         return bandr;
     }
 
-    //shouldn't do it this way.
-    public static Integer[] getBackupNumberForEntry(int sampleID, ObservableList<Entry> entries) {
-        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID, entries);
+    //shouldn't do it this way due to high overhead
 
-        return new Integer[0];
+    public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries) {
+        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID, entries);
+        if(sampleEntries==null){return 0;}
+
+        int exgen=0;
+        int backupNumber=0;
+        for(Entry e : sampleEntries){
+            if(e.experimentalGeneration>=experimentalGeneration){
+                return 0;
+            }else if(exgen==0){
+                exgen=e.experimentalGeneration;
+            }else{
+
+            }
+
+        }
+        return backupNumber;
     }
+
 
 
 }
