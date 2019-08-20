@@ -504,7 +504,6 @@ public class Entries {
         }
     }
 
-
     //miscellaneous methods
 
     public boolean isInteger(String s) {

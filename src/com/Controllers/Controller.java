@@ -26,7 +26,7 @@ public class Controller implements Initializable{
 
     @FXML private Spinner<Integer> SLGenerationSpinner;
     @FXML private TableView sampleListTable;
-    @FXML private TableColumn SLSampleColumn,SLGenerationColumn, SLBackupCountColumn, SLResetCountColumn;
+    @FXML private TableColumn SLSampleColumn, SLBackupNumberColumn, SLGenerationColumn, SLBackupCountColumn, SLResetCountColumn;
 
     @FXML private Spinner<Integer> EHSampleNumberSpinner;
     @FXML private TableView EHTable;
@@ -84,6 +84,7 @@ public class Controller implements Initializable{
 
     private void initializeSampleListTable() {
         SLSampleColumn.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.sampleIDString));
+        SLBackupNumberColumn.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.backupNumberString));
         SLGenerationColumn.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.calculatedGenerationString));
         SLBackupCountColumn.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.backupCountString));
         SLResetCountColumn.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.resetCountString));
