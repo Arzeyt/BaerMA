@@ -148,6 +148,10 @@ public class Controller implements Initializable{
         }
     }
 
+        public void experimentButtonPressed(){
+            entriesClass.calcBackups();
+        }
+
         //Sample List Panel
 
         public void PrintList(){

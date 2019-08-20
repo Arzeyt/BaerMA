@@ -11,9 +11,7 @@ import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by Nick on 1/31/2019.
@@ -45,6 +43,7 @@ public class Entries {
             System.out.println("Added entry to entries");
             entriesList.add(entry);
             oEntriesAdd=true;
+            calcBackups();
         }
 
         jsonizeEntries();
@@ -240,8 +239,7 @@ public class Entries {
         System.out.println("Entries cleared");
     }
 
-
-    //Calculated Data Creation----------------------
+//Calculated Data Creation----------------------
 
     //calculated entries
     public void createCalculatedEntriesList(int experimentalGeneration){
@@ -523,8 +521,47 @@ public class Entries {
     }
 
     public void calcBackups(){
-        ArrayList<Entry> allEntries = (ArrayList<Entry>) entriesList;
-        //sort by experimental gen.
+        //SampleNumber, list containing all entries for that sample number
+        HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
 
+        int debug=1;
+
+        //sampleID by experimentalGen by sampleGen
+        for(Entry e : entriesList){
+            if(debug==1) {
+                //debug sout
+            }
+
+            //if there is an entryList for this sample number, add this new entry to that existing list
+            if(entriesBySample.get(e.id)!=null) {
+                entriesBySample.get(e.id).add(e);
+            //else, create a new entryList array and add this entry to that list, and add that array to the entriesBySample array under the sample id index
+            }else{
+                ArrayList<Entry> entryList = new ArrayList<Entry>();
+                entryList.add(e);
+                entriesBySample.put(e.id,entryList);
+            }
+        }
+
+        Iterator i = entriesBySample.keySet().iterator();
+        i.forEachRemaining(o -> {
+            int id = (int) o;
+            System.out.println(id+" size: "+entriesBySample.get(id).size());
+        });
+
+    }
+
+    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber, ObservableList<Entry> oEntries){
+        ArrayList<Entry> entries = new ArrayList<>();
+        for(Entry e : oEntries){
+            if(e.id==sampleNumber) {
+                entries.add(e);
+            }
+        }
+        if(entries.size()<1){
+            return null;
+        }else{
+            return entries;
+        }
     }
 }

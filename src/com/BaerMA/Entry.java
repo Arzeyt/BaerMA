@@ -79,12 +79,12 @@ public class Entry implements Serializable{
         return Snotes;
     }
 
-    transient SimpleIntegerProperty backupNumberssp;
+    transient SimpleIntegerProperty SbackupNumber;
     public void setbackupNumberssp(Integer value){ backupNumbersp().set(value);}
     public Integer getbackupNumberssp(){return backupNumbersp().getValue();}
     public IntegerProperty backupNumbersp(){
-        if(backupNumberssp ==null) backupNumberssp =new SimpleIntegerProperty(this,"backupNumberssp");
-        return backupNumberssp;
+        if(SbackupNumber ==null) SbackupNumber =new SimpleIntegerProperty(this,"SbackupNumber");
+        return SbackupNumber;
     }
 
     public Entry(int sampleID, int experimentalGeneration, LocalDate pickDate, int backupGeneration, LocalDate backupOfDate, String notes){
@@ -136,6 +136,10 @@ public class Entry implements Serializable{
         }else{
             return false;
         }
+    }
+
+    public void setBackupNumber(int backupNumber){
+        this.SbackupNumber=new SimpleIntegerProperty(backupNumber);
     }
 
 }

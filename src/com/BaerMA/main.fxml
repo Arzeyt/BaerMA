@@ -94,7 +94,7 @@
                      <children>
                       <Button mnemonicParsing="false" onAction="#addEntryAction" prefHeight="26.0" prefWidth="94.0" text="Add Entry" />
                         <Button mnemonicParsing="false" onAction="#deleteEntryButtonPressed" prefHeight="26.0" prefWidth="108.0" text="Delete Entry" />
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Experiment" />
+                        <Button mnemonicParsing="false" onAction="#experimentButtonPressed" prefHeight="26.0" prefWidth="97.0" text="Experiment" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" top="5.0" />
