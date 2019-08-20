@@ -525,6 +525,6 @@ public class Entries {
     public void calcBackups(){
         ArrayList<Entry> allEntries = (ArrayList<Entry>) entriesList;
         //sort by experimental gen.
-        
+
     }
 }
