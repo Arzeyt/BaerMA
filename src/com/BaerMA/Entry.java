@@ -79,9 +79,9 @@ public class Entry implements Serializable{
         return Snotes;
     }
 
-    transient SimpleIntegerProperty SbackupNumber;
-    public void setbackupNumberssp(Integer value){ backupNumbersp().set(value);}
-    public Integer getbackupNumberssp(){return backupNumbersp().getValue();}
+    public transient SimpleIntegerProperty SbackupNumber;
+    public void setSbackupNumber(Integer value){ backupNumbersp().set(value);}
+    public Integer getSbackupNumber(){return backupNumbersp().getValue();}
     public IntegerProperty backupNumbersp(){
         if(SbackupNumber ==null) SbackupNumber =new SimpleIntegerProperty(this,"SbackupNumber");
         return SbackupNumber;
@@ -109,8 +109,9 @@ public class Entry implements Serializable{
         }
 
         this.Snotes=new SimpleStringProperty(notes+"");
+        this.SbackupNumber=new SimpleIntegerProperty(100);
 
-        System.out.println("sampleID: "+ sampleIDssp +"\nSexperimentalGeneration: "+SexperimentalGeneration+" \nSbackupGeneration: "+SbackupGeneration+"\nSbackupOfDate: "+SbackupOfDate+" \nSnotes: "+Snotes+"");
+        System.out.println("sampleID: "+ sampleIDssp +"\nSexperimentalGeneration: "+SexperimentalGeneration+" \nSbackupGeneration: "+SbackupGeneration+"\nSbackupOfDate: "+SbackupOfDate+" \nSnotes: "+Snotes+" \nSbackupNumber"+SbackupNumber);
     }
 
 

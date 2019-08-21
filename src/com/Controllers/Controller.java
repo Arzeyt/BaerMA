@@ -22,7 +22,7 @@ public class Controller implements Initializable{
     @FXML private TextArea notesField;
 
     @FXML private TableView allEntriesTable;
-    @FXML private TableColumn AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn;
+    @FXML private TableColumn AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn, AEBackupNumberColumn;
 
     @FXML private Spinner<Integer> SLGenerationSpinner;
     @FXML private TableView sampleListTable;
@@ -78,6 +78,7 @@ public class Controller implements Initializable{
         AEBackupGenerationColumn.setCellValueFactory(new PropertyValueFactory<Entry, Integer>("SbackupGeneration"));
         AEBackupDateColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SbackupOfDate"));
         AENotesColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("Snotes"));
+        AEBackupNumberColumn.setCellValueFactory(new PropertyValueFactory<Entry, Integer>("SbackupNumber"));
 
         allEntriesTable.setItems(entriesClass.entriesList);
     }

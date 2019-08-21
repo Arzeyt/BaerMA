@@ -4,6 +4,7 @@ import com.Controllers.Controller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -543,25 +544,47 @@ public class Entries {
             }
         }
 
+        //sort the array containing the entries for each sample number by experimental generation
+        for(ArrayList<Entry> list : entriesBySample.values()){
+            Collections.sort(list, new Comparator<Entry>() {
+                @Override
+                public int compare(Entry o1, Entry o2) {
+                    return o1.experimentalGeneration-o2.experimentalGeneration;
+                }
+            });
+        }
+
         Iterator i = entriesBySample.keySet().iterator();
-        i.forEachRemaining(o -> {
-            int id = (int) o;
-            System.out.println(id+" size: "+entriesBySample.get(id).size());
-        });
+        int currentId=0;
+        int lastGen = 0;
+        int bk=0;
 
-    }
-
-    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber, ObservableList<Entry> oEntries){
-        ArrayList<Entry> entries = new ArrayList<>();
-        for(Entry e : oEntries){
-            if(e.id==sampleNumber) {
-                entries.add(e);
+        //for each sample id...
+        while(i.hasNext()){
+            int id = (int)i.next();
+            //loop through the array value and compare expgen to previous expgen
+            for(Entry e : entriesBySample.get(id)){
+                if(e.experimentalGeneration-lastGen==1){
+                    bk++;
+                }else{
+                    bk = 1;
+                }
+                lastGen=e.experimentalGeneration;
+                e.setBackupNumber(bk);
+                e.SbackupNumber=new SimpleIntegerProperty(bk);
+                System.out.println("id: "+id+" bk: "+bk+" expgen: "+e.experimentalGeneration);
             }
         }
-        if(entries.size()<1){
-            return null;
-        }else{
-            return entries;
+
+        //place back into observable list
+        entriesList.clear();
+        for(ArrayList<Entry> list : entriesBySample.values()){
+            System.out.println(" ");
+            for(Entry e : list){
+                System.out.print(e.id+","+e.backupNumbersp().getValue()+" ");
+                entriesList.add(e);
+            }
         }
     }
+
 }

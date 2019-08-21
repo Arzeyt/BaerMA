@@ -120,6 +120,7 @@
                         <TableColumn fx:id="AEBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
                         <TableColumn fx:id="AEBackupDateColumn" prefWidth="75.0" text="Backup Date" />
                         <TableColumn fx:id="AENotesColumn" prefWidth="150.0" text="Notes" />
+                        <TableColumn fx:id="AEBackupNumberColumn" prefWidth="75.0" text="Backup#" />
                     </columns>
                   </TableView>
                   <Label layoutX="212.0" text="All Entries">
