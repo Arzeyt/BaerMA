@@ -1,6 +1,5 @@
 package com.BaerMA;
 
-import com.Controllers.Controller;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -10,8 +9,6 @@ import javafx.collections.ObservableList;
 
 import java.awt.*;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.*;
 
 /**
@@ -24,12 +21,19 @@ public class Entries {
     public final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
 
     File dataFile = new File("Data");
+    File outputFile = new File("Output");
 
     public Entries(){
         System.out.println("Checking for data file");
         if (dataFile.exists()==false){
             dataFile.mkdir();
-            System.out.println("made data dir");
+            System.out.println("made data directory");
+        }
+        System.out.println("Checking for output file");
+        //this should be done at each file write location
+        if(outputFile.exists()==false){
+            outputFile.mkdir();
+            System.out.println("made output directory");
         }
     }
 
@@ -261,10 +265,10 @@ public class Entries {
 
         try
         {
-            File file = new File("Generation of all samples by MA generation "+generation+".csv");
+            File file = new File(outputFile+File.separator+"Generation_of_all_samples_by_MA_generation_"+generation+".csv");
             //Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("calculated generation list "+generation+".csv"),"utf-8"));
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file.getName()),"utf-8"));
-            System.out.println("filename is: "+file.getName());
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
+            System.out.println("filename is: "+file);
 
             //print header
             writer.write("Sample ID,Generation\n");
@@ -280,9 +284,8 @@ public class Entries {
                 writer.write(line);
             }
             writer.close();
-
-            System.out.println("attempting to open: "+file.toString());
             Desktop.getDesktop().open(file);
+
         }
         catch(IOException ex)
         {
@@ -295,8 +298,8 @@ public class Entries {
 
         try
         {
-            File file = new File("Samples to Generation "+generation+".csv");
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file.getName()),"utf-8"));
+            File file = new File(outputFile+File.separator+"Samples to Generation "+generation+".csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             writer.write("Sample ID,Generation,Backup Count,Reset Count\n");
             for(CalculatedEntry e : calculatedEntries){
@@ -339,8 +342,8 @@ public class Entries {
 
         try
         {
-            File file = new File("All Backups to generation "+numberOfGenerations+".csv");
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file.getName()),"utf-8"));
+            File file = new File(outputFile+File.separator+"All Backups to generation "+numberOfGenerations+".csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             String header = "Sample ID";
             for(int i=1;i<=numberOfGenerations;i++){
@@ -392,8 +395,8 @@ public class Entries {
 
         try
         {
-            File file = new File("Sample history to generation "+numberOfGenerations+".csv");
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file.getName()),"utf-8"));
+            File file = new File(outputFile+File.separator+"Sample history to generation "+numberOfGenerations+".csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             String header = "Sample ID";
             for(int i=1;i<=numberOfGenerations;i++){
