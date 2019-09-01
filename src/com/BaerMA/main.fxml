@@ -167,6 +167,7 @@
                                     <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Print Backup Table" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintHistory" text="Print History" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Print Entries CSV" />
+                                    <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries" />
                               </items>
                             </Menu>
                           </menus>

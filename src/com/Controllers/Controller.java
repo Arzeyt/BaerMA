@@ -177,4 +177,6 @@ public class Controller implements Initializable{
             entriesClass.writeEntriesCSV();
         }
 
+        public void PrintFormattedEntries(){entriesClass.printFormattedEntries(SLGenerationSpinner.getValue());}
+
 }

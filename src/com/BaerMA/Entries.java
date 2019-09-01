@@ -103,7 +103,7 @@ public class Entries {
                 Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
                 entriesList.add(iEntry);
             }
-
+            calcBackups();
             Main.dividingFlair();
             System.out.println("Loaded "+entriesList.size()+" entries");
         } catch (FileNotFoundException e) {
@@ -439,6 +439,25 @@ public class Entries {
         }
     }
 
+    public void printFormattedEntries(int experimentalGen){
+        calcBackups();
+        try{
+            File file = new File(outputFile+File.separator+"Formatted Entries Gen "+experimentalGen+".txt");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
+            ArrayList<Entry> entries = getEntriesForGeneration(experimentalGen);
+            for(Entry e : entries){
+                String date = e.backupOfDate.getMonthValue()+"/"+e.backupOfDate.getDayOfMonth()+"/"+e.backupOfDate.getYear();
+                //WRONG. We should be writing the name of the sample plate that failed, not simply the one we backed up from plus 1. This can be calculated.
+                String line = "BK"+e.backupNumbersp().getValue()+" "+e.id+"."+(CalculatedEntry.calculateGeneration(e.id,experimentalGen-1,entriesList))+" from "+e.id+"."+e.backupGeneration+" of "+date+" "+e.notes
+                        +"\n";
+                writer.write(line);
+            }
+            writer.close();
+            Desktop.getDesktop().open(file);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Creates a file displaying the sample number and sample generation up to the experimental generation that was input
@@ -522,6 +541,16 @@ public class Entries {
             if(Character.digit(s.charAt(i),radix) < 0) return false;
         }
         return true;
+    }
+
+    public ArrayList<Entry> getEntriesForGeneration(int generation){
+        ArrayList<Entry> list = new ArrayList<>();
+        for(Entry e : entriesList){
+            if(e.experimentalGeneration==generation){
+                list.add(e);
+            }
+        }
+        return list;
     }
 
     public void calcBackups(){
