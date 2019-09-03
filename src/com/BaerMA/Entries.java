@@ -37,25 +37,25 @@ public class Entries {
         }
     }
 
+    //add and remove Entries
+        public boolean addEntry(Entry entry){
+            //to avoid illegal entries, ensure that Entry.equals(Entry) returns true for any entry that matches the same experimental
+            //generation date
 
-    public boolean addEntry(Entry entry){
-        //to avoid illegal entries, ensure that Entry.equals(Entry) returns true for any entry that matches the same experimental
-        //generation date
+            boolean oEntriesAdd = false;
 
-        boolean oEntriesAdd = false;
+            if(!entriesList.contains(entry)){
+                System.out.println("Added entry to entries");
+                entriesList.add(entry);
+                oEntriesAdd=true;
+                calcBackups();
+            }
 
-        if(!entriesList.contains(entry)){
-            System.out.println("Added entry to entries");
-            entriesList.add(entry);
-            oEntriesAdd=true;
-            calcBackups();
+            jsonizeEntries();
+            return oEntriesAdd;
+
         }
-
-        jsonizeEntries();
-        return oEntriesAdd;
-
-    }
-    public void removeEntry(Entry e){
+        public void removeEntry(Entry e){
 
         if(entriesList.contains(e)){
             entriesList.remove(e);
@@ -63,57 +63,57 @@ public class Entries {
 
         jsonizeEntries();
     }
-
+//Data Storage
     //JSON
-    public void jsonizeEntries(){
-        ArrayList<Entry> entries = new ArrayList<>();
-        for(Entry e : entriesList){
-            entries.add(e);
-        }
-
-        GsonBuilder gsonBuilder= new GsonBuilder();
-        gsonBuilder.setPrettyPrinting();
-        Gson gson=gsonBuilder.create();
-
-        try {
-            FileWriter writer = new FileWriter(dataFile+File.separator+"Entries.json");
-            writer.write(gson.toJson(entries));
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-    public void parseEntriesJSON(){
-
-        try {
-
-            FileReader reader = new FileReader(dataFile+File.separator+"Entries.json");
-            Gson gson=new Gson();
-
-            ArrayList<Entry> entries = gson.fromJson(reader,new TypeToken<ArrayList<Entry>>(){}.getType());
-
-            reader.close();
-            Main.dividingFlair();
-            //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
-            // within the Entry that enables JavaFX tables to populate the list.
-            // The solution is to create new object based on the JSON data, and place these new Entry objets in the entries list
-            //This calls into question the utility of the UUID system. I should deprecate that.
-            for(Entry e : entries){
-                Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
-                entriesList.add(iEntry);
+        public void jsonizeEntries(){
+            ArrayList<Entry> entries = new ArrayList<>();
+            for(Entry e : entriesList){
+                entries.add(e);
             }
-            calcBackups();
-            Main.dividingFlair();
-            System.out.println("Loaded "+entriesList.size()+" entries");
-        } catch (FileNotFoundException e) {
-           e.printStackTrace();
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            GsonBuilder gsonBuilder= new GsonBuilder();
+            gsonBuilder.setPrettyPrinting();
+            Gson gson=gsonBuilder.create();
+
+            try {
+                FileWriter writer = new FileWriter(dataFile+File.separator+"Entries.json");
+                writer.write(gson.toJson(entries));
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
-    }
-    public void loadEntriesFromCSV(){
+        public void parseEntriesJSON(){
+
+            try {
+
+                FileReader reader = new FileReader(dataFile+File.separator+"Entries.json");
+                Gson gson=new Gson();
+
+                ArrayList<Entry> entries = gson.fromJson(reader,new TypeToken<ArrayList<Entry>>(){}.getType());
+
+                reader.close();
+                Main.dividingFlair();
+                //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
+                // within the Entry that enables JavaFX tables to populate the list.
+                // The solution is to create new object based on the JSON data, and place these new Entry objets in the entries list
+                //This calls into question the utility of the UUID system. I should deprecate that.
+                for(Entry e : entries){
+                    Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
+                    entriesList.add(iEntry);
+                }
+                calcBackups();
+                Main.dividingFlair();
+                System.out.println("Loaded "+entriesList.size()+" entries");
+            } catch (FileNotFoundException e) {
+               e.printStackTrace();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        public void loadEntriesFromCSV(){
         try {
             File csv = new File(dataFile+File.separator+"Entries.csv");
             //System.out.println("absolute path: "+csv.getAbsolutePath()+" cannonnical path: "+csv.getCanonicalFile());
@@ -131,7 +131,7 @@ public class Entries {
     }
 
     //CSV
-    public void writeEntriesCSV(){
+        public void writeEntriesCSV(){
         try{
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dataFile+File.separator+"Entries.csv"),"utf-8"));
 
@@ -161,10 +161,7 @@ public class Entries {
     }
 
     //serialization (deprecated)
-    /**
-     * @deprecated
-     */
-    public void serializeEntries(){
+        public void serializeEntries(){
         try
         {
             File saveFile = new File("entries");
@@ -194,11 +191,7 @@ public class Entries {
             ex.printStackTrace();
         }
     }
-
-    /**
-     * @deprecated
-     */
-    public void deserializeEntries(){
+        public void deserializeEntries(){
         if(new File("entries").exists()){
             System.out.println("Entry file found");
         }else{
@@ -238,13 +231,13 @@ public class Entries {
     }
 
     //list management functions
-    public void clearEntries(){
+        public void clearEntries(){
         entriesList.clear();
         jsonizeEntries();
         System.out.println("Entries cleared");
     }
 
-//Calculated Data Creation----------------------
+//Calculated Data----------------------
 
     //calculated entries
     public void createCalculatedEntriesList(int experimentalGeneration){
@@ -260,12 +253,15 @@ public class Entries {
         System.out.println("Number of entries in calculated entry: "+calculatedEntries.size());
     }
 
+//Writing Functions--------------------------
     //write sample id and generation for samples 500 to 999
     public void writeCalculatedEntriesCommaDelimited(int generation){
 
         try
         {
             File file = new File(outputFile+File.separator+"Generation_of_all_samples_by_MA_generation_"+generation+".csv");
+            if(outputFile.exists()==false)outputFile.mkdir();
+
             //Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("calculated generation list "+generation+".csv"),"utf-8"));
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             System.out.println("filename is: "+file);
@@ -299,6 +295,8 @@ public class Entries {
         try
         {
             File file = new File(outputFile+File.separator+"Samples to Generation "+generation+".csv");
+            if(outputFile.exists()==false)outputFile.mkdir();
+
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             writer.write("Sample ID,Generation,Backup Count,Reset Count\n");
@@ -343,6 +341,7 @@ public class Entries {
         try
         {
             File file = new File(outputFile+File.separator+"All Backups to generation "+numberOfGenerations+".csv");
+            if(outputFile.exists()==false)outputFile.mkdir();
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             String header = "Sample ID";
@@ -396,6 +395,7 @@ public class Entries {
         try
         {
             File file = new File(outputFile+File.separator+"Sample history to generation "+numberOfGenerations+".csv");
+            if(outputFile.exists()==false)outputFile.mkdir();
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             String header = "Sample ID";
@@ -439,17 +439,19 @@ public class Entries {
         }
     }
 
+    //write the formatted entry list according to Dr. Katju's guidelines
     public void printFormattedEntries(int experimentalGen){
         calcBackups();
         try{
             File file = new File(outputFile+File.separator+"Formatted Entries Gen "+experimentalGen+".txt");
+            if(outputFile.exists()==false)outputFile.mkdir();
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
             ArrayList<Entry> entries = getEntriesForGeneration(experimentalGen);
             for(Entry e : entries){
                 String date = e.backupOfDate.getMonthValue()+"/"+e.backupOfDate.getDayOfMonth()+"/"+e.backupOfDate.getYear();
                 //WRONG. We should be writing the name of the sample plate that failed, not simply the one we backed up from plus 1. This can be calculated.
-                String line = "BK"+e.backupNumbersp().getValue()+" "+e.id+"."+(CalculatedEntry.calculateGeneration(e.id,experimentalGen-1,entriesList))+" from "+e.id+"."+e.backupGeneration+" of "+date+" "+e.notes
-                        +"\n";
+                String line = "BK"+e.backupNumbersp().getValue()+" "+e.getLineLetter()+e.id+"."+(CalculatedEntry.calculateGeneration(e.id,experimentalGen-1,entriesList))+" from "+e.getLineLetter()+e.id+"."+e.backupGeneration+" of "+date+" "+e.notes
+                        +"\r\n";
                 writer.write(line);
             }
             writer.close();
@@ -459,6 +461,37 @@ public class Entries {
         }
     }
 
+    //write all formatted entry lists up to the given gen
+    public void printAllFormattedEntries(int experimentalGen){
+        calcBackups();
+        try{
+            File file = new File(outputFile+File.separator+"All Formatted Entries to Gen "+experimentalGen+".txt");
+            if(outputFile.exists()==false)outputFile.mkdir();
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
+            for(int i=0; i<=experimentalGen; i++) {
+                //header for each generation
+                writer.write("Generation: "+i+"\r\n");
+                ArrayList<Entry> entries = getEntriesForGeneration(i);
+                for (Entry e : entries) {
+                    String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
+                    String line=null;
+                    //check for extinction entry
+                    if(e.backupGeneration==-1){
+                        line = e.getLineLetter()+e.id+" extinct "+e.notes+"\r\n";
+                    }else {
+                        line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, i - 1, entriesList)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
+                                + "\r\n";
+                    }
+                    writer.write(line);
+                }
+                writer.write("\r\n");
+            }
+            writer.close();
+            Desktop.getDesktop().open(file);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     /**
      * Creates a file displaying the sample number and sample generation up to the experimental generation that was input
      * @param numberOfGenerations

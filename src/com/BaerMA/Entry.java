@@ -123,12 +123,10 @@ public class Entry implements Serializable{
                 "Notes: "+notes+
                 "\n-------\n";
     }
-
     public boolean equalsID(int id){
 
         return this.id==id;
     }
-
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Entry && ((Entry) obj).experimentalGeneration==this.experimentalGeneration && ((Entry)obj).id==this.id){
@@ -142,4 +140,20 @@ public class Entry implements Serializable{
         this.SbackupNumber=new SimpleIntegerProperty(backupNumber);
     }
 
+    public String getLineLetter(){
+        if(id >= 500 && id <= 599){
+            return "C";
+        }else if(id >= 600 && id <= 699){
+            return "M";
+        }else if(id >= 700 && id <= 799){
+            return "X";
+        }else if(id >= 800 && id <= 899){
+            return "J";
+        }else if(id >= 900 && id <= 999){
+            return "E";
+        }else if(id >= 1000 && id <= 1099){
+            return "J2";
+        }
+        return null;
+    }
 }

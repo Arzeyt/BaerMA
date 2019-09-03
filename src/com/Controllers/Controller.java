@@ -117,66 +117,68 @@ public class Controller implements Initializable{
 
     //Component Events
         //TopBar
-        public void exit() {
+            public void exit() {
             System.exit(0);
         }
 
         //Entry Panel
-        public void addEntryAction() {
-            Entry entry;
-            if(ExtinctButton.isSelected()==false){
-                entry = new Entry(sampleNumberSpinner.getValue(), experimentalGenerationSpinner.getValue(), experimentalGenerationDatePicker.getValue(), backupGenerationSpinner.getValue(), backupOfDatePicker.getValue(), notesField.getText());
-            }else {
-                entry = new Entry(sampleNumberSpinner.getValue(), experimentalGenerationSpinner.getValue(), experimentalGenerationDatePicker.getValue(), -1, experimentalGenerationDatePicker.getValue(), notesField.getText());
+            public void addEntryAction() {
+                Entry entry;
+                if(ExtinctButton.isSelected()==false){
+                    entry = new Entry(sampleNumberSpinner.getValue(), experimentalGenerationSpinner.getValue(), experimentalGenerationDatePicker.getValue(), backupGenerationSpinner.getValue(), backupOfDatePicker.getValue(), notesField.getText());
+                }else {
+                    entry = new Entry(sampleNumberSpinner.getValue(), experimentalGenerationSpinner.getValue(), experimentalGenerationDatePicker.getValue(), -1, experimentalGenerationDatePicker.getValue(), notesField.getText());
+                }
+                if (!entriesClass.addEntry(entry)) {
+                    System.out.println("Could not add entry");
+                }
             }
-            if (!entriesClass.addEntry(entry)) {
-                System.out.println("Could not add entry");
+
+            public void deleteEntryButtonPressed(){
+                Entry entry = (Entry) allEntriesTable.getSelectionModel().getSelectedItem();
+                entriesClass.removeEntry(entry);
+            }
+
+            public void extinctButtonPressed(){
+            if(ExtinctButton.isSelected()){
+                backupGenerationSpinner.setDisable(true);
+                backupOfDatePicker.setDisable(true);
+            }else{
+                backupGenerationSpinner.setDisable(false);
+                backupOfDatePicker.setDisable(false);
             }
         }
 
-        public void deleteEntryButtonPressed(){
-            Entry entry = (Entry) allEntriesTable.getSelectionModel().getSelectedItem();
-            entriesClass.removeEntry(entry);
-        }
+            public void experimentButtonPressed(){
+                entriesClass.calcBackups();
+            }
 
-        public void extinctButtonPressed(){
-        if(ExtinctButton.isSelected()){
-            backupGenerationSpinner.setDisable(true);
-            backupOfDatePicker.setDisable(true);
-        }else{
-            backupGenerationSpinner.setDisable(false);
-            backupOfDatePicker.setDisable(false);
-        }
-    }
+        //Sample List Panel (Top right)
 
-        public void experimentButtonPressed(){
-            entriesClass.calcBackups();
-        }
+            public void PrintList(){
+                entriesClass.writeCalculatedEntriesCommaDelimited(SLGenerationSpinner.getValue());
+            }
 
-        //Sample List Panel
+            public void PrintAdvancedList(){
+                entriesClass.writeCalculatedEntriesWithBackupAndResetsCommaDelimited(SLGenerationSpinner.getValue());
 
-        public void PrintList(){
-            entriesClass.writeCalculatedEntriesCommaDelimited(SLGenerationSpinner.getValue());
-        }
+            }
 
-        public void PrintAdvancedList(){
-            entriesClass.writeCalculatedEntriesWithBackupAndResetsCommaDelimited(SLGenerationSpinner.getValue());
+            public void PrintBackupTable(){
+                entriesClass.writeBackupTable(SLGenerationSpinner.getValue());
 
-        }
+            }
 
-        public void PrintBackupTable(){
-            entriesClass.writeBackupTable(SLGenerationSpinner.getValue());
+            public void PrintHistory(){
+                entriesClass.writeBackupHistory(SLGenerationSpinner.getValue());
+            }
 
-        }
+            public void PrintEntriesCSV(){
+                entriesClass.writeEntriesCSV();
+            }
 
-        public void PrintHistory(){
-            entriesClass.writeBackupHistory(SLGenerationSpinner.getValue());
-        }
+            public void PrintFormattedEntries(){entriesClass.printFormattedEntries(SLGenerationSpinner.getValue());}
 
-        public void PrintEntriesCSV(){
-            entriesClass.writeEntriesCSV();
-        }
-
-        public void PrintFormattedEntries(){entriesClass.printFormattedEntries(SLGenerationSpinner.getValue());}
+            public void PrintAllFormattedEntries(){entriesClass.printAllFormattedEntries(SLGenerationSpinner.getValue());}
 
 }
