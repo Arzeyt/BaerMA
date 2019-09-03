@@ -253,6 +253,98 @@ public class Entries {
         System.out.println("Number of entries in calculated entry: "+calculatedEntries.size());
     }
 
+    public boolean isInteger(String s) {
+        return isInteger(s,10);
+    }
+
+    public boolean isInteger(String s, int radix) {
+        if(s.isEmpty()) return false;
+        for(int i = 0; i < s.length(); i++) {
+            if(i == 0 && s.charAt(i) == '-') {
+                if(s.length() == 1) return false;
+                else continue;
+            }
+            if(Character.digit(s.charAt(i),radix) < 0) return false;
+        }
+        return true;
+    }
+
+    public ArrayList<Entry> getEntriesForGeneration(int generation){
+        ArrayList<Entry> list = new ArrayList<>();
+        for(Entry e : entriesList){
+            if(e.experimentalGeneration==generation){
+                list.add(e);
+            }
+        }
+        return list;
+    }
+
+    public void calcBackups(){
+        //SampleNumber, list containing all entries for that sample number
+        HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
+
+        int debug=1;
+
+        //sampleID by experimentalGen by sampleGen
+        for(Entry e : entriesList){
+            if(debug==1) {
+                //debug sout
+            }
+
+            //if there is an entryList for this sample number, add this new entry to that existing list
+            if(entriesBySample.get(e.id)!=null) {
+                entriesBySample.get(e.id).add(e);
+                //else, create a new entryList array and add this entry to that list, and add that array to the entriesBySample array under the sample id index
+            }else{
+                ArrayList<Entry> entryList = new ArrayList<Entry>();
+                entryList.add(e);
+                entriesBySample.put(e.id,entryList);
+            }
+        }
+
+        //sort the array containing the entries for each sample number by experimental generation
+        for(ArrayList<Entry> list : entriesBySample.values()){
+            Collections.sort(list, new Comparator<Entry>() {
+                @Override
+                public int compare(Entry o1, Entry o2) {
+                    return o1.experimentalGeneration-o2.experimentalGeneration;
+                }
+            });
+        }
+
+        Iterator i = entriesBySample.keySet().iterator();
+        int currentId=0;
+        int lastGen = 0;
+        int bk=0;
+
+        //for each sample id...
+        while(i.hasNext()){
+            int id = (int)i.next();
+            //loop through the array value and compare expgen to previous expgen
+            for(Entry e : entriesBySample.get(id)){
+                if(e.experimentalGeneration-lastGen==1){
+                    bk++;
+                }else{
+                    bk = 1;
+                }
+                lastGen=e.experimentalGeneration;
+                e.setBackupNumber(bk);
+                e.SbackupNumber=new SimpleIntegerProperty(bk);
+                System.out.println("id: "+id+" bk: "+bk+" expgen: "+e.experimentalGeneration);
+            }
+        }
+
+        //place back into observable list
+        entriesList.clear();
+        for(ArrayList<Entry> list : entriesBySample.values()){
+            System.out.println(" ");
+            for(Entry e : list){
+                System.out.print(e.id+","+e.backupNumbersp().getValue()+" ");
+                entriesList.add(e);
+            }
+        }
+    }
+
 //Writing Functions--------------------------
     //write sample id and generation for samples 500 to 999
     public void writeCalculatedEntriesCommaDelimited(int generation){
@@ -447,12 +539,32 @@ public class Entries {
             if(outputFile.exists()==false)outputFile.mkdir();
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
             ArrayList<Entry> entries = getEntriesForGeneration(experimentalGen);
+
+            //divide the entries list into extinct and non extinct
+            ArrayList<Entry> nonextinct = new ArrayList<>();
+            ArrayList<Entry> extinct = new ArrayList<>();
             for(Entry e : entries){
-                String date = e.backupOfDate.getMonthValue()+"/"+e.backupOfDate.getDayOfMonth()+"/"+e.backupOfDate.getYear();
-                //WRONG. We should be writing the name of the sample plate that failed, not simply the one we backed up from plus 1. This can be calculated.
-                String line = "BK"+e.backupNumbersp().getValue()+" "+e.getLineLetter()+e.id+"."+(CalculatedEntry.calculateGeneration(e.id,experimentalGen-1,entriesList))+" from "+e.getLineLetter()+e.id+"."+e.backupGeneration+" of "+date+" "+e.notes
-                        +"\r\n";
-                writer.write(line);
+                if(e.backupGeneration==-1){
+                    extinct.add(e);
+                }else{
+                    nonextinct.add(e);
+                }
+            }
+            //if there are entries in the nonextinct list, print them
+            if(nonextinct!=null) {
+                for (Entry e : nonextinct) {
+                    String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
+                    String line = null;
+                    line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, i - 1, entriesList)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
+                            + "\r\n";
+                    writer.write(line);
+                }
+            }
+            //if there are entires in the extinct list, print them
+            if(extinct!=null) {
+                for (Entry e : extinct) {
+                    writer.write(e.getLineLetter() + e.id + " extinct " + e.notes + "\r\n");
+                }
             }
             writer.close();
             Desktop.getDesktop().open(file);
@@ -471,19 +583,36 @@ public class Entries {
             for(int i=0; i<=experimentalGen; i++) {
                 //header for each generation
                 writer.write("Generation: "+i+"\r\n");
+
                 ArrayList<Entry> entries = getEntriesForGeneration(i);
-                for (Entry e : entries) {
-                    String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
-                    String line=null;
-                    //check for extinction entry
+
+                //divide the entries list into extinct and non extinct
+                ArrayList<Entry> nonextinct = new ArrayList<>();
+                ArrayList<Entry> extinct = new ArrayList<>();
+                for(Entry e : entries){
                     if(e.backupGeneration==-1){
-                        line = e.getLineLetter()+e.id+" extinct "+e.notes+"\r\n";
-                    }else {
+                        extinct.add(e);
+                    }else{
+                        nonextinct.add(e);
+                    }
+                }
+                //if there are entries in the nonextinct list, print them
+                if(nonextinct!=null) {
+                    for (Entry e : nonextinct) {
+                        String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
+                        String line = null;
                         line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, i - 1, entriesList)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
                                 + "\r\n";
+                        writer.write(line);
                     }
-                    writer.write(line);
                 }
+                //if there are entires in the extinct list, print them
+                if(extinct!=null) {
+                    for (Entry e : extinct) {
+                        writer.write(e.getLineLetter() + e.id + " extinct " + e.notes + "\r\n");
+                    }
+                }
+                //new line between gens
                 writer.write("\r\n");
             }
             writer.close();
@@ -492,6 +621,7 @@ public class Entries {
             e.printStackTrace();
         }
     }
+
     /**
      * Creates a file displaying the sample number and sample generation up to the experimental generation that was input
      * @param numberOfGenerations
@@ -558,98 +688,8 @@ public class Entries {
         }
     }
 
-    //miscellaneous methods
+//miscellaneous methods------------------------
 
-    public boolean isInteger(String s) {
-        return isInteger(s,10);
-    }
 
-    public boolean isInteger(String s, int radix) {
-        if(s.isEmpty()) return false;
-        for(int i = 0; i < s.length(); i++) {
-            if(i == 0 && s.charAt(i) == '-') {
-                if(s.length() == 1) return false;
-                else continue;
-            }
-            if(Character.digit(s.charAt(i),radix) < 0) return false;
-        }
-        return true;
-    }
-
-    public ArrayList<Entry> getEntriesForGeneration(int generation){
-        ArrayList<Entry> list = new ArrayList<>();
-        for(Entry e : entriesList){
-            if(e.experimentalGeneration==generation){
-                list.add(e);
-            }
-        }
-        return list;
-    }
-
-    public void calcBackups(){
-        //SampleNumber, list containing all entries for that sample number
-        HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
-
-        int debug=1;
-
-        //sampleID by experimentalGen by sampleGen
-        for(Entry e : entriesList){
-            if(debug==1) {
-                //debug sout
-            }
-
-            //if there is an entryList for this sample number, add this new entry to that existing list
-            if(entriesBySample.get(e.id)!=null) {
-                entriesBySample.get(e.id).add(e);
-            //else, create a new entryList array and add this entry to that list, and add that array to the entriesBySample array under the sample id index
-            }else{
-                ArrayList<Entry> entryList = new ArrayList<Entry>();
-                entryList.add(e);
-                entriesBySample.put(e.id,entryList);
-            }
-        }
-
-        //sort the array containing the entries for each sample number by experimental generation
-        for(ArrayList<Entry> list : entriesBySample.values()){
-            Collections.sort(list, new Comparator<Entry>() {
-                @Override
-                public int compare(Entry o1, Entry o2) {
-                    return o1.experimentalGeneration-o2.experimentalGeneration;
-                }
-            });
-        }
-
-        Iterator i = entriesBySample.keySet().iterator();
-        int currentId=0;
-        int lastGen = 0;
-        int bk=0;
-
-        //for each sample id...
-        while(i.hasNext()){
-            int id = (int)i.next();
-            //loop through the array value and compare expgen to previous expgen
-            for(Entry e : entriesBySample.get(id)){
-                if(e.experimentalGeneration-lastGen==1){
-                    bk++;
-                }else{
-                    bk = 1;
-                }
-                lastGen=e.experimentalGeneration;
-                e.setBackupNumber(bk);
-                e.SbackupNumber=new SimpleIntegerProperty(bk);
-                System.out.println("id: "+id+" bk: "+bk+" expgen: "+e.experimentalGeneration);
-            }
-        }
-
-        //place back into observable list
-        entriesList.clear();
-        for(ArrayList<Entry> list : entriesBySample.values()){
-            System.out.println(" ");
-            for(Entry e : list){
-                System.out.print(e.id+","+e.backupNumbersp().getValue()+" ");
-                entriesList.add(e);
-            }
-        }
-    }
 
 }
