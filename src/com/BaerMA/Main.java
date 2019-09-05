@@ -11,37 +11,35 @@ import java.util.HashSet;
 public class Main extends Application{
 
     //Entries list and reader
-    public static HashSet<Entry> entries = new HashSet<Entry>();
-    public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        public static HashSet<Entry> entries = new HashSet<Entry>();
+        public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     //terminal variables
-    public static DateObj currentDate = null;
-    public static int currentGeneration = 0;
+        public static DateObj currentDate = null;
+        public static int currentGeneration = 0;
 
-    public static String chelp="help",cnew = "new", clist="list", cserialize="serialize", cclear="clear entries", cedit="edit";
+        public static String chelp="help",cnew = "new", clist="list", cserialize="serialize", cclear="clear entries", cedit="edit";
 
 
-    //GUI
-    public static MainStage mainStage = new MainStage();
+    //START
+        public static MainStage mainStage = new MainStage();
 
-    public static void main(String[] args) throws IOException {
+        public static void main(String[] args) throws IOException {
 
-        //System.out.println("Deserializing entries");
-        //deserializeEntries();
+            //System.out.println("Deserializing entries");
+            //deserializeEntries();
 
-        dividingFlair();
-        help();
+            dividingFlair();
+            help();
 
-        launch(args);
-    }
+            launch(args);
+        }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
 
-        mainStage.start(primaryStage);
-
-        //terminalLoop();
-    }
+            @Override
+            public void start(Stage primaryStage) throws Exception {
+                mainStage.start(primaryStage);
+            }
 
     /**
     public static void newEntry() throws IOException {

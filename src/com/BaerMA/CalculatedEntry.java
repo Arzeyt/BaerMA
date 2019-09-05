@@ -110,11 +110,12 @@ public class CalculatedEntry {
         //the final calculation
         int calculatedGeneration = experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1;
 
+        /**
         System.out.println("Entry list size: "+entryList.size());
         System.out.println("First Entry in sorted list is: "+entryList.get(0));
         System.out.println("largest valid entry is: "+largestValidEntry);
         System.out.println("current generation for this sample is: "+calculatedGeneration);
-
+*/
         return calculatedGeneration;
 
     }

@@ -16,14 +16,19 @@ import java.util.*;
  */
 public class Entries {
 
-    public final ObservableList<Entry> entriesList = FXCollections.observableArrayList();
-    public final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
-    public final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
+    public static int numberOfInstaces = 0;
+
+    public static final ObservableList<Entry> entriesList = FXCollections.observableArrayList();
+    public static final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
+    public static final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
 
     File dataFile = new File("Data");
-    File outputFile = new File("Output");
+    static File outputFile = new File("Output");
 
     public Entries(){
+        numberOfInstaces++;
+        System.out.println("Entries instances: "+numberOfInstaces);
+
         System.out.println("Checking for data file");
         if (dataFile.exists()==false){
             dataFile.mkdir();
@@ -65,55 +70,55 @@ public class Entries {
     }
 //Data Storage
     //JSON
-        public void jsonizeEntries(){
-            ArrayList<Entry> entries = new ArrayList<>();
-            for(Entry e : entriesList){
-                entries.add(e);
-            }
-
-            GsonBuilder gsonBuilder= new GsonBuilder();
-            gsonBuilder.setPrettyPrinting();
-            Gson gson=gsonBuilder.create();
-
-            try {
-                FileWriter writer = new FileWriter(dataFile+File.separator+"Entries.json");
-                writer.write(gson.toJson(entries));
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+    public void jsonizeEntries(){
+        ArrayList<Entry> entries = new ArrayList<>();
+        for(Entry e : entriesList){
+            entries.add(e);
         }
-        public void parseEntriesJSON(){
 
-            try {
+        GsonBuilder gsonBuilder= new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+        Gson gson=gsonBuilder.create();
 
-                FileReader reader = new FileReader(dataFile+File.separator+"Entries.json");
-                Gson gson=new Gson();
-
-                ArrayList<Entry> entries = gson.fromJson(reader,new TypeToken<ArrayList<Entry>>(){}.getType());
-
-                reader.close();
-                Main.dividingFlair();
-                //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
-                // within the Entry that enables JavaFX tables to populate the list.
-                // The solution is to create new object based on the JSON data, and place these new Entry objets in the entries list
-                //This calls into question the utility of the UUID system. I should deprecate that.
-                for(Entry e : entries){
-                    Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
-                    entriesList.add(iEntry);
-                }
-                calcBackups();
-                Main.dividingFlair();
-                System.out.println("Loaded "+entriesList.size()+" entries");
-            } catch (FileNotFoundException e) {
-               e.printStackTrace();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            FileWriter writer = new FileWriter(dataFile+File.separator+"Entries.json");
+            writer.write(gson.toJson(entries));
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        public void loadEntriesFromCSV(){
+
+    }
+    public void parseEntriesJSON(){
+
+        try {
+
+            FileReader reader = new FileReader(dataFile+File.separator+"Entries.json");
+            Gson gson=new Gson();
+
+            ArrayList<Entry> entries = gson.fromJson(reader,new TypeToken<ArrayList<Entry>>(){}.getType());
+
+            reader.close();
+            Main.dividingFlair();
+            //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
+            // within the Entry that enables JavaFX tables to populate the list.
+            // The solution is to create new object based on the JSON data, and place these new Entry objets in the entries list
+            //This calls into question the utility of the UUID system. I should deprecate that.
+            for(Entry e : entries){
+                Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
+                entriesList.add(iEntry);
+            }
+            calcBackups();
+            Main.dividingFlair();
+            System.out.println("Loaded "+entriesList.size()+" entries");
+        } catch (FileNotFoundException e) {
+           e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void loadEntriesFromCSV(){
         try {
             File csv = new File(dataFile+File.separator+"Entries.csv");
             //System.out.println("absolute path: "+csv.getAbsolutePath()+" cannonnical path: "+csv.getCanonicalFile());
@@ -127,11 +132,12 @@ public class Entries {
 
         }catch (Exception e){
             e.printStackTrace();
+            System.out.println("CSV Entries file does not exist");
         }
     }
 
     //CSV
-        public void writeEntriesCSV(){
+    public void writeEntriesCSV(){
         try{
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dataFile+File.separator+"Entries.csv"),"utf-8"));
 
@@ -240,7 +246,7 @@ public class Entries {
 //Calculated Data----------------------
 
     //calculated entries
-    public void createCalculatedEntriesList(int experimentalGeneration){
+    public static void createCalculatedEntriesList(int experimentalGeneration){
         calculatedEntries.clear();
         for(int i =500; i<1000; i++){
             CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGeneration, entriesList);
@@ -346,7 +352,8 @@ public class Entries {
     }
 
 //Writing Functions--------------------------
-    //write sample id and generation for samples 500 to 999
+    //write sample id and generation for samples 500 to 999.
+    //This function relies on the pre-calculation of the calculatedEntries list and should be modified to allow ToF calculation.
     public void writeCalculatedEntriesCommaDelimited(int generation){
 
         try

@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/BaerMA_jar</output-path>
     <root id="archive" name="BearMA.jar">
       <element id="module-output" name="BearMA" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/gson-2.8.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/gson-2.8.5.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

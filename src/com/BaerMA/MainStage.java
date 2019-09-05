@@ -45,7 +45,9 @@ public class MainStage{
     TextField notesField;
 
 
+    //class instances
     public Entries entriesClass = new Entries();
+
 
     //Entry Table Components
     TableView entryTable;

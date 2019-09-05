@@ -150,11 +150,11 @@ public class Controller implements Initializable{
         }
 
             public void experimentButtonPressed(){
-                entriesClass.calcBackups();
             }
 
         //Sample List Panel (Top right)
 
+            public void PrintBaerSheet(){ExcelMaster.createBaerSheet(SLGenerationSpinner.getValue());}
             public void PrintList(){
                 entriesClass.writeCalculatedEntriesCommaDelimited(SLGenerationSpinner.getValue());
             }
