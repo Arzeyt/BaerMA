@@ -163,6 +163,7 @@
                             <Menu mnemonicParsing="false" text="Print">
                               <items>
                                     <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheet" text="Print Baer Sheet" />
+                                    <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheetUpTo" text="Print Baer Sheet Up To:" />
                                 <MenuItem mnemonicParsing="false" onAction="#PrintList" text="Print List" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintAdvancedList" text="Print Verbose List" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Print Backup Table" />

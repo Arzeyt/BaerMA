@@ -9,6 +9,7 @@ import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.file.Files;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ExcelMaster {
@@ -25,8 +26,13 @@ public class ExcelMaster {
        }
    }
 
-   public static void createBaerSheet(int experimentalGen){
-       File baerSheet = createBaerSheetCopy(experimentalGen);
+   public static void createBaerSheetUpTo(int experimentalGeneration){
+       for(int i = 0; i<=experimentalGeneration; i++){
+           createBaerSheet(i, false);
+       }
+   }
+   public static void createBaerSheet(int experimentalGeneration, boolean open){
+       File baerSheet = createBaerSheetCopy(experimentalGeneration);
        try(InputStream inputStream = new FileInputStream(baerSheet)){
            XSSFWorkbook wb = (XSSFWorkbook) WorkbookFactory.create(inputStream);
            XSSFSheet sheet = wb.getSheetAt(0);
@@ -34,17 +40,27 @@ public class ExcelMaster {
            XSSFRow row = sheet.getRow(0);
            XSSFCell cell = row.getCell(0);
            System.out.println("Cell 0,0 is: "+cell.getStringCellValue());
+           //set generation
+           row = sheet.getRow(2);
+           cell = row.getCell(5);
+           cell.setCellValue("Baer MA Generation #: "+experimentalGeneration);
+           //set Date
+           LocalDate date = Entries.getDateForGeneration(experimentalGeneration);
+           row = sheet.getRow(2);
+           cell=row.getCell(0);
+           cell.setCellValue("Date: "+date.getMonthValue()+"-"+date.getDayOfMonth()+"-"+date.getYear());
 
            //Calc 1 page
            sheet=wb.getSheetAt(1);
 
            System.out.println("editing sheet: "+sheet.getSheetName());
 
+
            //create an arraylist for each calculated entry
            ArrayList<CalculatedEntry> calculatedEntries=new ArrayList<>();
 
            for(int i =500; i<1000; i++){
-               CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGen, Entries.entriesList);
+               CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGeneration, Entries.entriesList);
                calculatedEntries.add(calculatedEntry);
            }
 
@@ -60,8 +76,13 @@ public class ExcelMaster {
                System.out.println(cell.getNumericCellValue());
                //right one
                cell = row.getCell(1);
-               cell.setCellValue(e.calculatedGeneration.getValue());
-               System.out.println(cell.getNumericCellValue());
+               //format extinct
+               if(e.calculatedGeneration.getValue()==-1){
+                   cell.setCellType(CellType.STRING);
+                   cell.setCellValue("Extinct");
+               }else {
+                   cell.setCellValue(e.calculatedGeneration.getValue());
+               }
 
                //increment row and reset column to 0
                rowi++;
@@ -73,12 +94,14 @@ public class ExcelMaster {
            try {
                OutputStream outputStream = new FileOutputStream(baerSheet);
                wb.write(outputStream);
+               outputStream.close();
            }catch(Exception e){
                e.printStackTrace();
            }
 
            wb.close();
-           Desktop.getDesktop().open(baerSheet);
+           inputStream.close();
+           if(open) Desktop.getDesktop().open(baerSheet);
 
 
        } catch (FileNotFoundException e) {

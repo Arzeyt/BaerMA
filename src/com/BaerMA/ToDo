@@ -37,8 +37,14 @@ entries list
 NOTES
 
 Calculations
-    -'resets' are acknowledged in if the entry.backupGeneration = 0 && >=3
+    -'resets' are acknowledged if the entry.backupGeneration = 0 && >=3
 
 APACHE DOC
 https://poi.apache.org/components/spreadsheet/quick-guide.html#NewWorkbook
 
+
+BRAINSTORM
+
+Need to find a way to account for X line termination. Need data on when each line went extinct.
+
+Would be cool to calculate stats as well. 

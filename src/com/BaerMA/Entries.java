@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 
 import java.awt.*;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -697,6 +698,10 @@ public class Entries {
 
 //miscellaneous methods------------------------
 
+    public static LocalDate getDateForGeneration(int experimentalGeneration){
+        LocalDate date = LocalDate.of(2018,11,26);
+        return date.plusDays(experimentalGeneration*4);
+    }
 
 
 }

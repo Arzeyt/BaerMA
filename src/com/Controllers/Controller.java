@@ -154,7 +154,10 @@ public class Controller implements Initializable{
 
         //Sample List Panel (Top right)
 
-            public void PrintBaerSheet(){ExcelMaster.createBaerSheet(SLGenerationSpinner.getValue());}
+            public void PrintBaerSheet(){ExcelMaster.createBaerSheet(SLGenerationSpinner.getValue(),true);}
+
+            public void PrintBaerSheetUpTo(){ExcelMaster.createBaerSheetUpTo(SLGenerationSpinner.getValue());}
+
             public void PrintList(){
                 entriesClass.writeCalculatedEntriesCommaDelimited(SLGenerationSpinner.getValue());
             }
