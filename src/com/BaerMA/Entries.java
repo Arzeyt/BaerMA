@@ -320,14 +320,17 @@ public class Entries {
 
         Iterator i = entriesBySample.keySet().iterator();
         int currentId=0;
-        int lastGen = 0;
         int bk=0;
 
         //for each sample id...
         while(i.hasNext()){
+            int lastGen = 0;
             int id = (int)i.next();
             //loop through the array value and compare expgen to previous expgen
             for(Entry e : entriesBySample.get(id)){
+                if (id == 618){
+                    System.out.println(e.experimentalGeneration+" "+lastGen);
+                }
                 if(e.experimentalGeneration-lastGen==1){
                     bk++;
                 }else{
@@ -343,9 +346,7 @@ public class Entries {
         //place back into observable list
         entriesList.clear();
         for(ArrayList<Entry> list : entriesBySample.values()){
-            System.out.println(" ");
             for(Entry e : list){
-                System.out.print(e.id+","+e.backupNumbersp().getValue()+" ");
                 entriesList.add(e);
             }
         }

@@ -88,10 +88,12 @@ public class Entry implements Serializable{
     }
 
     public Entry(int sampleID, int experimentalGeneration, LocalDate pickDate, int backupGeneration, LocalDate backupOfDate, String notes){
+
+
         this.id=sampleID;
         this.experimentalGeneration=experimentalGeneration;
         this.pickDate=pickDate;
-        this.backupGeneration=backupGeneration;
+        this.backupGeneration = backupGeneration;
         this.backupOfDate=backupOfDate;
         this.notes=notes;
 

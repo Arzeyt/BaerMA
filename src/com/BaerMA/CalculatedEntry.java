@@ -101,9 +101,14 @@ public class CalculatedEntry {
             return experimentalGeneration;
         }
 
-        //if the sample is extint by this point, the largest valid entry will contain a value of -1 for the backup generation. In this case,
+        //if the sample is extinct by this point, the largest valid entry will contain a value of -1 for the backup generation. In this case,
         // we return the same -1 value at each generation after this point, and avoid incrementing it in the future to denote the extinction.
         if(largestValidEntry.backupGeneration==-1){
+            return -1;
+        }
+
+        //X line Termination. If the sample is an X, and the expGen >= Settings.XTerminationGeneration, return -1
+        if(sampleNumber>=700 && sampleNumber<=799 && experimentalGeneration>=Settings.XTerminationGeneration){
             return -1;
         }
 

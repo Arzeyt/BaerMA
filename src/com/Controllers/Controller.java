@@ -2,15 +2,20 @@ package com.Controllers;
 
 import com.sun.media.jfxmediaimpl.platform.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import com.BaerMA.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class Controller implements Initializable{
 
@@ -121,7 +126,6 @@ public class Controller implements Initializable{
     }
 
     public void sortByExperimentalGen(){
-        System.out.println("Sorted bitches");
         allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
     }
     //Component Events
@@ -129,6 +133,19 @@ public class Controller implements Initializable{
             public void exit() {
             System.exit(0);
         }
+
+            public void openTerminal(){
+                System.out.println("openingTerminal");
+                try {
+                    Parent root = FXMLLoader.load(getClass().getResource("BaerTerminal.fxml"));
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
         //Entry Panel
             public void addEntryAction() {
