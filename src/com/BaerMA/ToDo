@@ -13,18 +13,30 @@ with calclated generation of the sample
     checkbox "extinct"
     find a way to show extinct samples in the list5. Suggested date for each generation
 <Complete> Converting to FXML
+<COMPLETE>Implement Auto BK calculation when Entry is added. Should recalculate the whole list each time for safety
 
---Suggested date for each generation
+BUG - sample 618 gen 65 should be bk1 but is cal as bk2
+    due to backed up from 62 (I think?)
+
+---account for 1000-1099 in spinners and in gen calculation (starting at gen 71).
+--edit mode for entries
+--option to load particular save file, including CSV
+--Suggested date for each generation.
+    Include this date in the Sample list panel
+    Also include this during entry creation
+---highlight the newest gen added
+---add a text box in the "all entries" area that describes how many total entries are loaded
+---hover text that explains what each of the areas are
+---add backup number to entry history
 
 --Add unique samples in anticipation of the X lines being thrown out.
     might require an explicit definition of all sample numbers, which are stored in an array that's used to build the sample list
 --BAD CODING PRACTICE. Calculated Entry is an object of which hundreds of instances exist, yet each object is instantiated with a complete list of
-entries.
---BAD CODING. make calculated entries list instead of requiring the calculated entries to build themselves.
+entries. Is this true?
+--BAD CODING. make calculated entries list instead of requiring the calculated entries to build themselves. Complete?
 
-Implement Auto BK calculation when Entry is added. Should recalculate the whole list each time for safety
-Add ability to export all entries in comma delimited format
-Add ability to print the Baer MA log that goes into the notebook
+---Add ability to export all entries in comma delimited format
+---Add ability to print the Baer MA log that goes into the notebook
 
 
 Bug Fixes:

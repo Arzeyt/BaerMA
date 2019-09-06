@@ -18,8 +18,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="565.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
+<AnchorPane prefHeight="565.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
    <children>
       <MenuBar>
         <menus>
@@ -53,7 +54,7 @@
             <GridPane hgap="10.0">
               <columnConstraints>
                 <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="275.2000274658203" minWidth="10.0" prefWidth="252.59996032714844" />
-                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="263.0000274658203" minWidth="10.0" prefWidth="250.20003967285157" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="250.20003967285157" />
               </columnConstraints>
               <rowConstraints>
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -66,7 +67,16 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Spinner fx:id="experimentalGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Spinner fx:id="experimentalGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" />
+                        <Text fx:id="experimentalGenerationDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a generation">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
                   <Label text="Experimental Generation" GridPane.rowIndex="1" />
                   <Label text="Date" GridPane.rowIndex="2" />
                   <DatePicker fx:id="experimentalGenerationDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -123,7 +133,7 @@
                         <TableColumn fx:id="AEBackupNumberColumn" prefWidth="75.0" text="Backup#" />
                     </columns>
                   </TableView>
-                  <Label layoutX="212.0" text="All Entries">
+                  <Label alignment="TOP_LEFT" layoutX="283.0" text="All Entries">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -202,6 +212,7 @@
                         <TableColumn fx:id="EHBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
                         <TableColumn fx:id="EHBackupDateColumn" prefWidth="75.0" text="Backup Date" />
                         <TableColumn fx:id="EHNotesColumn" prefWidth="176.7999267578125" text="Notes" />
+                        <TableColumn fx:id="EHBackupNumberColumn" prefWidth="60.0" text="Backup#" />
                      </columns>
                   </TableView>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">

@@ -109,7 +109,6 @@ public class Entries {
                 Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
                 entriesList.add(iEntry);
             }
-            calcBackups();
             Main.dividingFlair();
             System.out.println("Loaded "+entriesList.size()+" entries");
         } catch (FileNotFoundException e) {
@@ -290,11 +289,11 @@ public class Entries {
         //SampleNumber, list containing all entries for that sample number
         HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
 
-        int debug=1;
+        int debug=0;
 
         //sampleID by experimentalGen by sampleGen
         for(Entry e : entriesList){
-            if(debug==1) {
+            if(debug==0) {
                 //debug sout
             }
 
@@ -337,7 +336,7 @@ public class Entries {
                 lastGen=e.experimentalGeneration;
                 e.setBackupNumber(bk);
                 e.SbackupNumber=new SimpleIntegerProperty(bk);
-                System.out.println("id: "+id+" bk: "+bk+" expgen: "+e.experimentalGeneration);
+                if(debug==1)System.out.println("id: "+id+" bk: "+bk+" expgen: "+e.experimentalGeneration);
             }
         }
 

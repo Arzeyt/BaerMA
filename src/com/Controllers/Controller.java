@@ -6,15 +6,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import com.BaerMA.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 
 public class Controller implements Initializable{
 
 
     @FXML private Spinner<Integer> experimentalGenerationSpinner;
     @FXML private DatePicker experimentalGenerationDatePicker;
+    @FXML private Text experimentalGenerationDateText;
     @FXML private Spinner<Integer> sampleNumberSpinner;
     @FXML private CheckBox ExtinctButton;
     @FXML private Spinner<Integer> backupGenerationSpinner;
@@ -30,18 +33,17 @@ public class Controller implements Initializable{
 
     @FXML private Spinner<Integer> EHSampleNumberSpinner;
     @FXML private TableView EHTable;
-    @FXML private TableColumn EHSampleColumn, EHExperimentalGenerationColumn, EHPickDateColumn, EHBackupGenerationColumn, EHBackupDateColumn,EHNotesColumn;
+    @FXML private TableColumn EHSampleColumn, EHExperimentalGenerationColumn, EHPickDateColumn, EHBackupGenerationColumn, EHBackupDateColumn,EHNotesColumn,EHBackupNumberColumn;
 
     public Entries entriesClass = new Entries();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        entriesClass.parseEntriesJSON();
         initializeAddEntryComponents();
         initializeAllEntriesTable();
         initializeSampleListTable();
         initializeSampleHistoryTable();
-
+        MainStage.controller=this;
     }
 
     /**
@@ -49,13 +51,14 @@ public class Controller implements Initializable{
      */
     private void initializeAddEntryComponents() {
         experimentalGenerationSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,999,0));
-        experimentalGenerationSpinner.focusedProperty().addListener(((observable, oldValue, newValue) -> {
+        experimentalGenerationSpinner.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if(!newValue){
                 experimentalGenerationSpinner.increment(0  );
+                updateExperimentalGenerationDateRecommendation();
             }
-        }));
+        });
 
-        sampleNumberSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(500,999,500));
+        sampleNumberSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(500,1099,500));
         sampleNumberSpinner.focusedProperty().addListener(((observable, oldValue, newValue) -> {
             if(!newValue){
                 sampleNumberSpinner.increment(0  );
@@ -81,6 +84,7 @@ public class Controller implements Initializable{
         AEBackupNumberColumn.setCellValueFactory(new PropertyValueFactory<Entry, Integer>("SbackupNumber"));
 
         allEntriesTable.setItems(entriesClass.entriesList);
+        allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
     }
 
     private void initializeSampleListTable() {
@@ -111,10 +115,15 @@ public class Controller implements Initializable{
         EHBackupGenerationColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SbackupGeneration"));
         EHBackupDateColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SbackupOfDate"));
         EHNotesColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("Snotes"));
+        EHBackupNumberColumn.setCellValueFactory(new PropertyValueFactory<Entry, Integer>("SbackupNumber"));
 
         EHTable.setItems(entriesClass.entryHistory);
     }
 
+    public void sortByExperimentalGen(){
+        System.out.println("Sorted bitches");
+        allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
+    }
     //Component Events
         //TopBar
             public void exit() {
@@ -132,6 +141,7 @@ public class Controller implements Initializable{
                 if (!entriesClass.addEntry(entry)) {
                     System.out.println("Could not add entry");
                 }
+                allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
             }
 
             public void deleteEntryButtonPressed(){
@@ -183,5 +193,12 @@ public class Controller implements Initializable{
             public void PrintFormattedEntries(){entriesClass.printFormattedEntries(SLGenerationSpinner.getValue());}
 
             public void PrintAllFormattedEntries(){entriesClass.printAllFormattedEntries(SLGenerationSpinner.getValue());}
+
+
+    //Miscellaneous Methods
+    public void updateExperimentalGenerationDateRecommendation(){
+        LocalDate date = Entries.getDateForGeneration(experimentalGenerationSpinner.getValue());
+        experimentalGenerationDateText.setText("Recommended: "+date.getMonthValue()+"/"+date.getDayOfMonth()+"/"+date.getYear());
+    }
 
 }

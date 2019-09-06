@@ -1,5 +1,6 @@
 package com.BaerMA;
 
+import com.Controllers.Controller;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -47,6 +48,7 @@ public class MainStage{
 
     //class instances
     public Entries entriesClass = new Entries();
+    public static Controller controller;
 
 
     //Entry Table Components
@@ -70,6 +72,8 @@ public class MainStage{
         //entries
         entriesClass.parseEntriesJSON();
         entriesClass.loadEntriesFromCSV();
+        entriesClass.calcBackups();
+        controller.sortByExperimentalGen();
 
     }
 
