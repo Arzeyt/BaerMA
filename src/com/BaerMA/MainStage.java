@@ -25,7 +25,6 @@ import java.util.Locale;
 public class MainStage{
 
     //much of this is deprecated due to using SceneBuilding instead. Check the controller class to configure the GUI.
-    int sceneWidth=1200, sceneHeight=800;
 
     Text generationText;
     Text dateText;
@@ -64,6 +63,7 @@ public class MainStage{
 
 
     public void start(Stage primaryStage) throws Exception {
+        System.out.println("Resource: "+getClass().getResource("main.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("BaerMA");
         primaryStage.setScene(new Scene(root));
