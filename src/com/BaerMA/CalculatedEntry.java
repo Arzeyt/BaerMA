@@ -75,7 +75,7 @@ public class CalculatedEntry {
     }
 
     public static Integer calculateGeneration(int sampleNumber, int experimentalGeneration, ObservableList<Entry> entries){
-        ArrayList<Entry> entryList = getEntriesForSampleNumber(sampleNumber,entries);
+        ArrayList<Entry> entryList = getEntriesForSampleNumber(sampleNumber);
 
         //if there are no entries for this sample number, just return the experimental generation
         if(entryList==null){
@@ -120,9 +120,9 @@ public class CalculatedEntry {
 
     }
 
-    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber, ObservableList<Entry> oEntries){
+    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber){
         ArrayList<Entry> entries = new ArrayList<>();
-        for(Entry e : oEntries){
+        for(Entry e : Entries.entriesList){
             if(e.id==sampleNumber) {
                 entries.add(e);
             }
@@ -141,7 +141,7 @@ public class CalculatedEntry {
     }
 
     public Integer getNumberOfBackupsForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID,oEntries);
+        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
         if(entries==null)return 0;
         Collections.sort(entries,new SortByDate());
         int backupCounter = 0;
@@ -155,7 +155,7 @@ public class CalculatedEntry {
     }
 
     public Integer getResetNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID,oEntries);
+        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
         if(entries==null)return 0;
         Collections.sort(entries,new SortByDate());
         int resetCounter = 0;
@@ -176,7 +176,7 @@ public class CalculatedEntry {
      */
     public static Integer[] getBackupAndResetNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
         Integer[] bandr = new Integer[2];
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID,oEntries);
+        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
         if(entries==null){
             bandr[0] = 0;
             bandr[1] = 0;
@@ -204,7 +204,7 @@ public class CalculatedEntry {
     //shouldn't do it this way due to high overhead
 
     public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries) {
-        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID, entries);
+        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID);
         if(sampleEntries==null){return 0;}
 
         int exgen=0;

@@ -26,6 +26,7 @@ public class ExcelMaster {
        }
    }
 
+   //baer sheet----------------------
    public static void createBaerSheetUpTo(int experimentalGeneration){
        for(int i = 0; i<=experimentalGeneration; i++){
            createBaerSheet(i, false);
@@ -110,7 +111,6 @@ public class ExcelMaster {
            e.printStackTrace();
        }
    }
-
    public static File createBaerSheetCopy(int experimentalGen){
        File baerTemplate = new File("BaerMA Template.xlsx");
        if(baerTemplate.exists()){
@@ -129,5 +129,15 @@ public class ExcelMaster {
        return baerFile;
    }
 
+   //generation history excel sheet
+   public static void createGenerationVisualizer(int experimentalGeneration){
+        XSSFWorkbook wb = new XSSFWorkbook();
+        File visualizerFile = new File("Generation Visualizer for gen: "+experimentalGeneration);
+        try{
+            OutputStream outputStream = new FileOutputStream(visualizerFile);
+        }catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
