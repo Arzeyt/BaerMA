@@ -70,10 +70,10 @@ public class MainStage{
         primaryStage.show();
 
         //entries
-        entriesClass.parseEntriesJSON();
-        entriesClass.loadEntriesFromCSV();
-        entriesClass.calcBackups();
-        controller.sortByExperimentalGen();
+        //entriesClass.parseEntriesJSON();
+        //entriesClass.loadEntriesFromCSV();
+        //entriesClass.calcBackups();
+        //controller.sortByExperimentalGen();
 
     }
 
