@@ -60,7 +60,8 @@ public class ExcelMaster {
            //create an arraylist for each calculated entry
            ArrayList<CalculatedEntry> calculatedEntries=new ArrayList<>();
 
-           for(int i =500; i<1000; i++){
+           //for pre-J2 sheet
+           for(int i =500; i<=1099; i++){
                CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGeneration, Entries.entriesList);
                calculatedEntries.add(calculatedEntry);
            }
@@ -68,15 +69,19 @@ public class ExcelMaster {
            System.out.println(calculatedEntries.size());
 
            int rowi = 2;
-           int celli = 0;
-           row = sheet.getRow(rowi);
-           cell = row.getCell(celli);
+           int columni = 0;
 
            for(CalculatedEntry e : calculatedEntries){
+
+               row = sheet.getRow(rowi);
+               cell = row.getCell(columni);
+
                cell.setCellValue(e.sampleID.getValue());
                System.out.println(cell.getNumericCellValue());
                //right one
+               row.createCell(1);
                cell = row.getCell(1);
+               System.out.println("Writing cell: "+cell.getRowIndex()+" "+cell.getColumnIndex());
                //format extinct
                if(e.calculatedGeneration.getValue()==-1){
                    cell.setCellType(CellType.STRING);
@@ -87,8 +92,7 @@ public class ExcelMaster {
 
                //increment row and reset column to 0
                rowi++;
-               row=sheet.getRow(rowi);
-               cell=row.getCell(0);
+               columni=0;
            }
 
            //write it out
@@ -112,11 +116,16 @@ public class ExcelMaster {
        }
    }
    public static File createBaerSheetCopy(int experimentalGen){
-       File baerTemplate = new File("BaerMA Template.xlsx");
-       if(baerTemplate.exists()){
-           System.out.println("BaerMA Template.xlsx found");
+       File baerTemplate = null;
+       if(experimentalGen<Settings.J2LineGenesisGeneration){
+            baerTemplate = new File("BaerMA Template X.xlsx");
        }else{
-           System.out.println("BaerMA Template.xlsx not found. Please replace this file.");
+           baerTemplate = new File("BaerMA Template J2.xlsx");
+       }
+       if(baerTemplate.exists()){
+           System.out.println(baerTemplate.getName()+" found");
+       }else{
+           System.out.println(baerTemplate.getName()+" not found. Please replace this file.");
        }
        //copy the file
        File baerFile = new File(Entries.outputFile+File.separator+"BaerMA Gen "+experimentalGen+".xlsx");

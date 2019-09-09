@@ -248,7 +248,7 @@ public class Entries {
     //calculated entries
     public static void createCalculatedEntriesList(int experimentalGeneration){
         calculatedEntries.clear();
-        for(int i =500; i<1000; i++){
+        for(int i =500; i<=1099; i++){
             CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGeneration, entriesList);
             calculatedEntries.add(calculatedEntry);
             /**System.out.println("Calculated Entry id: "+calculatedEntry.sampleID.get()+" simpleStringProperty ID: "+calculatedEntry.sampleIDProperty()
@@ -402,7 +402,7 @@ public class Entries {
             writer.write("Sample ID,Generation,Backup Count,Reset Count\n");
             for(CalculatedEntry e : calculatedEntries){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(e.sampleID.getValue(), entriesList);
+                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(e.sampleID.getValue());
                 int backupCounter = 0;
                 int resetCounter = 0;
                 if (sampleEntries!=null) {
@@ -451,9 +451,9 @@ public class Entries {
             header=header+"\n";
             writer.write(header);
             //for each sample number
-            for(int csample=500;csample<=999;csample++){
+            for(int csample=500;csample<=1099;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample, this.entriesList);
+                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
                 String line = csample+"";
                 //loop through generation 1 through numberOfGenerations and append a 0 for no backup or 1 for backup for each generation
                 for(int cgen=1;cgen<=numberOfGenerations;cgen++){
@@ -508,7 +508,7 @@ public class Entries {
             //for each sample number
             for(int csample=500;csample<=999;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample, this.entriesList);
+                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
 
                 String line = csample+"";//build this line by appending sample generation for each experimental generations
 
@@ -516,7 +516,7 @@ public class Entries {
                 if(sampleEntries!=null){
                     //for every experimental generation (1 through numberOfGenerations), append the generation of the sample to the line
                     for(int cgen=1; cgen<=numberOfGenerations;cgen++) {
-                        line=line+","+CalculatedEntry.calculateGeneration(csample,cgen, entriesList);
+                        line=line+","+CalculatedEntry.calculateGeneration(csample,cgen);
                     }
                 }else{
                     for(int cgen=1; cgen<=numberOfGenerations;cgen++){
@@ -563,7 +563,7 @@ public class Entries {
                 for (Entry e : nonextinct) {
                     String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
                     String line = null;
-                    line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, experimentalGen - 1, entriesList)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
+                    line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, experimentalGen - 1)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
                             + "\r\n";
                     writer.write(line);
                 }
@@ -609,7 +609,7 @@ public class Entries {
                     for (Entry e : nonextinct) {
                         String date = e.backupOfDate.getMonthValue() + "/" + e.backupOfDate.getDayOfMonth() + "/" + e.backupOfDate.getYear();
                         String line = null;
-                        line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, i - 1, entriesList)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
+                        line = "BK" + e.backupNumbersp().getValue() + " " + e.getLineLetter() + e.id + "." + (CalculatedEntry.calculateGeneration(e.id, i - 1)) + " from " + e.getLineLetter() + e.id + "." + e.backupGeneration + " of " + date + " " + e.notes
                                 + "\r\n";
                         writer.write(line);
                     }
@@ -650,7 +650,7 @@ public class Entries {
             //for each sample number
             for(int csample=500;csample<=999;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample, this.entriesList);
+                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
                 String line = csample+"";
                 //loop through generation 1 through numberOfGenerations and append a 0 for no backup or 1 for backup for each generation
                 for(int cgen=1;cgen<=numberOfGenerations;cgen++){
@@ -688,7 +688,7 @@ public class Entries {
 
     public void createEntryHistoryList(int sampleID){
         entryHistory.clear();
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID, entriesList);
+        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
         if(entries==null)return;
         Collections.sort(entries,new SortByDate());
         for(Entry e : entries){

@@ -61,9 +61,9 @@ public class CalculatedEntry {
     public CalculatedEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries){
         this.sampleID =new SimpleIntegerProperty(sampleID);
 
-        this.backupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration,entries));
+        this.backupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration));
 
-        int calculatedGeneration = calculateGeneration(sampleID,experimentalGeneration,entries);
+        int calculatedGeneration = calculateGeneration(sampleID,experimentalGeneration);
         this.calculatedGeneration =new SimpleIntegerProperty(calculatedGeneration);
 
         //for efficiency's sake, use the function that calculates both backup and reset count at the same time.
@@ -72,19 +72,30 @@ public class CalculatedEntry {
         this.resetCount=new SimpleIntegerProperty(bandr[1]);
 
 
+
+
     }
 
-    public static Integer calculateGeneration(int sampleNumber, int experimentalGeneration, ObservableList<Entry> entries){
+    public static Integer calculateGeneration(int sampleNumber, int experimentalGeneration){
         ArrayList<Entry> entryList = getEntriesForSampleNumber(sampleNumber);
 
-        //if there are no entries for this sample number, just return the experimental generation
+        //if there are no entries for this sample number, just return the experimental generation, unless it's a J2 line
         if(entryList==null){
+            //if J2 line
+            if(sampleNumber>=1000 && sampleNumber <=1099) {
+                if (experimentalGeneration < Settings.J2LineGenesisGeneration) {
+                    return -2;
+                }else{
+                    return experimentalGeneration-Settings.J2LineGenesisGeneration;
+                }
+            }
             return experimentalGeneration;
         }
 
         //ensure that entries with experimental generations larger than the input are ignored, but the largest one before that is picked
+        //find the largest valid entry
         entryList.sort(new SortByDate());
-        Entry largestValidEntry = entryList.get(0);
+        Entry largestValidEntry = entryList.get(0); //start with the entry with an experimental generation sorted at the bottom.
 
         for(int i = 0; i<entryList.size(); i++){
             Entry e = entryList.get(i);
@@ -112,6 +123,14 @@ public class CalculatedEntry {
             return -1;
         }
 
+        //J2 line calculation. This line was set up at gen 71 = gen 0.
+        // If the sample is a J, and the expGen <= gen 71, return -2, but this was already done at the beginning of this method.
+        //else, return the same calculation as normal, minus 71
+        if(sampleNumber>=1000 && sampleNumber <= 1099){
+            if(experimentalGeneration>=Settings.J2LineGenesisGeneration){
+                return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1-Settings.J2LineGenesisGeneration;
+            }
+        }
         //the final calculation
         int calculatedGeneration = experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1;
 
@@ -208,17 +227,22 @@ public class CalculatedEntry {
 
     //shouldn't do it this way due to high overhead
 
-    public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries) {
+    /**
+     * @param sampleID
+     * @param experimentalGeneration
+     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration
+     */
+    public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
         ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID);
         if(sampleEntries==null){return 0;}
 
-        int exgen=0;
+        int exGen=0;
         int backupNumber=0;
         for(Entry e : sampleEntries){
             if(e.experimentalGeneration>=experimentalGeneration){
                 return 0;
-            }else if(exgen==0){
-                exgen=e.experimentalGeneration;
+            }else if(exGen==0){
+                exGen=e.experimentalGeneration;
             }else{
 
             }
