@@ -23,7 +23,7 @@ public class Entries {
     public static final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
     public static final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
 
-    File dataFile = new File("Data");
+    File dataFile = Settings.dataDirectory;
     static File outputFile = new File("Output");
 
     public Entries(){
@@ -82,19 +82,19 @@ public class Entries {
         Gson gson=gsonBuilder.create();
 
         try {
-            FileWriter writer = new FileWriter(dataFile+File.separator+"Entries.json");
+            FileWriter writer = new FileWriter(Settings.dataDirectory +File.separator+"Entries.json");
             writer.write(gson.toJson(entries));
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-    public void parseEntriesJSON(){
+
+    public static void parseEntriesJSON(File file){
 
         try {
 
-            FileReader reader = new FileReader(dataFile+File.separator+"Entries.json");
+            FileReader reader = new FileReader(file);
             Gson gson=new Gson();
 
             ArrayList<Entry> entries = gson.fromJson(reader,new TypeToken<ArrayList<Entry>>(){}.getType());
@@ -285,7 +285,7 @@ public class Entries {
         return list;
     }
 
-    public void calcBackups(){
+    public static void calcBackups(){
         //SampleNumber, list containing all entries for that sample number
         HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
 

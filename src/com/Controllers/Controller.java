@@ -8,11 +8,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import java.awt.*;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import com.BaerMA.*;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -51,9 +55,8 @@ public class Controller implements Initializable{
         MainStage.controller=this;
     }
 
-    /**
-     * Assigns spinner value factories and uses the focusedProperty event listener to enable reading accurate inputs. This is a work-around to a bug
-     */
+    //1. Initializers--------------------------
+    //Assigns spinner value factories and uses the focusedProperty event listener to enable reading accurate inputs. This is a work-around to a bug
     private void initializeAddEntryComponents() {
         experimentalGenerationSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,999,0));
         experimentalGenerationSpinner.focusedProperty().addListener((observable, oldValue, newValue) -> {
@@ -125,14 +128,30 @@ public class Controller implements Initializable{
         EHTable.setItems(entriesClass.entryHistory);
     }
 
-    public void sortByExperimentalGen(){
-        allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
-    }
-    //Component Events
-        //TopBar
+
+    //2. Component Events----------------
+        //a. TopBar---------
             public void exit() {
             System.exit(0);
         }
+
+            public void loadEntriesFile_ButtonPressed(){
+                FileDialog dialog = new FileDialog((Frame)null, "Select Entries File to Open");
+                dialog.setMode(FileDialog.LOAD);
+                dialog.setVisible(true);
+                String directory = dialog.getDirectory();
+                String fileName = dialog.getFile();
+
+                File test = new File(directory+File.separator+fileName);
+                System.out.println(test.getAbsolutePath());
+                System.out.println(test.exists());
+                System.out.println(test.canRead());
+                System.out.println(test.isDirectory());
+
+                Entries.parseEntriesJSON(test);
+                Entries.calcBackups();
+                sortByExperimentalGen();
+            }
 
             public void openTerminal(){
                 System.out.println("openingTerminal");
@@ -147,7 +166,7 @@ public class Controller implements Initializable{
                 }
             }
 
-        //Entry Panel
+        //b. Entry Panel-------
             public void addEntryAction() {
                 Entry entry;
                 if(ExtinctButton.isSelected()==false){
@@ -179,7 +198,7 @@ public class Controller implements Initializable{
             public void experimentButtonPressed(){
             }
 
-        //Sample List Panel (Top right)
+        //c. Sample List Panel (Top right)------
 
             public void PrintBaerSheet(){ExcelMaster.createBaerSheet(SLGenerationSpinner.getValue(),true);}
 
@@ -212,10 +231,13 @@ public class Controller implements Initializable{
             public void PrintAllFormattedEntries(){entriesClass.printAllFormattedEntries(SLGenerationSpinner.getValue());}
 
 
-    //Miscellaneous Methods
+    //3. Miscellaneous Methods-------------
     public void updateExperimentalGenerationDateRecommendation(){
         LocalDate date = Entries.getDateForGeneration(experimentalGenerationSpinner.getValue());
         experimentalGenerationDateText.setText("Recommended: "+date.getMonthValue()+"/"+date.getDayOfMonth()+"/"+date.getYear());
+    }
+    public void sortByExperimentalGen(){
+        allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
     }
 
 }

@@ -27,6 +27,7 @@
           <Menu mnemonicParsing="false" text="File">
             <items>
               <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#exit" text="Close" />
+                  <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#loadEntriesFile_ButtonPressed" text="Load Entries File" />
                   <MenuItem mnemonicParsing="false" onAction="#openTerminal" text="Open Terminal" />
             </items>
           </Menu>

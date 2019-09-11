@@ -112,7 +112,7 @@ public class Entry implements Serializable{
 
         this.Snotes=new SimpleStringProperty(notes+"");
 
-        System.out.println("sampleID: "+ sampleIDssp +"\nSexperimentalGeneration: "+SexperimentalGeneration+" \nSbackupGeneration: "+SbackupGeneration+"\nSbackupOfDate: "+SbackupOfDate+" \nSnotes: "+Snotes+" \nSbackupNumber"+SbackupNumber);
+        //System.out.println("sampleID: "+ sampleIDssp +"\nSexperimentalGeneration: "+SexperimentalGeneration+" \nSbackupGeneration: "+SbackupGeneration+"\nSbackupOfDate: "+SbackupOfDate+" \nSnotes: "+Snotes+" \nSbackupNumber"+SbackupNumber);
     }
 
 
