@@ -23,27 +23,6 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
    <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#exit" text="Close" />
-                  <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#loadEntriesFile_ButtonPressed" text="Load Entries File" />
-                  <MenuItem mnemonicParsing="false" onAction="#openTerminal" text="Open Terminal" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem disable="true" mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Output">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#PrintList" text="Print List" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
     <AnchorPane minHeight="0.0" minWidth="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0">
@@ -219,5 +198,21 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#exit" text="Close" />
+                  <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#loadEntriesFile_ButtonPressed" text="Load Entries File" />
+                  <MenuItem mnemonicParsing="false" onAction="#openTerminal" text="Open Terminal" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>

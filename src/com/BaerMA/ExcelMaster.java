@@ -34,37 +34,40 @@ public class ExcelMaster {
    }
    public static void createBaerSheet(int experimentalGeneration, boolean open){
        File baerSheet = createBaerSheetCopy(experimentalGeneration);
-       try(InputStream inputStream = new FileInputStream(baerSheet)){
+       try(InputStream inputStream = new FileInputStream(baerSheet)) {
            XSSFWorkbook wb = (XSSFWorkbook) WorkbookFactory.create(inputStream);
            XSSFSheet sheet = wb.getSheetAt(0);
-           System.out.println("editing sheet: "+sheet.getSheetName());
+           System.out.println("editing sheet: " + sheet.getSheetName());
            XSSFRow row = sheet.getRow(0);
            XSSFCell cell = row.getCell(0);
-           System.out.println("Cell 0,0 is: "+cell.getStringCellValue());
+           System.out.println("Cell 0,0 is: " + cell.getStringCellValue());
            //set generation
            row = sheet.getRow(2);
            cell = row.getCell(5);
-           cell.setCellValue("Baer MA Generation #: "+experimentalGeneration);
+           cell.setCellValue("Baer MA Generation #: " + experimentalGeneration);
            //set Date
            LocalDate date = Entries.getDateForGeneration(experimentalGeneration);
            row = sheet.getRow(2);
-           cell=row.getCell(0);
-           cell.setCellValue("Date: "+date.getMonthValue()+"-"+date.getDayOfMonth()+"-"+date.getYear());
+           cell = row.getCell(0);
+           cell.setCellValue("Date: " + date.getMonthValue() + "-" + date.getDayOfMonth() + "-" + date.getYear());
 
            //Calc 1 page
-           sheet=wb.getSheetAt(1);
+           sheet = wb.getSheetAt(1);
 
-           System.out.println("editing sheet: "+sheet.getSheetName());
+           System.out.println("editing sheet: " + sheet.getSheetName());
 
 
            //create an arraylist for each calculated entry
-           ArrayList<CalculatedEntry> calculatedEntries=new ArrayList<>();
+           ArrayList<CalculatedEntry> calculatedEntries = new ArrayList<>();
 
+           int max = 999;
            //for pre-J2 sheet
-           for(int i =500; i<=1099; i++){
-               CalculatedEntry calculatedEntry = new CalculatedEntry(i,experimentalGeneration, Entries.entriesList);
+           if (experimentalGeneration >= Settings.J2LineGenesisGeneration) max=1099;
+           for (int i = 500; i <= max; i++) {
+               CalculatedEntry calculatedEntry = new CalculatedEntry(i, experimentalGeneration, Entries.entriesList);
                calculatedEntries.add(calculatedEntry);
            }
+
 
            System.out.println(calculatedEntries.size());
 
