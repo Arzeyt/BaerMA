@@ -23,7 +23,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
    <children>
-    <AnchorPane minHeight="0.0" minWidth="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="25.0">
          <children>
             <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0">
                <children>
@@ -116,7 +116,7 @@
             </GridPane>
          </children>
       </AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="625.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="625.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
          <children>
             <GridPane minWidth="-Infinity" prefWidth="600.0" vgap="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>
@@ -159,6 +159,7 @@
                                     <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Print Entries CSV" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries" />
                                     <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries" />
+                                    <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer" />
                               </items>
                             </Menu>
                           </menus>

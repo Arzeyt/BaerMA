@@ -3,9 +3,11 @@ package com.BaerMA;
 import javafx.scene.Parent;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.*;
 
 import java.awt.*;
+import java.awt.Color;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.file.Files;
@@ -141,15 +143,84 @@ public class ExcelMaster {
        return baerFile;
    }
 
-   //generation history excel sheet
+   //generation visualizer excel sheet
    public static void createGenerationVisualizer(int experimentalGeneration){
         XSSFWorkbook wb = new XSSFWorkbook();
-        File visualizerFile = new File("Generation Visualizer for gen: "+experimentalGeneration);
+        File visualizerFile = new File(Settings.outputDirectory+File.separator+"Generation Visualizer for gen "+experimentalGeneration+".xlsx");
+        Sheet sheet = wb.createSheet();
+        int numberOfRows=650;
+        //create 650 rows
+        for(int i=0;i<=numberOfRows;i++){sheet.createRow(i);}
+
+        //generation header
+        sheet.addMergedRegion(new CellRangeAddress(0,0,1,experimentalGeneration+1));
+        sheet.getRow(0).createCell(1).setCellValue("Generation");
+        CellStyle centered = wb.createCellStyle();
+        centered.setAlignment(HorizontalAlignment.CENTER);
+        sheet.getRow(0).getCell(1).setCellStyle(centered);
+
+        //sampleID header
+        sheet.getRow(1).createCell(0).setCellValue("Sample ID");
+
+        //generation header
+        for(int i=0;i<=experimentalGeneration;i++){
+            sheet.getRow(1).createCell(i+1).setCellValue(i);
+        }
+
+
+        //Cell styles
+       CellStyle styleYellow = wb.createCellStyle();
+       styleYellow.setFillForegroundColor(IndexedColors.YELLOW.index);
+       styleYellow.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+       CellStyle styleRed = wb.createCellStyle();
+       styleRed.setFillForegroundColor(IndexedColors.RED.index);
+       styleRed.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+       CellStyle styleBlack = wb.createCellStyle();
+       styleBlack.setFillForegroundColor(IndexedColors.BLACK.index);
+       styleBlack.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
+        //for each sample between 500 and 1099
+       for(int r=2;r<=1099-500+2;r++){
+            for(int c=0;c<=experimentalGeneration+1;c++){
+                if(c==0){
+                    System.out.println(r+" "+c);
+                    sheet.getRow(r).createCell(c).setCellValue(r-2+500);
+
+                }else{
+                    int value = new CalculatedEntry(r-2+500,c,Entries.entriesList).calculatedGeneration.getValue();
+                    sheet.getRow(r).createCell(c).setCellValue(value);
+                    if(c!=1) {
+                        if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue()) {
+                            sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
+                            System.out.println("Set yellow "+r+" "+c);
+                        }
+                        if (value == -1) {
+                            sheet.getRow(r).getCell(c).setCellStyle(styleRed);
+                        }
+                        if (value == -2) {
+                            sheet.getRow(r).getCell(c).setCellStyle(styleBlack);
+                        }
+                    }
+                }
+            }
+       }
+
+       //write file
         try{
-            OutputStream outputStream = new FileOutputStream(visualizerFile);
+           OutputStream outputStream = new FileOutputStream(visualizerFile);
+           wb.write(outputStream);
+           outputStream.close();
+           wb.close();
+           Desktop.getDesktop().open(visualizerFile);
         }catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+           e.printStackTrace();
         }
-    }
+
+   }
+
 
 }

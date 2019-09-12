@@ -230,6 +230,10 @@ public class Controller implements Initializable{
 
             public void PrintAllFormattedEntries(){entriesClass.printAllFormattedEntries(SLGenerationSpinner.getValue());}
 
+            public void PrintGenerationVisualizer(){
+                ExcelMaster.createGenerationVisualizer(SLGenerationSpinner.getValue());
+            }
+
 
     //3. Miscellaneous Methods-------------
     public void updateExperimentalGenerationDateRecommendation(){
