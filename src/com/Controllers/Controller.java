@@ -9,17 +9,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import java.awt.*;
+import java.awt.Dialog;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadPoolExecutor;
+
 import com.BaerMA.*;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 
 public class Controller implements Initializable{
 
@@ -136,8 +143,12 @@ public class Controller implements Initializable{
         }
 
             public void loadEntriesFile_ButtonPressed(){
+                Entries.entriesList.clear();
+                Entries.entryHistory.clear();
+                Entries.calculatedEntries.clear();
                 FileDialog dialog = new FileDialog((Frame)null, "Select Entries File to Open");
                 dialog.setMode(FileDialog.LOAD);
+                dialog.setFile("*.json");
                 dialog.setVisible(true);
                 String directory = dialog.getDirectory();
                 String fileName = dialog.getFile();
@@ -151,6 +162,13 @@ public class Controller implements Initializable{
                 Entries.parseEntriesJSON(test);
                 Entries.calcBackups();
                 sortByExperimentalGen();
+            }
+
+            public void ExportToCSV_ButtonPressed(){
+                Entries.writeEntriesCSV();
+                JDialog dialog = new JDialog((Frame)null,"CSV saved");
+                dialog.setVisible(true);
+
             }
 
             public void openTerminal(){

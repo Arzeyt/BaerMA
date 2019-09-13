@@ -23,7 +23,7 @@ public class Entries {
     public static final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
     public static final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
 
-    File dataFile = Settings.dataDirectory;
+    static File dataFile = Settings.dataDirectory;
     static File outputFile = new File("Output");
 
     public Entries(){
@@ -137,7 +137,7 @@ public class Entries {
     }
 
     //CSV
-    public void writeEntriesCSV(){
+    public static void writeEntriesCSV(){
         try{
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dataFile+File.separator+"Entries.csv"),"utf-8"));
 

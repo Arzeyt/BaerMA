@@ -13,6 +13,7 @@ import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ExcelMaster {
 
@@ -181,7 +182,7 @@ public class ExcelMaster {
        styleBlack.setFillForegroundColor(IndexedColors.BLACK.index);
        styleBlack.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
-        //for each sample between 500 and 1099
+        //iterate through each row and column and add the calculated generation value
        for(int r=2;r<=1099-500+2;r++){
             for(int c=0;c<=experimentalGeneration+1;c++){
                 if(c==0){
@@ -189,12 +190,11 @@ public class ExcelMaster {
                     sheet.getRow(r).createCell(c).setCellValue(r-2+500);
 
                 }else{
-                    int value = new CalculatedEntry(r-2+500,c,Entries.entriesList).calculatedGeneration.getValue();
+                    int value = new CalculatedEntry(r-2+500,c-1,Entries.entriesList).calculatedGeneration.getValue();
                     sheet.getRow(r).createCell(c).setCellValue(value);
                     if(c!=1) {
                         if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue()) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
-                            System.out.println("Set yellow "+r+" "+c);
                         }
                         if (value == -1) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleRed);
@@ -205,6 +205,15 @@ public class ExcelMaster {
                     }
                 }
             }
+       }
+
+       //resize columns
+       Iterator it = sheet.getRow(1).cellIterator();
+       while(it.hasNext()){
+           Cell next = (Cell) it.next();
+           if(next.getColumnIndex()>=1){
+               sheet.setColumnWidth(next.getColumnIndex(), (int) (String.valueOf(next.getColumnIndex()-1).length()*400));
+           }
        }
 
        //write file
