@@ -65,7 +65,7 @@ public class ExcelMaster {
 
            int max = 999;
            //for pre-J2 sheet
-           if (experimentalGeneration >= Settings.J2LineGenesisGeneration) max=1099;
+           if (experimentalGeneration >= MainStage.settings.J2LineGenesisGeneration) max=1099;
            for (int i = 500; i <= max; i++) {
                CalculatedEntry calculatedEntry = new CalculatedEntry(i, experimentalGeneration, Entries.entriesList);
                calculatedEntries.add(calculatedEntry);
@@ -123,7 +123,7 @@ public class ExcelMaster {
    }
    public static File createBaerSheetCopy(int experimentalGen){
        File baerTemplate = null;
-       if(experimentalGen<Settings.J2LineGenesisGeneration){
+       if(experimentalGen< MainStage.settings.J2LineGenesisGeneration){
             baerTemplate = new File("BaerMA Template X.xlsx");
        }else{
            baerTemplate = new File("BaerMA Template J2.xlsx");
@@ -147,7 +147,7 @@ public class ExcelMaster {
    //generation visualizer excel sheet
    public static void createGenerationVisualizer(int experimentalGeneration){
         XSSFWorkbook wb = new XSSFWorkbook();
-        File visualizerFile = new File(Settings.outputDirectory+File.separator+"Generation Visualizer for gen "+experimentalGeneration+".xlsx");
+        File visualizerFile = new File(MainStage.settings.outputDirectory+File.separator+"Generation Visualizer for gen "+experimentalGeneration+".xlsx");
         Sheet sheet = wb.createSheet();
         int numberOfRows=650;
         //create 650 rows

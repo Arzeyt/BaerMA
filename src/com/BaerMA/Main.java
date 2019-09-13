@@ -29,8 +29,8 @@ public class Main extends Application{
             //System.out.println("Deserializing entries");
             //deserializeEntries();
 
-            dividingFlair();
-            help();
+            //dividingFlair();
+            //help();
 
             launch(args);
         }

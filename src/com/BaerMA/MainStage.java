@@ -46,8 +46,9 @@ public class MainStage{
 
 
     //class instances
-    public Entries entriesClass = new Entries();
+    public static Entries entries;
     public static Controller controller;
+    public static Settings settings;
 
 
     //Entry Table Components
@@ -60,20 +61,27 @@ public class MainStage{
     //
     TableView entryHistoryTable;
 
-
-
     public void start(Stage primaryStage) throws Exception {
+        //It's important to keep the initialization of these static classes in order
+        //settings
+        settings=new Settings();
+        settings.initialize();
+        //entries
+        entries =new Entries();
+        entries.parseEntriesJSON(settings.entriesFile);
+        //entriesClass.loadEntriesFromCSV();
+        entries.calcBackups();
+
+        //this initializes controller
         System.out.println("Resource: "+getClass().getResource("main.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("BaerMA");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-
-        //entries
-        entriesClass.parseEntriesJSON(Settings.entriesFile);
-        //entriesClass.loadEntriesFromCSV();
-        entriesClass.calcBackups();
         controller.sortByExperimentalGen();
+
+
+
 
     }
 
@@ -166,13 +174,13 @@ public class MainStage{
         notes.setCellValueFactory(new PropertyValueFactory<Entry, String>("Snotes"));
 
         entryTable.getColumns().addAll(sampleNumber,sampleGeneration,pickDate,backupGeneration, backupOfDate, notes);
-        entryTable.setItems(entriesClass.entriesList);
+        entryTable.setItems(entries.entriesList);
 
 
         entryTable.setOnKeyPressed(event -> {
             //delete entries with del button
             if(event.getCode()== KeyCode.DELETE){
-                entriesClass.removeEntry((Entry) entryTable.getFocusModel().getFocusedItem());
+                entries.removeEntry((Entry) entryTable.getFocusModel().getFocusedItem());
             }
         });
 
@@ -206,7 +214,7 @@ public class MainStage{
         notes.setCellValueFactory(new PropertyValueFactory<Entry, String>("Snotes"));
 
         entryHistoryTable.getColumns().addAll(sampleNumber,sampleGeneration,pickDate,backupGeneration, backupOfDate, notes);
-        entryHistoryTable.setItems(entriesClass.entryHistory);
+        entryHistoryTable.setItems(entries.entryHistory);
 
         return entryHistoryTable;
     }
@@ -246,7 +254,7 @@ public class MainStage{
     private Button createBackupTablePrintButton(){
         Button button = new Button("Print Backup Table");
         button.setOnAction(event -> {
-            entriesClass.writeBackupTable(22);
+            entries.writeBackupTable(22);
             System.out.println("Printed BackupTable");
         });
 
@@ -272,7 +280,7 @@ public class MainStage{
         resetCount.setCellValueFactory(new PropertyValueFactory<CalculatedEntry, String>(CalculatedEntry.resetCountString));
 
         sampleListTable.getColumns().addAll(sampleNumber,sampleGeneration,backupCount,resetCount);
-        sampleListTable.setItems(entriesClass.calculatedEntries);
+        sampleListTable.setItems(entries.calculatedEntries);
         return sampleListTable;
     }
 
@@ -280,7 +288,7 @@ public class MainStage{
         Button deleteEntryButton = new Button("Delete Entry");
         deleteEntryButton.setOnAction(event -> {
             Entry entry = (Entry) entryTable.getSelectionModel().getSelectedItem();
-            entriesClass.removeEntry(entry);
+            entries.removeEntry(entry);
         });
         return deleteEntryButton;
     }
@@ -292,7 +300,7 @@ public class MainStage{
         sampleListGenerationSpinner.valueProperty().addListener(new ChangeListener<Integer>() {
             @Override
             public void changed(ObservableValue<? extends Integer> observable, Integer oldValue, Integer newValue) {
-                entriesClass.createCalculatedEntriesList(newValue);
+                entries.createCalculatedEntriesList(newValue);
                 System.out.println("\nOld Value: "+oldValue+"\nNew Value: "+newValue);
             }
         });
@@ -303,7 +311,7 @@ public class MainStage{
     private Button createClearAllEntriesButton(){
         Button button = new Button("Clear All");
         button.setOnAction(event -> {
-            entriesClass.clearEntries();
+            entries.clearEntries();
         });
         return button;
     }
@@ -328,7 +336,7 @@ public class MainStage{
         Button button = new Button("Add Entry");
         button.setOnAction(event -> {
             Entry entry = new Entry(sampleNumberSpinner.getValue(),experimentalGenerationSpinner.getValue(), pickDatePicker.getValue(),backupGenerationSpinner.getValue(),backupOfDate,notesField.getText());
-            if(!entriesClass.addEntry(entry)){
+            if(!entries.addEntry(entry)){
                 System.out.println("Could not add entry");
             }
         });
@@ -361,7 +369,7 @@ public class MainStage{
             if (!newValue) {
                 sampleNumberSpinner.increment(0); // won't change value, but will commit editor
                 //display generation history
-                entriesClass.createEntryHistoryList(sampleNumberSpinner.getValue());
+                entries.createEntryHistoryList(sampleNumberSpinner.getValue());
                 System.out.println("Showing history for sample "+sampleNumberSpinner.getValue());
             }
         });

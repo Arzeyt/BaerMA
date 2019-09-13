@@ -51,7 +51,7 @@ public class Controller implements Initializable{
     @FXML private TableView EHTable;
     @FXML private TableColumn EHSampleColumn, EHExperimentalGenerationColumn, EHPickDateColumn, EHBackupGenerationColumn, EHBackupDateColumn,EHNotesColumn,EHBackupNumberColumn;
 
-    public Entries entriesClass = new Entries();
+    private Entries entriesClass = MainStage.entries;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -166,9 +166,6 @@ public class Controller implements Initializable{
 
             public void ExportToCSV_ButtonPressed(){
                 Entries.writeEntriesCSV();
-                JDialog dialog = new JDialog((Frame)null,"CSV saved");
-                dialog.setVisible(true);
-
             }
 
             public void openTerminal(){

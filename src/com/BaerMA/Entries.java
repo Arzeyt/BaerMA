@@ -17,51 +17,59 @@ import java.util.*;
  */
 public class Entries {
 
+    //variables-------------
     public static int numberOfInstaces = 0;
 
     public static final ObservableList<Entry> entriesList = FXCollections.observableArrayList();
     public static final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
     public static final ObservableList<Entry> entryHistory = FXCollections.observableArrayList();
 
-    static File dataFile = Settings.dataDirectory;
-    static File outputFile = new File("Output");
+    static File dataFile = MainStage.settings.dataDirectory;
+    static File outputFile = MainStage.settings.outputDirectory;
 
+    //Constructor----------
     public Entries(){
+
         numberOfInstaces++;
         System.out.println("Entries instances: "+numberOfInstaces);
 
-        System.out.println("Checking for data file");
+        System.out.print("Checking for data file: ");
         if (dataFile.exists()==false){
             dataFile.mkdir();
-            System.out.println("made data directory");
+            System.out.println("Made data directory");
+        }else{
+            System.out.println("Found data file");
         }
-        System.out.println("Checking for output file");
+
+        System.out.print("Checking for output file: ");
         //this should be done at each file write location
         if(outputFile.exists()==false){
             outputFile.mkdir();
-            System.out.println("made output directory");
+            System.out.println("Made output directory");
+        }else {
+            System.out.println("Found output file");
         }
     }
 
     //add and remove Entries
-        public boolean addEntry(Entry entry){
-            //to avoid illegal entries, ensure that Entry.equals(Entry) returns true for any entry that matches the same experimental
-            //generation date
+    public boolean addEntry(Entry entry){
+        //to avoid illegal entries, ensure that Entry.equals(Entry) returns true for any entry that matches the same experimental
+        //generation date
 
-            boolean oEntriesAdd = false;
+        boolean oEntriesAdd = false;
 
-            if(!entriesList.contains(entry)){
-                System.out.println("Added entry to entries");
-                entriesList.add(entry);
-                oEntriesAdd=true;
-                calcBackups();
-            }
-
-            jsonizeEntries();
-            return oEntriesAdd;
-
+        if(!entriesList.contains(entry)){
+            System.out.println("Added entry to entries");
+            entriesList.add(entry);
+            oEntriesAdd=true;
+            calcBackups();
         }
-        public void removeEntry(Entry e){
+
+        jsonizeEntries();
+        return oEntriesAdd;
+
+    }
+    public void removeEntry(Entry e){
 
         if(entriesList.contains(e)){
             entriesList.remove(e);
@@ -69,7 +77,8 @@ public class Entries {
 
         jsonizeEntries();
     }
-//Data Storage
+
+    //Data Storage----------------
     //JSON
     public void jsonizeEntries(){
         ArrayList<Entry> entries = new ArrayList<>();
@@ -82,14 +91,13 @@ public class Entries {
         Gson gson=gsonBuilder.create();
 
         try {
-            FileWriter writer = new FileWriter(Settings.dataDirectory +File.separator+"Entries.json");
+            FileWriter writer = new FileWriter(MainStage.settings.dataDirectory +File.separator+"Entries.json");
             writer.write(gson.toJson(entries));
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
     public static void parseEntriesJSON(File file){
 
         try {
@@ -103,8 +111,7 @@ public class Entries {
             Main.dividingFlair();
             //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
             // within the Entry that enables JavaFX tables to populate the list.
-            // The solution is to create new object based on the JSON data, and place these new Entry objets in the entries list
-            //This calls into question the utility of the UUID system. I should deprecate that.
+            // The solution is to create new object based on the JSON data, and place these new Entry objects in the entries list
             for(Entry e : entries){
                 Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
                 entriesList.add(iEntry);
@@ -329,7 +336,7 @@ public class Entries {
             //loop through the array value and compare expgen to previous expgen
             for(Entry e : entriesBySample.get(id)){
                 if (id == 618){
-                    System.out.println(e.experimentalGeneration+" "+lastGen);
+                    System.out.println("618: "+e.experimentalGeneration+" "+lastGen);
                 }
                 if(e.experimentalGeneration-lastGen==1){
                     bk++;

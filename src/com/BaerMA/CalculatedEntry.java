@@ -11,7 +11,7 @@ public class CalculatedEntry {
 
 
     public static String sampleIDString = "sampleID", calculatedGenerationString = "calculatedGeneration", backupCountString = "backupCount",
-        resetCountString = "resetCount", backupNumberString = "backupNumber";
+        resetCountString = "resetCount", backupNumberString = "SbackupNumber";
 
 
     SimpleIntegerProperty sampleID;
@@ -48,20 +48,18 @@ public class CalculatedEntry {
         return resetCount;
     }
 
-    SimpleIntegerProperty backupNumber;
-    public void setbackupNumber(Integer value){
-        backupNumberProperty().set(value);}
-    public Integer getbackupNumber(){return backupNumberProperty().getValue();}
-    public IntegerProperty backupNumberProperty(){
-        if(backupNumber ==null) backupNumber =new SimpleIntegerProperty(this,backupNumberString);
-        return backupNumber;
+    public transient SimpleIntegerProperty SbackupNumber;
+    public void setSbackupNumber(Integer value){ backupNumbersp().set(value);}
+    public Integer getSbackupNumber(){return backupNumbersp().getValue();}
+    public IntegerProperty backupNumbersp(){
+        if(SbackupNumber ==null) SbackupNumber =new SimpleIntegerProperty(this,"SbackupNumber");
+        return SbackupNumber;
     }
-
 
     public CalculatedEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries){
         this.sampleID =new SimpleIntegerProperty(sampleID);
 
-        this.backupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration));
+        this.SbackupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration));
 
         int calculatedGeneration = calculateGeneration(sampleID,experimentalGeneration);
         this.calculatedGeneration =new SimpleIntegerProperty(calculatedGeneration);
@@ -83,10 +81,10 @@ public class CalculatedEntry {
         if(entryList==null){
             //if J2 line
             if(sampleNumber>=1000 && sampleNumber <=1099) {
-                if (experimentalGeneration < Settings.J2LineGenesisGeneration) {
+                if (experimentalGeneration < MainStage.settings.J2LineGenesisGeneration) {
                     return -2;
                 }else{
-                    return experimentalGeneration-Settings.J2LineGenesisGeneration;
+                    return experimentalGeneration-MainStage.settings.J2LineGenesisGeneration;
                 }
             }
             return experimentalGeneration;
@@ -119,7 +117,7 @@ public class CalculatedEntry {
         }
 
         //X line Termination. If the sample is an X, and the expGen >= Settings.XTerminationGeneration, return -1
-        if(sampleNumber>=700 && sampleNumber<=799 && experimentalGeneration>=Settings.XTerminationGeneration){
+        if(sampleNumber>=700 && sampleNumber<=799 && experimentalGeneration>=MainStage.settings.XTerminationGeneration){
             return -1;
         }
 
@@ -127,8 +125,8 @@ public class CalculatedEntry {
         // If the sample is a J, and the expGen <= gen 71, return -2, but this was already done at the beginning of this method.
         //else, return the same calculation as normal, minus 71
         if(sampleNumber>=1000 && sampleNumber <= 1099){
-            if(experimentalGeneration>=Settings.J2LineGenesisGeneration){
-                return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1-Settings.J2LineGenesisGeneration;
+            if(experimentalGeneration>=MainStage.settings.J2LineGenesisGeneration){
+                return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1-MainStage.settings.J2LineGenesisGeneration;
             }
         }
         //the final calculation
@@ -230,7 +228,8 @@ public class CalculatedEntry {
     /**
      * @param sampleID
      * @param experimentalGeneration
-     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration
+     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration. this method is only useful for an indivual
+     * entry, and not for a Calculated entry.
      */
     public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
         ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID);
