@@ -174,6 +174,10 @@ public class ExcelMaster {
        styleYellow.setFillForegroundColor(IndexedColors.YELLOW.index);
        styleYellow.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
+       CellStyle styleGreen = wb.createCellStyle();
+       styleGreen.setFillForegroundColor(IndexedColors.GREEN.index);
+       styleGreen.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+
        CellStyle styleRed = wb.createCellStyle();
        styleRed.setFillForegroundColor(IndexedColors.RED.index);
        styleRed.setFillPattern(FillPatternType.SOLID_FOREGROUND);
@@ -184,23 +188,24 @@ public class ExcelMaster {
 
         //iterate through each row and column and add the calculated generation value
        for(int r=2;r<=1099-500+2;r++){
+            int sampleID = r-2+500;
             for(int c=0;c<=experimentalGeneration+1;c++){
                 if(c==0){
                     System.out.println(r+" "+c);
-                    sheet.getRow(r).createCell(c).setCellValue(r-2+500);
+                    sheet.getRow(r).createCell(c).setCellValue(sampleID);
 
                 }else{
-                    int value = new CalculatedEntry(r-2+500,c-1,Entries.entriesList).calculatedGeneration.getValue();
+                    int value = new CalculatedEntry(sampleID,c-1,Entries.entriesList).calculatedGeneration.getValue();
                     sheet.getRow(r).createCell(c).setCellValue(value);
                     if(c!=1) {
-                        if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue()) {
-                            sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
-                        }
-                        if (value == -1) {
-                            sheet.getRow(r).getCell(c).setCellStyle(styleRed);
-                        }
                         if (value == -2) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleBlack);
+                        }else if (value == -1) {
+                            sheet.getRow(r).getCell(c).setCellStyle(styleRed);
+                        }else if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue()) {
+                            sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
+                        }else{
+                            //sheet.getRow(r).getCell(c).setCellStyle(styleGreen);
                         }
                     }
                 }
@@ -212,7 +217,8 @@ public class ExcelMaster {
        while(it.hasNext()){
            Cell next = (Cell) it.next();
            if(next.getColumnIndex()>=1){
-               sheet.setColumnWidth(next.getColumnIndex(), (int) (String.valueOf(next.getColumnIndex()-1).length()*400));
+               sheet.setColumnWidth(next.getColumnIndex(), 800);
+               //sheet.setColumnWidth(next.getColumnIndex(), (int) (String.valueOf(next.getColumnIndex()-1).length()*400));
            }
        }
 

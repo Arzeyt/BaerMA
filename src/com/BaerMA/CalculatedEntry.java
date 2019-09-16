@@ -96,9 +96,6 @@ public class CalculatedEntry {
         entryList.sort(new SortByDate());
         Entry largestValidEntry = entryList.get(0); //start with the entry with an experimental generation sorted at the bottom.
 
-        //debug
-        if(sampleNumber==1002) System.out.println(largestValidEntry);
-
         for(int i = 0; i<entryList.size(); i++){
             Entry e = entryList.get(i);
             if(e.experimentalGeneration<=experimentalGeneration){
@@ -112,10 +109,15 @@ public class CalculatedEntry {
         //   and we should return the experimental generation value, because we're assuming no backups have been made up to this point.
         //In the case of the J2 line, we can't simply return the experimental generation because the true generation time
         //  for this sample is about 70 generations less than the experimental generation. Subtract J2LineGenesisGeneration in
-        //  this case.
+        //  this case, unless the experimetnal generation is below the J2LineGenesisGeneration, in which case we must set the
+        //value to -2
         if(largestValidEntry.experimentalGeneration>experimentalGeneration){
             if(sampleNumber>=1000 && sampleNumber <=1099){
-                return experimentalGeneration-MainStage.settings.J2LineGenesisGeneration;
+                if(experimentalGeneration<MainStage.settings.J2LineGenesisGeneration){
+                    return -2;
+                }else {
+                    return experimentalGeneration - MainStage.settings.J2LineGenesisGeneration;
+                }
             }else {
                 return experimentalGeneration;
             }
