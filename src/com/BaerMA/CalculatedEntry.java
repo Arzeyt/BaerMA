@@ -52,7 +52,7 @@ public class CalculatedEntry {
     public void setSbackupNumber(Integer value){ backupNumbersp().set(value);}
     public Integer getSbackupNumber(){return backupNumbersp().getValue();}
     public IntegerProperty backupNumbersp(){
-        if(SbackupNumber ==null) SbackupNumber =new SimpleIntegerProperty(this,"SbackupNumber");
+        if(SbackupNumber ==null) SbackupNumber =new SimpleIntegerProperty(this,backupNumberString);
         return SbackupNumber;
     }
 
@@ -228,8 +228,8 @@ public class CalculatedEntry {
     /**
      * @param sampleID
      * @param experimentalGeneration
-     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration. this method is only useful for an indivual
-     * entry, and not for a Calculated entry.
+     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration. this method is only useful for an
+     * Entry, and not for a Calculated entry.
      */
     public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
         ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID);

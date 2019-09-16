@@ -27,7 +27,7 @@
          <children>
             <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0">
                <children>
-                  <TableView fx:id="allEntriesTable" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                  <TableView fx:id="allEntriesTable" editable="true" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
                     <columns>
                       <TableColumn fx:id="AEExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
                         <TableColumn fx:id="AEPickDateColumn" prefWidth="75.0" text="Pick Date" />
