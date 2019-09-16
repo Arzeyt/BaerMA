@@ -81,6 +81,7 @@ public class CalculatedEntry {
         if(entryList==null){
             //if J2 line
             if(sampleNumber>=1000 && sampleNumber <=1099) {
+                //return -2 if this line hasn't been established yet
                 if (experimentalGeneration < MainStage.settings.J2LineGenesisGeneration) {
                     return -2;
                 }else{
@@ -95,6 +96,9 @@ public class CalculatedEntry {
         entryList.sort(new SortByDate());
         Entry largestValidEntry = entryList.get(0); //start with the entry with an experimental generation sorted at the bottom.
 
+        //debug
+        if(sampleNumber==1002) System.out.println(largestValidEntry);
+
         for(int i = 0; i<entryList.size(); i++){
             Entry e = entryList.get(i);
             if(e.experimentalGeneration<=experimentalGeneration){
@@ -103,11 +107,18 @@ public class CalculatedEntry {
                 break;
             }
         }
-        //make sure largest valid entry's experimental generation does not exceed the experimental generation input.
+        //Make sure largest valid entry's experimental generation does not exceed the experimental generation input.
         //If it does, this means that there are no entries for this sample before the inputted experimental generation
-        //and we should return the experimental generation value, because we're assuming no backups have been made up to this point
+        //   and we should return the experimental generation value, because we're assuming no backups have been made up to this point.
+        //In the case of the J2 line, we can't simply return the experimental generation because the true generation time
+        //  for this sample is about 70 generations less than the experimental generation. Subtract J2LineGenesisGeneration in
+        //  this case.
         if(largestValidEntry.experimentalGeneration>experimentalGeneration){
-            return experimentalGeneration;
+            if(sampleNumber>=1000 && sampleNumber <=1099){
+                return experimentalGeneration-MainStage.settings.J2LineGenesisGeneration;
+            }else {
+                return experimentalGeneration;
+            }
         }
 
         //if the sample is extinct by this point, the largest valid entry will contain a value of -1 for the backup generation. In this case,
@@ -126,7 +137,7 @@ public class CalculatedEntry {
         //else, return the same calculation as normal, minus 71
         if(sampleNumber>=1000 && sampleNumber <= 1099){
             if(experimentalGeneration>=MainStage.settings.J2LineGenesisGeneration){
-                return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1-MainStage.settings.J2LineGenesisGeneration;
+                return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1;
             }
         }
         //the final calculation
