@@ -188,6 +188,11 @@ public class ExcelMaster {
 
         //iterate through each row and column and add the calculated generation value
        for(int r=2;r<=1099-500+2;r++){
+           //progress calc---
+            float progress= (float) ((double) r/(1099-500+2));
+            System.out.println("progress is: "+progress);
+            MainStage.controller.setSLPrintProgress(progress);
+            //---
             int sampleID = r-2+500;
             for(int c=0;c<=experimentalGeneration+1;c++){
                 if(c==0){
@@ -197,12 +202,12 @@ public class ExcelMaster {
                 }else{
                     int value = new CalculatedEntry(sampleID,c-1,Entries.entriesList).calculatedGeneration.getValue();
                     sheet.getRow(r).createCell(c).setCellValue(value);
-                    if(c!=1) {
+                    if(c!=0) {
                         if (value == -2) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleBlack);
                         }else if (value == -1) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleRed);
-                        }else if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue()) {
+                        }else if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue() && c!=1) {
                             sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
                         }else{
                             //sheet.getRow(r).getCell(c).setCellStyle(styleGreen);

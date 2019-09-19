@@ -733,20 +733,7 @@ public class Entries {
 
         //create gensBehindList
         for(int i=fromSampleID;i<=toSampleID;i++){
-
-            CalculatedEntry e = new CalculatedEntry(i,experimentalGeneration,entriesList);
-
-            //make sure not -2
-            if(e.getcalculatedGeneration()!=-2){
-                int generationsBehind = experimentalGeneration - e.getcalculatedGeneration();
-                if(e.getcalculatedGeneration()==-1){
-                    if(includeExtinctions==true){
-                        gensBehindList.add((double) generationsBehind);
-                    }
-                }else{
-                    gensBehindList.add((double) generationsBehind);
-                }
-            }
+            gensBehindList.add((double) generationsBehind(i,experimentalGeneration,false));
         }
 
         //calc average gens behind

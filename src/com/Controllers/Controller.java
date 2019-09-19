@@ -1,32 +1,24 @@
 package com.Controllers;
 
-import com.sun.media.jfxmediaimpl.platform.Platform;
+import com.BaerMA.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-
-import java.awt.*;
-import java.awt.Dialog;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ResourceBundle;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.ThreadPoolExecutor;
-
-import com.BaerMA.*;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
 
@@ -39,10 +31,12 @@ public class Controller implements Initializable{
     @FXML private Spinner<Integer> backupGenerationSpinner;
     @FXML private DatePicker backupOfDatePicker;
     @FXML private TextArea notesField;
+    @FXML private Label AEInfoLabel;
 
     @FXML private TableView allEntriesTable;
     @FXML private TableColumn AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn, AEBackupNumberColumn;
 
+    @FXML private ProgressIndicator SLPrintProgress;
     @FXML private Spinner<Integer> SLGenerationSpinner;
     @FXML private TableView sampleListTable;
     @FXML private TableColumn SLSampleColumn, SLBackupNumberColumn, SLGenerationColumn, SLBackupCountColumn, SLResetCountColumn;
@@ -257,6 +251,17 @@ public class Controller implements Initializable{
     }
     public void sortByExperimentalGen(){
         allEntriesTable.getSortOrder().add(AEExperimentalGenerationColumn);
+    }
+    public void setSLPrintProgress(float progress){
+        if(progress<=0F){
+            SLPrintProgress.setVisible(false);
+        }else{
+            SLPrintProgress.setVisible(true);
+            SLPrintProgress.setProgress(progress);
+        }
+    }
+    public void setAEInfoLabel(String text){
+        AEInfoLabel.setText(text);
     }
 
 }
