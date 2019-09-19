@@ -254,8 +254,10 @@ public class Controller implements Initializable{
     }
     public void setSLPrintProgress(float progress){
         if(progress<=0F){
+            System.out.println("progress <=");
             SLPrintProgress.setVisible(false);
         }else{
+            System.out.println("showing progress");
             SLPrintProgress.setVisible(true);
             SLPrintProgress.setProgress(progress);
         }

@@ -63,10 +63,11 @@ public class Entries {
         boolean oEntriesAdd = false;
 
         if(!entriesList.contains(entry)){
-            System.out.println("Added entry to entries");
             entriesList.add(entry);
             oEntriesAdd=true;
             calcBackups();
+            System.out.println("Added entry to entries list");
+            MainStage.controller.setAEInfoLabel("Added Entry: "+entry.getSampleIDssp());
         }
 
         jsonizeEntries();
@@ -77,6 +78,7 @@ public class Entries {
 
         if(entriesList.contains(e)){
             entriesList.remove(e);
+            MainStage.controller.setAEInfoLabel("Removed entry: "+e.getSampleIDssp());
         }
 
         jsonizeEntries();
