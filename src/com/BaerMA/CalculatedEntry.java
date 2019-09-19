@@ -13,6 +13,8 @@ public class CalculatedEntry {
     public static String sampleIDString = "sampleID", calculatedGenerationString = "calculatedGeneration", backupCountString = "backupCount",
         resetCountString = "resetCount", backupNumberString = "SbackupNumber";
 
+    private static Settings settings;
+
 
     SimpleIntegerProperty sampleID;
     public void setSampleID(Integer value){
@@ -57,6 +59,8 @@ public class CalculatedEntry {
     }
 
     public CalculatedEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> entries){
+        settings = MainStage.settings;
+
         this.sampleID =new SimpleIntegerProperty(sampleID);
 
         this.SbackupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration));
@@ -75,20 +79,30 @@ public class CalculatedEntry {
     }
 
     public static Integer calculateGeneration(int sampleNumber, int experimentalGeneration){
-        ArrayList<Entry> entryList = getEntriesForSampleNumber(sampleNumber);
+        ArrayList<Entry> entryList = Entries.getEntriesForSampleNumber(sampleNumber);
 
         //if there are no entries for this sample number, just return the experimental generation, unless it's a J2 line
         if(entryList==null){
             //if J2 line
             if(sampleNumber>=1000 && sampleNumber <=1099) {
                 //return -2 if this line hasn't been established yet
-                if (experimentalGeneration < MainStage.settings.J2LineGenesisGeneration) {
+                if (experimentalGeneration < settings.J2LineGenesisGeneration) {
                     return -2;
                 }else{
-                    return experimentalGeneration-MainStage.settings.J2LineGenesisGeneration;
+                    return experimentalGeneration-settings.J2LineGenesisGeneration;
+                }
+            //if X line, terminate when appropriate
+            }else if(sampleNumber>=700 && sampleNumber<=799){
+                if(experimentalGeneration>=settings.XTerminationGeneration){
+                    return -1;
                 }
             }
             return experimentalGeneration;
+        }
+
+        //X line Termination. If the sample is an X, and the expGen >= Settings.XTerminationGeneration, return -1
+        if(sampleNumber>=700 && sampleNumber<=799 && experimentalGeneration>=settings.XTerminationGeneration){
+            return -1;
         }
 
         //ensure that entries with experimental generations larger than the input are ignored, but the largest one before that is picked
@@ -113,10 +127,10 @@ public class CalculatedEntry {
         //value to -2
         if(largestValidEntry.experimentalGeneration>experimentalGeneration){
             if(sampleNumber>=1000 && sampleNumber <=1099){
-                if(experimentalGeneration<MainStage.settings.J2LineGenesisGeneration){
+                if(experimentalGeneration<settings.J2LineGenesisGeneration){
                     return -2;
                 }else {
-                    return experimentalGeneration - MainStage.settings.J2LineGenesisGeneration;
+                    return experimentalGeneration - settings.J2LineGenesisGeneration;
                 }
             }else {
                 return experimentalGeneration;
@@ -129,16 +143,12 @@ public class CalculatedEntry {
             return -1;
         }
 
-        //X line Termination. If the sample is an X, and the expGen >= Settings.XTerminationGeneration, return -1
-        if(sampleNumber>=700 && sampleNumber<=799 && experimentalGeneration>=MainStage.settings.XTerminationGeneration){
-            return -1;
-        }
 
         //J2 line calculation. This line was set up at gen 71 = gen 0.
         // If the sample is a J, and the expGen <= gen 71, return -2, but this was already done at the beginning of this method.
         //else, return the same calculation as normal, minus 71
         if(sampleNumber>=1000 && sampleNumber <= 1099){
-            if(experimentalGeneration>=MainStage.settings.J2LineGenesisGeneration){
+            if(experimentalGeneration>=settings.J2LineGenesisGeneration){
                 return experimentalGeneration-largestValidEntry.experimentalGeneration+largestValidEntry.backupGeneration+1;
             }
         }
@@ -155,20 +165,6 @@ public class CalculatedEntry {
 
     }
 
-    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber){
-        ArrayList<Entry> entries = new ArrayList<>();
-        for(Entry e : Entries.entriesList){
-            if(e.id==sampleNumber) {
-                entries.add(e);
-            }
-        }
-        if(entries.size()<1){
-            return null;
-        }else{
-            return entries;
-        }
-    }
-
 
     @Override
     public String toString() {
@@ -176,7 +172,7 @@ public class CalculatedEntry {
     }
 
     public Integer getNumberOfBackupsForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
+        ArrayList<Entry> entries = Entries.getEntriesForSampleNumber(sampleID);
         if(entries==null)return 0;
         Collections.sort(entries,new SortByDate());
         int backupCounter = 0;
@@ -190,7 +186,7 @@ public class CalculatedEntry {
     }
 
     public Integer getResetNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
+        ArrayList<Entry> entries = Entries.getEntriesForSampleNumber(sampleID);
         if(entries==null)return 0;
         Collections.sort(entries,new SortByDate());
         int resetCounter = 0;
@@ -211,7 +207,7 @@ public class CalculatedEntry {
      */
     public static Integer[] getBackupAndResetNumberForEntry(int sampleID, int experimentalGeneration, ObservableList<Entry> oEntries){
         Integer[] bandr = new Integer[2];
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
+        ArrayList<Entry> entries = Entries.getEntriesForSampleNumber(sampleID);
         if(entries==null){
             bandr[0] = 0;
             bandr[1] = 0;
@@ -245,7 +241,7 @@ public class CalculatedEntry {
      * Entry, and not for a Calculated entry.
      */
     public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
-        ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(sampleID);
+        ArrayList<Entry> sampleEntries = Entries.getEntriesForSampleNumber(sampleID);
         if(sampleEntries==null){return 0;}
 
         int exGen=0;

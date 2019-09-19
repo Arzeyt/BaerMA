@@ -6,11 +6,14 @@ import com.google.gson.reflect.TypeToken;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.apache.commons.math3.stat.descriptive.moment.Mean;
+import org.apache.poi.util.ArrayUtil;
 
 import java.awt.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.List;
 
 /**
  * Created by Nick on 1/31/2019.
@@ -50,6 +53,7 @@ public class Entries {
             System.out.println("Found output file");
         }
     }
+
 
     //add and remove Entries
     public boolean addEntry(Entry entry){
@@ -282,16 +286,6 @@ public class Entries {
         return true;
     }
 
-    public ArrayList<Entry> getEntriesForGeneration(int generation){
-        ArrayList<Entry> list = new ArrayList<>();
-        for(Entry e : entriesList){
-            if(e.experimentalGeneration==generation){
-                list.add(e);
-            }
-        }
-        return list;
-    }
-
     public static void calcBackups(){
         //SampleNumber, list containing all entries for that sample number
         HashMap<Integer,ArrayList<Entry>> entriesBySample = new HashMap<>();
@@ -359,7 +353,32 @@ public class Entries {
         }
     }
 
-//Writing Functions--------------------------
+    public static ArrayList<Entry> getEntriesForSampleNumber(int sampleNumber){
+        ArrayList<Entry> entries = new ArrayList<>();
+        for(Entry e : entriesList){
+            if(e.id==sampleNumber) {
+                entries.add(e);
+            }
+        }
+        if(entries.size()<1){
+            return null;
+        }else{
+            return entries;
+        }
+    }
+
+    public ArrayList<Entry> getEntriesForGeneration(int generation){
+        ArrayList<Entry> list = new ArrayList<>();
+        for(Entry e : entriesList){
+            if(e.experimentalGeneration==generation){
+                list.add(e);
+            }
+        }
+        return list;
+    }
+
+
+    //Writing Functions--------------------------
     //write sample id and generation for samples 500 to 999.
     //This function relies on the pre-calculation of the calculatedEntries list and should be modified to allow ToF calculation.
     public void writeCalculatedEntriesCommaDelimited(int generation){
@@ -409,7 +428,7 @@ public class Entries {
             writer.write("Sample ID,Generation,Backup Count,Reset Count\n");
             for(CalculatedEntry e : calculatedEntries){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(e.sampleID.getValue());
+                ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(e.sampleID.getValue());
                 int backupCounter = 0;
                 int resetCounter = 0;
                 if (sampleEntries!=null) {
@@ -460,7 +479,7 @@ public class Entries {
             //for each sample number
             for(int csample=500;csample<=1099;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
+                ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(csample);
                 String line = csample+"";
                 //loop through generation 1 through numberOfGenerations and append a 0 for no backup or 1 for backup for each generation
                 for(int cgen=1;cgen<=numberOfGenerations;cgen++){
@@ -515,7 +534,7 @@ public class Entries {
             //for each sample number
             for(int csample=500;csample<=999;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
+                ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(csample);
 
                 String line = csample+"";//build this line by appending sample generation for each experimental generations
 
@@ -538,10 +557,8 @@ public class Entries {
             }
 
             writer.close();
-        }
-
-        catch(IOException ex)
-        {
+            Desktop.getDesktop().open(file);
+        }catch(IOException ex) {
             ex.printStackTrace();
         }
     }
@@ -657,7 +674,7 @@ public class Entries {
             //for each sample number
             for(int csample=500;csample<=999;csample++){
 
-                ArrayList<Entry> sampleEntries = CalculatedEntry.getEntriesForSampleNumber(csample);
+                ArrayList<Entry> sampleEntries = getEntriesForSampleNumber(csample);
                 String line = csample+"";
                 //loop through generation 1 through numberOfGenerations and append a 0 for no backup or 1 for backup for each generation
                 for(int cgen=1;cgen<=numberOfGenerations;cgen++){
@@ -695,7 +712,7 @@ public class Entries {
 
     public void createEntryHistoryList(int sampleID){
         entryHistory.clear();
-        ArrayList<Entry> entries = CalculatedEntry.getEntriesForSampleNumber(sampleID);
+        ArrayList<Entry> entries = getEntriesForSampleNumber(sampleID);
         if(entries==null)return;
         Collections.sort(entries,new SortByDate());
         for(Entry e : entries){
@@ -710,5 +727,54 @@ public class Entries {
         return date.plusDays(experimentalGeneration*4);
     }
 
+//stats methods--------------------------
+    public double averageGenerationsBehind (int fromSampleID, int toSampleID, int experimentalGeneration, boolean includeExtinctions){
+        List<Double> gensBehindList = new ArrayList<Double>();
+
+        //create gensBehindList
+        for(int i=fromSampleID;i<=toSampleID;i++){
+
+            CalculatedEntry e = new CalculatedEntry(i,experimentalGeneration,entriesList);
+
+            //make sure not -2
+            if(e.getcalculatedGeneration()!=-2){
+                int generationsBehind = experimentalGeneration - e.getcalculatedGeneration();
+                if(e.getcalculatedGeneration()==-1){
+                    if(includeExtinctions==true){
+                        gensBehindList.add((double) generationsBehind);
+                    }
+                }else{
+                    gensBehindList.add((double) generationsBehind);
+                }
+            }
+        }
+
+        //calc average gens behind
+        double[] doubles = new double[gensBehindList.size()];
+        for(int i =0;i<doubles.length;i++){
+            doubles[i]=gensBehindList.get(i);
+        }
+        double mean = new Mean().evaluate(doubles);
+        System.out.println("mean is:" +mean);
+        return mean;
+    }
+
+
+    public int generationsBehind(int sampleID, int experimentalGeneration, boolean includeExtinctions){
+        int gensBehind = 0;
+
+        CalculatedEntry e = new CalculatedEntry(sampleID,experimentalGeneration,entriesList);
+        if(e.getcalculatedGeneration()!=-2){
+            int generationsBehind = experimentalGeneration - e.getcalculatedGeneration();
+            if(e.getcalculatedGeneration()==-1){
+                if(includeExtinctions==true){
+                    gensBehind=generationsBehind;
+                }
+            }else{
+                gensBehind=generationsBehind;
+            }
+        }
+        return gensBehind;
+    }
 
 }
