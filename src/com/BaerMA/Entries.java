@@ -7,7 +7,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
-import org.apache.poi.util.ArrayUtil;
+import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
+import org.apache.commons.math3.stat.descriptive.rank.Median;
 
 import java.awt.*;
 import java.io.*;
@@ -730,40 +731,116 @@ public class Entries {
     }
 
 //stats methods--------------------------
-    public double averageGenerationsBehind (int fromSampleID, int toSampleID, int experimentalGeneration, boolean includeExtinctions){
+
+    /**
+     *
+     * @param fromSampleID
+     * @param toSampleID
+     * @param experimentalGeneration
+     * @param includeExtinctions
+     * @return double[0] = mean ; double[1] = stdev ; double[2] = median
+     */
+    public double[] generationsBehind_Stats (int fromSampleID, int toSampleID, int experimentalGeneration, boolean includeExtinctions){
+        System.out.println("----Sample "+fromSampleID+" to "+toSampleID+" ---------");
+
         List<Double> gensBehindList = new ArrayList<Double>();
 
         //create gensBehindList
         for(int i=fromSampleID;i<=toSampleID;i++){
-            gensBehindList.add((double) generationsBehind(i,experimentalGeneration,false));
+            double gb = getGenerationsBehind(i,experimentalGeneration,includeExtinctions);
+            System.out.println("calc: "+i+" gens behind: "+gb);
+            if(includeExtinctions){
+                //this needs work
+                gensBehindList.add((double) getGenerationsBehind(i, experimentalGeneration, includeExtinctions));
+            }else {
+                if (gb != -1) {
+                    gensBehindList.add((double) getGenerationsBehind(i, experimentalGeneration, includeExtinctions));
+                }
+            }
+
         }
 
-        //calc average gens behind
+        System.out.println("ExpGen: "+experimentalGeneration);
+        //convert from List to double[]
         double[] doubles = new double[gensBehindList.size()];
         for(int i =0;i<doubles.length;i++){
             doubles[i]=gensBehindList.get(i);
+            System.out.println("new calc: "+i+" gens behind: "+gensBehindList.get(i));
         }
+        System.out.println("doubles[] size is: "+doubles.length);
+
+        //calc average gens behind
         double mean = new Mean().evaluate(doubles);
         System.out.println("mean is:" +mean);
-        return mean;
+
+        //calc stdev gens behind
+        double standardDeviation = new StandardDeviation().evaluate(doubles);
+        System.out.println("Stdev is:" +standardDeviation);
+
+        //calc median gens behind
+        double median = new Median().evaluate(doubles);
+        System.out.println("Median is: "+median);
+
+        double[] stats = new double[3];
+        stats[0]=mean;
+        stats[1]=standardDeviation;
+        stats[2]=median;
+
+        return stats;
     }
 
 
-    public int generationsBehind(int sampleID, int experimentalGeneration, boolean includeExtinctions){
+    /**
+     *
+     * @param sampleID
+     * @param experimentalGeneration
+     * @param includeExtinctions
+     * @return returns -1 if the sample was extinct. TODO: this should return the generations behind for extinct
+     * samples too by calculating the last gen before the sample went extinct and subtracting the experimentalGeneration
+     * from that.
+     */
+    public int getGenerationsBehind(int sampleID, int experimentalGeneration, boolean includeExtinctions){
         int gensBehind = 0;
 
         CalculatedEntry e = new CalculatedEntry(sampleID,experimentalGeneration,entriesList);
         if(e.getcalculatedGeneration()!=-2){
-            int generationsBehind = experimentalGeneration - e.getcalculatedGeneration();
             if(e.getcalculatedGeneration()==-1){
-                if(includeExtinctions==true){
-                    gensBehind=generationsBehind;
+                if(includeExtinctions){
+                    gensBehind=-1;
+                }else{
+                    gensBehind=-1;
                 }
             }else{
-                gensBehind=generationsBehind;
+                gensBehind=experimentalGeneration-e.getcalculatedGeneration();
             }
+        }else{
+            gensBehind=0;
         }
+
         return gensBehind;
     }
 
+    public Entry getLargestValidEntry(int sampleNumber, int experimentalGeneration){
+
+        ArrayList<Entry> entryList = Entries.getEntriesForSampleNumber(sampleNumber);
+
+        System.out.println("glve entryList size: "+entryList.size());
+
+        if(entryList.size()<1){
+            return null;
+        }
+        //ensure that entries with experimental generations larger than the input are ignored, but the largest one before that is picked
+        entryList.sort(new SortByDate());
+        Entry largestValidEntry = entryList.get(0); //start with the entry with an experimental generation sorted at the bottom.
+
+        for(int i = 0; i<entryList.size(); i++){
+            Entry e = entryList.get(i);
+            if(e.experimentalGeneration<=experimentalGeneration){
+                largestValidEntry=e;
+            }else{
+                break;
+            }
+        }
+        return largestValidEntry;
+    }
 }

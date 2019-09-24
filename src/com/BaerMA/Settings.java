@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Settings implements Serializable{
 
@@ -13,11 +14,18 @@ public int J2LineGenesisGeneration = 71;
 public File dataDirectory = new File("Data");
 public File outputDirectory = new File("Output");
 public File entriesFile = new File(dataDirectory+File.separator+"Entries.json");
+public ArrayList<LineObject> lines = new ArrayList<>();
 
 
 
     public Settings(){
-
+        //default lines
+        lines.add(new LineObject("C",500,599));
+        lines.add(new LineObject("M",600,699));
+        lines.add(new LineObject("X",700,799));
+        lines.add(new LineObject("J",800,899));
+        lines.add(new LineObject("E",900,999));
+        lines.add(new LineObject("J2",1000,1099));
     }
 
     public void initialize(){
