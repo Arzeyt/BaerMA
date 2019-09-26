@@ -657,6 +657,89 @@ public class Entries {
         }
     }
 
+    public void printGenerationsBehindSequential(int experimentalGeneration){
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    File file = new File(MainStage.settings.outputDirectory + File.separator + "Average Generations Behind to Gen " + experimentalGeneration + ".csv");
+                    Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
+
+                    //header
+                    writer.write(",Generation\n");
+                    writer.write("Line,");
+                    for (int i = 0; i <= experimentalGeneration; i++) {
+                        writer.write(i + ",");
+                    }
+                    writer.write("\n");
+
+
+                    //Line
+                    ArrayList<LineObject> lines = MainStage.settings.lines;
+                    int progressDataLength = lines.size() * experimentalGeneration;
+                    int counter = 0;
+
+                    //for each line
+                    for (LineObject line : lines) {
+                        //iterate through each generation and output average generations behind
+                        for (int i = -1; i <= experimentalGeneration; i++) {
+                            counter++;
+                            float progress = (float) counter/progressDataLength;
+                            MainStage.controller.setSLPrintProgress(progress);
+                            System.out.println("progress: "+progress);
+                            //line name
+                            if (i == -1) {
+                                writer.write(line.lineName + ",");
+                            } else {
+                                int start = line.lineStartNumber;
+                                int end = line.lineEndNumber;
+                                double[] stats = generationsBehind_Stats(start, end, i, false);
+                                writer.write(stats[0] + ",");
+                            }
+                        }
+                        writer.write("\n");
+                    }
+                    writer.write("\n");
+                    writer.close();
+                    Desktop.getDesktop().open(file);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+    /**
+     * @param experimentalGeneration
+     * write .csv file with the mean, stdev, and median of all lines for the given experimental generation
+     */
+    public void printGenerationsBehindStats(int experimentalGeneration){
+        try {
+            File file = new File(MainStage.settings.outputDirectory + File.separator + "Stats for Gen " + experimentalGeneration + ".csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
+
+            //header
+            writer.write(",Generations Behind\n");
+            writer.write("Line,Mean,StdDev,Median\n");
+
+            //Line
+            ArrayList<LineObject> lines = MainStage.settings.lines;
+            for(LineObject line : lines){
+                String lineName = line.lineName;
+                int start = line.lineStartNumber;
+                int end = line.lineEndNumber;
+                double[] stats = generationsBehind_Stats(start,end,experimentalGeneration,false);
+                writer.write(lineName+","+stats[0]+","+stats[1]+","+stats[2]+"\n");
+            }
+
+            writer.close();
+            Desktop.getDesktop().open(file);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
     /**
      * Creates a file displaying the sample number and sample generation up to the experimental generation that was input
      * @param numberOfGenerations
@@ -747,13 +830,13 @@ public class Entries {
 
         //create gensBehindList
         for(int i=fromSampleID;i<=toSampleID;i++){
-            double gb = getGenerationsBehind(i,experimentalGeneration,includeExtinctions);
-            System.out.println("calc: "+i+" gens behind: "+gb);
+            double gensBehind = getGenerationsBehind(i,experimentalGeneration,includeExtinctions);
+            System.out.println("calc: "+i+" gens behind: "+gensBehind);
             if(includeExtinctions){
                 //this needs work
                 gensBehindList.add((double) getGenerationsBehind(i, experimentalGeneration, includeExtinctions));
             }else {
-                if (gb != -1) {
+                if (gensBehind != -1 && gensBehind!=-2) {
                     gensBehindList.add((double) getGenerationsBehind(i, experimentalGeneration, includeExtinctions));
                 }
             }
@@ -803,23 +886,33 @@ public class Entries {
         int gensBehind = 0;
 
         CalculatedEntry e = new CalculatedEntry(sampleID,experimentalGeneration,entriesList);
-        if(e.getcalculatedGeneration()!=-2){
-            if(e.getcalculatedGeneration()==-1){
+        if(e.getcalculatedGeneration()==-2) {//does not exist
+            gensBehind=0;
+        }else{
+            if(e.getcalculatedGeneration()==-1){//extinct
                 if(includeExtinctions){
                     gensBehind=-1;
                 }else{
                     gensBehind=-1;
                 }
             }else{
-                gensBehind=experimentalGeneration-e.getcalculatedGeneration();
+                if(e.sampleID.getValue()>=1000 && e.sampleID.getValue()<=1099){ //J2 line
+                    gensBehind=experimentalGeneration-MainStage.settings.J2LineGenesisGeneration-e.getcalculatedGeneration();
+                }else {
+                    gensBehind = experimentalGeneration - e.getcalculatedGeneration();
+                }
             }
-        }else{
-            gensBehind=0;
         }
 
         return gensBehind;
     }
 
+    /**
+     *
+     * @param sampleNumber
+     * @param experimentalGeneration
+     * @return returns the largest valid entry before the given experimental generation
+     */
     public Entry getLargestValidEntry(int sampleNumber, int experimentalGeneration){
 
         ArrayList<Entry> entryList = Entries.getEntriesForSampleNumber(sampleNumber);

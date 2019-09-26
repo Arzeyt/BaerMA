@@ -191,6 +191,8 @@
                                           <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries" />
                                           <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries" />
                                           <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer" />
+                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats" />
+                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential" />
                                     </items>
                                   </Menu>
                                 </menus>

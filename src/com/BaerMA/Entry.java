@@ -8,6 +8,7 @@ import javafx.beans.property.StringProperty;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 /**
  * Created by Nick on 1/27/2019.
@@ -157,5 +158,30 @@ public class Entry implements Serializable{
             return "J2";
         }
         return null;
+    }
+
+    /**
+     * @param sampleID
+     * @param experimentalGeneration
+     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration. this method is only useful for an
+     * Entry, and not for a Calculated entry.
+     */
+    public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
+        ArrayList<Entry> sampleEntries = Entries.getEntriesForSampleNumber(sampleID);
+        if(sampleEntries==null){return 0;}
+
+        int exGen=0;
+        int backupNumber=0;
+        for(Entry e : sampleEntries){
+            if(e.experimentalGeneration>=experimentalGeneration){
+                return 0;
+            }else if(exGen==0){
+                exGen=e.experimentalGeneration;
+            }else{
+
+            }
+
+        }
+        return backupNumber;
     }
 }

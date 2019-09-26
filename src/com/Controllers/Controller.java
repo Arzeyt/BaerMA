@@ -249,6 +249,14 @@ public class Controller implements Initializable{
                 ExcelMaster.createGenerationVisualizer(SLGenerationSpinner.getValue());
             }
 
+            public void PrintGenerationStats(){
+                MainStage.entries.printGenerationsBehindStats(SLGenerationSpinner.getValue());
+            }
+
+            public void PrintGenerationsBehindSequential(){
+                MainStage.entries.printGenerationsBehindSequential(SLGenerationSpinner.getValue());
+            }
+
 
     //3. Miscellaneous Methods-------------
     public void updateExperimentalGenerationDateRecommendation(){

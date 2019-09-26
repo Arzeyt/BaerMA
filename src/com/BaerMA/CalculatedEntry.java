@@ -63,7 +63,7 @@ public class CalculatedEntry {
 
         this.sampleID =new SimpleIntegerProperty(sampleID);
 
-        this.SbackupNumber = new SimpleIntegerProperty(getBackupNumberForEntry(sampleID,experimentalGeneration));
+        this.SbackupNumber = new SimpleIntegerProperty(Entry.getBackupNumberForEntry(sampleID,experimentalGeneration));
 
         int calculatedGeneration = calculateGeneration(sampleID,experimentalGeneration);
         this.calculatedGeneration =new SimpleIntegerProperty(calculatedGeneration);
@@ -233,32 +233,6 @@ public class CalculatedEntry {
     }
 
     //shouldn't do it this way due to high overhead
-
-    /**
-     * @param sampleID
-     * @param experimentalGeneration
-     * @return the backup number (failure combo) of this sampleID for this experimentalGeneration. this method is only useful for an
-     * Entry, and not for a Calculated entry.
-     */
-    public static int getBackupNumberForEntry(int sampleID, int experimentalGeneration) {
-        ArrayList<Entry> sampleEntries = Entries.getEntriesForSampleNumber(sampleID);
-        if(sampleEntries==null){return 0;}
-
-        int exGen=0;
-        int backupNumber=0;
-        for(Entry e : sampleEntries){
-            if(e.experimentalGeneration>=experimentalGeneration){
-                return 0;
-            }else if(exGen==0){
-                exGen=e.experimentalGeneration;
-            }else{
-
-            }
-
-        }
-        return backupNumber;
-    }
-
 
 
 }
