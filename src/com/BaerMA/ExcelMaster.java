@@ -257,94 +257,16 @@ public class ExcelMaster {
         Thread thread = new Thread("ExcelPrint"){
             public void run(){
                 XSSFWorkbook wb = new XSSFWorkbook();
-                File visualizerFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for gen "+experimentalGeneration+".xlsx");
-                Sheet sheet = wb.createSheet();
-                int numberOfRows=1100;
-                //create 650 rows
-                for(int i=0;i<=numberOfRows;i++){sheet.createRow(i);}
+                File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for Gen "+experimentalGeneration+".xlsx");
 
-                //generation header
-                sheet.addMergedRegion(new CellRangeAddress(0,0,1,experimentalGeneration+1));
-                sheet.getRow(0).createCell(1).setCellValue("Generation");
-                CellStyle centered = wb.createCellStyle();
-                centered.setAlignment(HorizontalAlignment.CENTER);
-                sheet.getRow(0).getCell(1).setCellStyle(centered);
-
-                //sampleID header
-                sheet.getRow(1).createCell(0).setCellValue("Sample ID");
-
-                //generation header
-                for(int i=0;i<=experimentalGeneration;i++){
-                    sheet.getRow(1).createCell(i+1).setCellValue(i);
-                }
-
-
-                //Cell styles
-                CellStyle styleYellow = wb.createCellStyle();
-                styleYellow.setFillForegroundColor(IndexedColors.YELLOW.index);
-                styleYellow.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-                CellStyle styleGreen = wb.createCellStyle();
-                styleGreen.setFillForegroundColor(IndexedColors.GREEN.index);
-                styleGreen.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-                CellStyle styleRed = wb.createCellStyle();
-                styleRed.setFillForegroundColor(IndexedColors.RED.index);
-                styleRed.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-                CellStyle styleBlack = wb.createCellStyle();
-                styleBlack.setFillForegroundColor(IndexedColors.BLACK.index);
-                styleBlack.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-
-                //iterate through each row and column and add the calculated generation value
-                for(int r=2;r<=1099-500+2;r++){
-                    //progress calculation--
-                    float progress= (float) ((double) r/(1099-500+2));
-                    System.out.println("progress is: "+progress);
-                    MainStage.controller.setSLPrintProgress(progress);
-                    //---
-
-                    int sampleID = r-2+500;
-                    for(int c=0;c<=experimentalGeneration+1;c++){
-                        if(c==0){
-                            System.out.println(r+" "+c);
-                            sheet.getRow(r).createCell(c).setCellValue(sampleID);
-
-                        }else{
-                            int value = new CalculatedEntry(sampleID,c-1,Entries.entriesList).calculatedGeneration.getValue();
-                            sheet.getRow(r).createCell(c).setCellValue(value);
-                            if(c!=0) {
-                                if (value == -2) {
-                                    sheet.getRow(r).getCell(c).setCellStyle(styleBlack);
-                                }else if (value == -1) {
-                                    sheet.getRow(r).getCell(c).setCellStyle(styleRed);
-                                }else if (value <= sheet.getRow(r).getCell(c - 1).getNumericCellValue() && c!=1) {
-                                    sheet.getRow(r).getCell(c).setCellStyle(styleYellow);
-                                }else{
-                                    //sheet.getRow(r).getCell(c).setCellStyle(styleGreen);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                //resize columns
-                Iterator it = sheet.getRow(1).cellIterator();
-                while(it.hasNext()){
-                    Cell next = (Cell) it.next();
-                    if(next.getColumnIndex()>=1){
-                        sheet.setColumnWidth(next.getColumnIndex(), 800);
-                        //sheet.setColumnWidth(next.getColumnIndex(), (int) (String.valueOf(next.getColumnIndex()-1).length()*400));
-                    }
-                }
-
+                
                 //write file
                 try{
-                    OutputStream outputStream = new FileOutputStream(visualizerFile);
+                    OutputStream outputStream = new FileOutputStream(statsFile);
                     wb.write(outputStream);
                     outputStream.close();
                     wb.close();
-                    Desktop.getDesktop().open(visualizerFile);
+                    Desktop.getDesktop().open(statsFile);
                 }catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {

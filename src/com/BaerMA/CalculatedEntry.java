@@ -232,7 +232,5 @@ public class CalculatedEntry {
         return bandr;
     }
 
-    //shouldn't do it this way due to high overhead
-
 
 }
