@@ -257,6 +257,8 @@ public class Controller implements Initializable{
                 MainStage.entries.printGenerationsBehindSequential(SLGenerationSpinner.getValue());
             }
 
+            public void PrintGenerationsBehindSequentialExcel(){ExcelMaster.createAverageBackupGraphingSheet(SLGenerationSpinner.getValue());}
+
 
     //3. Miscellaneous Methods-------------
     public void updateExperimentalGenerationDateRecommendation(){

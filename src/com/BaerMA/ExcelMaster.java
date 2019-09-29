@@ -4,7 +4,11 @@ import javafx.scene.Parent;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.CellReference;
+import org.apache.poi.xddf.usermodel.*;
+import org.apache.poi.xddf.usermodel.chart.*;
 import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.charts.XSSFChartLegend;
 
 import java.awt.*;
 import java.awt.Color;
@@ -252,14 +256,90 @@ public class ExcelMaster {
    }
 
     //generation visualizer excel sheet
-    public static void createStatsSheet(int experimentalGeneration){
+    public static void createAverageBackupGraphingSheet(int experimentalGeneration){
         //threaded to allow for progress indicator incrementing
         Thread thread = new Thread("ExcelPrint"){
             public void run(){
                 XSSFWorkbook wb = new XSSFWorkbook();
+                XSSFSheet sheet = wb.createSheet();
                 File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for Gen "+experimentalGeneration+".xlsx");
 
-                
+                //rows to create = number of lines + 3ish
+                for(int i=0;i<=MainStage.settings.lines.size()+3;i++){
+                    sheet.createRow(i);
+                }
+                //header
+                sheet.getRow(0).createCell(1).setCellValue("Generation");
+                sheet.addMergedRegion(new CellRangeAddress(0,0,1,experimentalGeneration+3));
+                CellStyle centered = wb.createCellStyle();
+                centered.setAlignment(HorizontalAlignment.CENTER);
+                sheet.getRow(0).getCell(1).setCellStyle(centered);
+
+                sheet.getRow(1).createCell(0).setCellValue("Line");
+                for(int i=1;i<=experimentalGeneration+1;i++){
+                    sheet.getRow(1).createCell(i).setCellValue(i-1);
+                }
+
+
+                //data
+                int numberOfLines = MainStage.settings.lines.size();
+                int progressTarget = numberOfLines*experimentalGeneration;
+                int progressCounter = 0;
+
+                for(int r = 2;r<=numberOfLines+1;r++){
+                    LineObject currentLine = MainStage.settings.lines.get(r-2);
+                    for(int g = 0;g<=experimentalGeneration+1;g++){
+                        progressCounter++;
+                        MainStage.controller.setSLPrintProgress((float)progressCounter/progressTarget);
+                        int currentGen = g-1;
+                        if(g==0){
+                            sheet.getRow(r).createCell(g).setCellValue(currentLine.lineName);
+                        }else{
+                            double[] stats = MainStage.entries.generationsBehind_Stats(currentLine.lineStartNumber,currentLine.lineEndNumber,currentGen,false);
+                            sheet.getRow(r).createCell(g).setCellValue(stats[0]);
+                        }
+                    }
+                }
+
+                //chart
+                XSSFDrawing drawing = (XSSFDrawing) sheet.createDrawingPatriarch();
+                XSSFClientAnchor anchor = drawing.createAnchor(0,0,0,0,0,10,15,25);
+                XSSFChart chart = drawing.createChart(anchor);
+                XDDFChartLegend legend = chart.getOrAddLegend();
+                legend.setPosition(LegendPosition.RIGHT);
+                XDDFCategoryAxis categoryAxis = chart.createCategoryAxis(AxisPosition.BOTTOM);
+                categoryAxis.setTitle("Experimental Generations");
+                categoryAxis.setMajorUnit(5);
+                XDDFValueAxis valueAxis=chart.createValueAxis(AxisPosition.LEFT);
+                valueAxis.setTitle("Average Generations Behind");
+                valueAxis.setCrosses(AxisCrosses.AUTO_ZERO);
+
+                XDDFLineChartData chartData = (XDDFLineChartData) chart.createData(ChartTypes.LINE, categoryAxis,valueAxis);
+
+                XDDFNumericalDataSource<Double> dataGenerations = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(1,1,1,experimentalGeneration));
+                //line data hard coded. Consider not hard coding it.
+                XDDFNumericalDataSource<Double> line1 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(2,2,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> line2 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(3,3,1, experimentalGeneration));
+                XDDFNumericalDataSource<Double> line3 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(4,4,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> line4 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(5,5,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> line5 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(6,6,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> line6 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(7,7,1,experimentalGeneration));
+
+                XDDFChartData.Series series = chartData.addSeries(dataGenerations,line1);
+                series.setTitle(sheet.getRow(1).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),2,0,true,true));
+                series=chartData.addSeries(dataGenerations,line2);
+                series.setTitle(sheet.getRow(2).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),3,0,true,true));
+                series=chartData.addSeries(dataGenerations,line3);
+                series.setTitle(sheet.getRow(3).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),4,0,true,true));
+                series=chartData.addSeries(dataGenerations,line4);
+                series.setTitle(sheet.getRow(4).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),5,0,true,true));
+                series=chartData.addSeries(dataGenerations,line5);
+                series.setTitle(sheet.getRow(5).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),6,0,true,true));
+                series=chartData.addSeries(dataGenerations,line6);
+                series.setTitle(sheet.getRow(6).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),7,0,true,true));
+
+                chart.plot(chartData);
+
                 //write file
                 try{
                     OutputStream outputStream = new FileOutputStream(statsFile);
@@ -278,6 +358,19 @@ public class ExcelMaster {
         thread.start();
 
 
+    }
+
+    private static void solidLineSeries(XDDFChartData data, int index, PresetColor color) {
+        XDDFSolidFillProperties fill = new XDDFSolidFillProperties(XDDFColor.from(color));
+        XDDFLineProperties line = new XDDFLineProperties();
+        line.setFillProperties(fill);
+        XDDFChartData.Series series = data.getSeries().get(index);
+        XDDFShapeProperties properties = series.getShapeProperties();
+        if (properties == null) {
+            properties = new XDDFShapeProperties();
+        }
+        properties.setLineProperties(line);
+        series.setShapeProperties(properties);
     }
 
 
