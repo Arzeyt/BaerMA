@@ -205,12 +205,12 @@ public class Controller implements Initializable{
         }
 
             public void experimentButtonPressed(){
-                MainStage.entries.generationsBehind_Stats(500,599,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehind_Stats(600,699,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehind_Stats(700,799,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehind_Stats(800,899,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehind_Stats(900,999,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehind_Stats(1000,1099,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(500,599,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(600,699,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(700,799,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(800,899,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(900,999,SLGenerationSpinner.getValue(),false);
+                MainStage.entries.generationsBehindStats(1000,1099,SLGenerationSpinner.getValue(),false);
             }
 
         //c. Sample List Panel (Top right)------

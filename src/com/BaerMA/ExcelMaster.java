@@ -1,6 +1,5 @@
 package com.BaerMA;
 
-import javafx.scene.Parent;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -8,12 +7,9 @@ import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xddf.usermodel.*;
 import org.apache.poi.xddf.usermodel.chart.*;
 import org.apache.poi.xssf.usermodel.*;
-import org.apache.poi.xssf.usermodel.charts.XSSFChartLegend;
 
 import java.awt.*;
-import java.awt.Color;
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -265,8 +261,10 @@ public class ExcelMaster {
                 File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for Gen "+experimentalGeneration+".xlsx");
 
                 //rows to create = number of lines + 3ish
-                for(int i=0;i<=MainStage.settings.lines.size()+3;i++){
-                    sheet.createRow(i);
+                for(int i=0;i<=MainStage.settings.lines.size()+50;i++){
+                    for(int x=0;x<=experimentalGeneration+5;x++) {
+                        sheet.createRow(i).createCell(x);
+                    }
                 }
                 //header
                 sheet.getRow(0).createCell(1).setCellValue("Generation");
@@ -295,7 +293,7 @@ public class ExcelMaster {
                         if(g==0){
                             sheet.getRow(r).createCell(g).setCellValue(currentLine.lineName);
                         }else{
-                            double[] stats = MainStage.entries.generationsBehind_Stats(currentLine.lineStartNumber,currentLine.lineEndNumber,currentGen,false);
+                            double[] stats = MainStage.entries.generationsBehindStats(currentLine.lineStartNumber,currentLine.lineEndNumber,currentGen,false);
                             sheet.getRow(r).createCell(g).setCellValue(stats[0]);
                         }
                     }
@@ -309,21 +307,21 @@ public class ExcelMaster {
                 legend.setPosition(LegendPosition.RIGHT);
                 XDDFCategoryAxis categoryAxis = chart.createCategoryAxis(AxisPosition.BOTTOM);
                 categoryAxis.setTitle("Experimental Generations");
-                categoryAxis.setMajorUnit(5);
+                //categoryAxis.setMajorUnit(5);
                 XDDFValueAxis valueAxis=chart.createValueAxis(AxisPosition.LEFT);
                 valueAxis.setTitle("Average Generations Behind");
                 valueAxis.setCrosses(AxisCrosses.AUTO_ZERO);
 
                 XDDFLineChartData chartData = (XDDFLineChartData) chart.createData(ChartTypes.LINE, categoryAxis,valueAxis);
 
-                XDDFNumericalDataSource<Double> dataGenerations = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(1,1,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> dataGenerations = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(1,1,1,experimentalGeneration+1));
                 //line data hard coded. Consider not hard coding it.
-                XDDFNumericalDataSource<Double> line1 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(2,2,1,experimentalGeneration));
-                XDDFNumericalDataSource<Double> line2 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(3,3,1, experimentalGeneration));
-                XDDFNumericalDataSource<Double> line3 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(4,4,1,experimentalGeneration));
-                XDDFNumericalDataSource<Double> line4 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(5,5,1,experimentalGeneration));
-                XDDFNumericalDataSource<Double> line5 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(6,6,1,experimentalGeneration));
-                XDDFNumericalDataSource<Double> line6 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(7,7,1,experimentalGeneration));
+                XDDFNumericalDataSource<Double> line1 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(2,2,1,experimentalGeneration+1));
+                XDDFNumericalDataSource<Double> line2 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(3,3,1, experimentalGeneration+1));
+                XDDFNumericalDataSource<Double> line3 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(4,4,1,experimentalGeneration+1));
+                XDDFNumericalDataSource<Double> line4 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(5,5,1,experimentalGeneration+1));
+                XDDFNumericalDataSource<Double> line5 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(6,6,1,experimentalGeneration+1));
+                XDDFNumericalDataSource<Double> line6 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(7,7,1,experimentalGeneration+1));
 
                 XDDFChartData.Series series = chartData.addSeries(dataGenerations,line1);
                 series.setTitle(sheet.getRow(1).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),2,0,true,true));
@@ -338,7 +336,17 @@ public class ExcelMaster {
                 series=chartData.addSeries(dataGenerations,line6);
                 series.setTitle(sheet.getRow(6).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),7,0,true,true));
 
-                chart.plot(chartData);
+                for(XDDFChartData.Series seri : chartData.getSeries()){
+                    System.out.println(seri.getCategoryData().getPointCount());
+                    System.out.println(seri.getValuesData().getPointCount());
+                }
+                try {
+                    chart.plot(chartData);
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                    System.out.println("Error Drawing Chart. File recovery is still an option");
+                }
+
 
                 //write file
                 try{

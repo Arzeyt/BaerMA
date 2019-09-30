@@ -692,7 +692,7 @@ public class Entries {
                             } else {
                                 int start = line.lineStartNumber;
                                 int end = line.lineEndNumber;
-                                double[] stats = generationsBehind_Stats(start, end, i, false);
+                                double[] stats = generationsBehindStats(start, end, i, false);
                                 writer.write(stats[0] + ",");
                             }
                         }
@@ -728,7 +728,7 @@ public class Entries {
                 String lineName = line.lineName;
                 int start = line.lineStartNumber;
                 int end = line.lineEndNumber;
-                double[] stats = generationsBehind_Stats(start,end,experimentalGeneration,false);
+                double[] stats = generationsBehindStats(start,end,experimentalGeneration,false);
                 writer.write(lineName+","+stats[0]+","+stats[1]+","+stats[2]+"\n");
             }
 
@@ -821,9 +821,10 @@ public class Entries {
      * @param toSampleID
      * @param experimentalGeneration
      * @param includeExtinctions
-     * @return double[0] = mean ; double[1] = stdev ; double[2] = median
+     * @return double[0] = mean ; double[1] = stdev ; double[2] = median.
+     * All values return -1 if there were no samples to run the stats on in the given sampleID range.
      */
-    public double[] generationsBehind_Stats (int fromSampleID, int toSampleID, int experimentalGeneration, boolean includeExtinctions){
+    public double[] generationsBehindStats(int fromSampleID, int toSampleID, int experimentalGeneration, boolean includeExtinctions){
         System.out.println("----Sample "+fromSampleID+" to "+toSampleID+" ---------");
 
         List<Double> gensBehindList = new ArrayList<Double>();
@@ -831,7 +832,7 @@ public class Entries {
         //create gensBehindList
         for(int i=fromSampleID;i<=toSampleID;i++){
             double gensBehind = getGenerationsBehind(i,experimentalGeneration,includeExtinctions);
-            System.out.println("calc: "+i+" gens behind: "+gensBehind);
+            //System.out.println("calc: "+i+" gens behind: "+gensBehind);
             if(includeExtinctions){
                 //this needs work
                 gensBehindList.add((double) getGenerationsBehind(i, experimentalGeneration, includeExtinctions));
@@ -844,32 +845,37 @@ public class Entries {
         }
 
         System.out.println("ExpGen: "+experimentalGeneration);
-        //convert from List to double[]
-        double[] doubles = new double[gensBehindList.size()];
-        for(int i =0;i<doubles.length;i++){
-            doubles[i]=gensBehindList.get(i);
-            System.out.println("new calc: "+i+" gens behind: "+gensBehindList.get(i));
+        if(gensBehindList.size()>0){
+            //convert from List to double[]
+            double[] doubles = new double[gensBehindList.size()];
+            for(int i =0;i<doubles.length;i++){
+                doubles[i]=gensBehindList.get(i);
+                //System.out.println("new calc: "+i+" gens behind: "+gensBehindList.get(i));
+            }
+            System.out.println("doubles[] size is: "+doubles.length);
+
+            //calc average gens behind
+            double mean = new Mean().evaluate(doubles);
+            System.out.println("mean is:" +mean);
+
+            //calc stdev gens behind
+            double standardDeviation = new StandardDeviation().evaluate(doubles);
+            System.out.println("Stdev is:" +standardDeviation);
+
+            //calc median gens behind
+            double median = new Median().evaluate(doubles);
+            System.out.println("Median is: "+median);
+
+            double[] stats = new double[3];
+            stats[0]=mean;
+            stats[1]=standardDeviation;
+            stats[2]=median;
+
+            return stats;
+        }else{
+            return new double[]{-1,-1,-1};
         }
-        System.out.println("doubles[] size is: "+doubles.length);
 
-        //calc average gens behind
-        double mean = new Mean().evaluate(doubles);
-        System.out.println("mean is:" +mean);
-
-        //calc stdev gens behind
-        double standardDeviation = new StandardDeviation().evaluate(doubles);
-        System.out.println("Stdev is:" +standardDeviation);
-
-        //calc median gens behind
-        double median = new Median().evaluate(doubles);
-        System.out.println("Median is: "+median);
-
-        double[] stats = new double[3];
-        stats[0]=mean;
-        stats[1]=standardDeviation;
-        stats[2]=median;
-
-        return stats;
     }
 
 

@@ -20,6 +20,8 @@ with calclated generation of the sample
 BUG - sample 618 gen 65 should be bk1 but is cal as bk2
     due to backed up from 62 (I think?)
 
+---averageBackupGraphingSheet has line info hard coded
+---
 ---add column with line letter to all relevant tables and lists
 ---print stats sheet
 ---make getLineLetter in Entry use settings
