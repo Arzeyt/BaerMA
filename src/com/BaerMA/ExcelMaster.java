@@ -1,5 +1,6 @@
 package com.BaerMA;
 
+import javafx.scene.control.Alert;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -255,13 +256,14 @@ public class ExcelMaster {
     public static void createAverageBackupGraphingSheet(int experimentalGeneration){
         //threaded to allow for progress indicator incrementing
         Thread thread = new Thread("ExcelPrint"){
+            boolean proceed = false;
             public void run(){
                 XSSFWorkbook wb = new XSSFWorkbook();
                 XSSFSheet sheet = wb.createSheet();
                 File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for Gen "+experimentalGeneration+".xlsx");
 
                 //rows to create = number of lines + 3ish
-                for(int i=0;i<=MainStage.settings.lines.size()+50;i++){
+                for(int i=0;i<=MainStage.settings.lines.size()+100;i++){
                     for(int x=0;x<=experimentalGeneration+5;x++) {
                         sheet.createRow(i).createCell(x);
                     }
@@ -347,6 +349,28 @@ public class ExcelMaster {
                     System.out.println("Error Drawing Chart. File recovery is still an option");
                 }
 
+                //Stats table -------
+                int statsTableStartRow = numberOfLines+20;
+                sheet.getRow(statsTableStartRow).createCell(1).setCellValue("Average Number of Generations Behind");
+                sheet.addMergedRegion(new CellRangeAddress(statsTableStartRow,statsTableStartRow+1,1,3));
+                sheet.getRow(statsTableStartRow+2).createCell(0).setCellValue("Line");
+                sheet.getRow(statsTableStartRow+2).createCell(1).setCellValue("Mean");
+                sheet.getRow(statsTableStartRow+2).createCell(2).setCellValue("Stdev.");
+                sheet.getRow(statsTableStartRow+2).createCell(3).setCellValue("Median");
+
+                //data
+                ArrayList<LineObject> lines = MainStage.settings.lines;
+                int dataStartRow = statsTableStartRow+3;
+                int lineIndex = 0;
+                for(LineObject line : lines){
+                    double[] stats = MainStage.entries.generationsBehindStats(line.lineStartNumber,line.lineEndNumber,experimentalGeneration,false);
+                    sheet.createRow(dataStartRow+lineIndex).createCell(0).setCellValue(""+line.lineName);
+                    sheet.getRow(dataStartRow+lineIndex).createCell(1).setCellValue(stats[0]);
+                    sheet.getRow(dataStartRow+lineIndex).createCell(2).setCellValue(stats[1]);
+                    sheet.getRow(dataStartRow+lineIndex).createCell(3).setCellValue(stats[2]);
+
+                    lineIndex++;
+                }
 
                 //write file
                 try{
@@ -357,6 +381,7 @@ public class ExcelMaster {
                     Desktop.getDesktop().open(statsFile);
                 }catch (FileNotFoundException e) {
                     e.printStackTrace();
+                    MainStage.alertError("File Write Error","File could not be written. Ensure a file with the same name isn't currently open, and try again.");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -365,7 +390,32 @@ public class ExcelMaster {
         };
         thread.start();
 
+    }
 
+    private static boolean writeWorkbookFile(XSSFWorkbook workbook, File file){
+       boolean fileWritten=false;
+       int triesLeft = 10;
+       while(fileWritten!=true){
+           try{
+               OutputStream outputStream = new FileOutputStream(file);
+               workbook.write(outputStream);
+               outputStream.close();
+               workbook.close();
+               fileWritten=true;
+               Desktop.getDesktop().open(file);
+           }catch (FileNotFoundException e) {
+               e.printStackTrace();
+               System.out.println("Cause of failure is: "+e.getCause().toString());
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+       }
+
+       if(triesLeft==0){
+           return false;
+       }else {
+           return true;
+       }
     }
 
     private static void solidLineSeries(XDDFChartData data, int index, PresetColor color) {
@@ -379,6 +429,18 @@ public class ExcelMaster {
         }
         properties.setLineProperties(line);
         series.setShapeProperties(properties);
+    }
+
+    public static void setCellValue(Sheet sheet, int row, int column, Object value){
+       if(value instanceof String){
+           sheet.getRow(row).getCell(column).setCellValue((String) value);
+       }else if(value instanceof Integer){
+           sheet.getRow(row).getCell(column).setCellValue((int)value);
+       }else if(value instanceof Double){
+           sheet.getRow(row).getCell(column).setCellValue((double)value);
+       }else{
+           System.out.println("Cannot write cell value");
+       }
     }
 
 

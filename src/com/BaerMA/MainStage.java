@@ -85,6 +85,14 @@ public class MainStage{
 
     }
 
+    public static void alertError(String title, String text){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(text);
+        alert.showAndWait();
+    }
+    //---------deprecated code. It's all handled by javafx now.
     private Pane createSuperPane(){
         GridPane superPane = new GridPane();
 
