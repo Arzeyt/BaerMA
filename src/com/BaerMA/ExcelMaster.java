@@ -256,7 +256,6 @@ public class ExcelMaster {
     public static void createAverageBackupGraphingSheet(int experimentalGeneration){
         //threaded to allow for progress indicator incrementing
         Thread thread = new Thread("ExcelPrint"){
-            boolean proceed = false;
             public void run(){
                 XSSFWorkbook wb = new XSSFWorkbook();
                 XSSFSheet sheet = wb.createSheet();
@@ -381,7 +380,6 @@ public class ExcelMaster {
                     Desktop.getDesktop().open(statsFile);
                 }catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    MainStage.alertError("File Write Error","File could not be written. Ensure a file with the same name isn't currently open, and try again.");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -85,10 +85,18 @@ public class MainStage{
 
     }
 
-    public static void alertError(String title, String text){
+    public static void alertError(String title, String headerText, String text){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
-        alert.setHeaderText(null);
+        alert.setHeaderText(headerText);
+        alert.setContentText(text);
+        alert.showAndWait();
+    }
+
+    public static void alertInfo(String title, String headerText, String text){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(headerText);
         alert.setContentText(text);
         alert.showAndWait();
     }
