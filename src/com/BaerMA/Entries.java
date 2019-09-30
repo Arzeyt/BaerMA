@@ -657,6 +657,11 @@ public class Entries {
         }
     }
 
+    /**
+     * @implNote prints .csv with the average generations behind for each generation and each line up to the
+     * experimental generation provided
+     * @param experimentalGeneration
+     */
     public void printGenerationsBehindSequential(int experimentalGeneration){
         Thread thread = new Thread() {
             public void run() {
@@ -709,9 +714,10 @@ public class Entries {
         };
         thread.start();
     }
+
     /**
+     * @implNote  write .csv file with the mean, stdev, and median of all lines for the given experimental generation
      * @param experimentalGeneration
-     * write .csv file with the mean, stdev, and median of all lines for the given experimental generation
      */
     public void printGenerationsBehindStats(int experimentalGeneration){
         try {
@@ -741,7 +747,7 @@ public class Entries {
     }
 
     /**
-     * Creates a file displaying the sample number and sample generation up to the experimental generation that was input
+     * @implNote Creates a file displaying the sample number and sample generation up to the experimental generation that was input
      * @param numberOfGenerations
      */
     public void writeBackupTableDetailed(int numberOfGenerations){
@@ -796,6 +802,14 @@ public class Entries {
 
     }
 
+
+//miscellaneous methods------------------------
+
+    public static LocalDate getDateForGeneration(int experimentalGeneration){
+        LocalDate date = LocalDate.of(2018,11,26);
+        return date.plusDays(experimentalGeneration*4);
+    }
+
     public void createEntryHistoryList(int sampleID){
         entryHistory.clear();
         ArrayList<Entry> entries = getEntriesForSampleNumber(sampleID);
@@ -804,13 +818,6 @@ public class Entries {
         for(Entry e : entries){
             this.entryHistory.add(e);
         }
-    }
-
-//miscellaneous methods------------------------
-
-    public static LocalDate getDateForGeneration(int experimentalGeneration){
-        LocalDate date = LocalDate.of(2018,11,26);
-        return date.plusDays(experimentalGeneration*4);
     }
 
 //stats methods--------------------------
