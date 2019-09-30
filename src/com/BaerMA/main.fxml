@@ -10,6 +10,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -18,12 +19,11 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
    <children>
       <MenuBar>
         <menus>
@@ -42,199 +42,200 @@
           </Menu>
         </menus>
       </MenuBar>
-      <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
-         <children>
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
-                  <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
-                     <children>
-                        <TableView fx:id="allEntriesTable" editable="true" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
-                          <columns>
-                            <TableColumn fx:id="AEExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
-                              <TableColumn fx:id="AEPickDateColumn" prefWidth="75.0" text="Pick Date" />
-                              <TableColumn fx:id="AEBackupNumberColumn" prefWidth="75.0" text="Backup#" />
-                            <TableColumn fx:id="AESampleColumn" prefWidth="75.0" text="Sample" />
-                              <TableColumn fx:id="AEBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
-                              <TableColumn fx:id="AEBackupDateColumn" prefWidth="75.0" text="Backup Date" />
-                              <TableColumn fx:id="AENotesColumn" prefWidth="150.0" text="Notes" />
-                          </columns>
-                        </TableView>
-                        <Label alignment="CENTER" text="All Entries" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <GridPane hgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columnConstraints>
-                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                        <GridPane hgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="50.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="-Infinity" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                          </rowConstraints>
                            <children>
-                              <Spinner fx:id="experimentalGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" />
-                              <Text fx:id="experimentalGenerationDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a generation">
-                                 <HBox.margin>
-                                    <Insets top="5.0" />
-                                 </HBox.margin>
-                              </Text>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Spinner fx:id="experimentalGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" />
+                                    <Text fx:id="experimentalGenerationDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a generation">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <Label text="Experimental Generation" GridPane.rowIndex="1" />
+                              <Label text="Date" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="experimentalGenerationDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Spinner fx:id="sampleNumberSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" />
+                                    <CheckBox fx:id="ExtinctButton" mnemonicParsing="false" onMouseClicked="#extinctButtonPressed" text="Extinct" />
+                                 </children>
+                              </HBox>
+                              <Label text="Backup Generation" GridPane.rowIndex="4" />
+                              <Label text="Sample Number" GridPane.rowIndex="3" />
+                              <Spinner fx:id="backupGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <DatePicker fx:id="backupOfDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Backup Plate Date" GridPane.rowIndex="5" />
+                              <Label text="Notes" GridPane.rowIndex="6" />
+                              <TextArea fx:id="notesField" prefHeight="42.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" right="30.0" top="5.0" />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                                 <children>
+                                  <Button mnemonicParsing="false" onAction="#addEntryAction" prefHeight="26.0" prefWidth="94.0" text="Add Entry" />
+                                    <Button mnemonicParsing="false" onAction="#deleteEntryButtonPressed" prefHeight="26.0" prefWidth="108.0" text="Delete Entry" />
+                                    <Button mnemonicParsing="false" onAction="#experimentButtonPressed" prefHeight="26.0" prefWidth="97.0" text="Experiment" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Label text="Add an Entry" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="AEInfoLabel" alignment="CENTER" prefHeight="18.0" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
                            </children>
-                        </HBox>
-                        <Label text="Experimental Generation" GridPane.rowIndex="1" />
-                        <Label text="Date" GridPane.rowIndex="2" />
-                        <DatePicker fx:id="experimentalGenerationDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <children>
-                              <Spinner fx:id="sampleNumberSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" />
-                              <CheckBox fx:id="ExtinctButton" mnemonicParsing="false" onMouseClicked="#extinctButtonPressed" text="Extinct" />
-                           </children>
-                        </HBox>
-                        <Label text="Backup Generation" GridPane.rowIndex="4" />
-                        <Label text="Sample Number" GridPane.rowIndex="3" />
-                        <Spinner fx:id="backupGenerationSpinner" editable="true" prefHeight="26.0" prefWidth="79.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <DatePicker fx:id="backupOfDatePicker" prefHeight="26.0" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label text="Backup Plate Date" GridPane.rowIndex="5" />
-                        <Label text="Notes" GridPane.rowIndex="6" />
-                        <TextArea fx:id="notesField" prefHeight="42.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
-                           <GridPane.margin>
-                              <Insets bottom="5.0" right="30.0" top="5.0" />
-                           </GridPane.margin>
-                        </TextArea>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                        </GridPane>
+                        <AnchorPane>
                            <children>
-                            <Button mnemonicParsing="false" onAction="#addEntryAction" prefHeight="26.0" prefWidth="94.0" text="Add Entry" />
-                              <Button mnemonicParsing="false" onAction="#deleteEntryButtonPressed" prefHeight="26.0" prefWidth="108.0" text="Delete Entry" />
-                              <Button mnemonicParsing="false" onAction="#experimentButtonPressed" prefHeight="26.0" prefWidth="97.0" text="Experiment" />
+                              <TableView fx:id="allEntriesTable" editable="true" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                                <columns>
+                                  <TableColumn fx:id="AEExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
+                                    <TableColumn fx:id="AEPickDateColumn" prefWidth="75.0" text="Pick Date" />
+                                    <TableColumn fx:id="AEBackupNumberColumn" prefWidth="75.0" text="Backup#" />
+                                  <TableColumn fx:id="AESampleColumn" prefWidth="75.0" text="Sample" />
+                                    <TableColumn fx:id="AEBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
+                                    <TableColumn fx:id="AEBackupDateColumn" prefWidth="75.0" text="Backup Date" />
+                                    <TableColumn fx:id="AENotesColumn" prefWidth="150.0" text="Notes" />
+                                </columns>
+                              </TableView>
+                              <Label alignment="CENTER" text="All Entries" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
-                           <padding>
-                              <Insets bottom="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <Label text="Add an Entry" GridPane.columnSpan="2" GridPane.halignment="CENTER">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="AEInfoLabel" alignment="CENTER" prefHeight="18.0" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="8" />
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </GridPane>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
                </children>
             </AnchorPane>
-            <Pane prefHeight="200.0" prefWidth="25.0">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Pane>
           <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
-                  <GridPane minWidth="-Infinity" prefWidth="600.0" vgap="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints fillHeight="false" maxHeight="132.00000610351563" minHeight="10.0" prefHeight="21.800006103515628" vgrow="SOMETIMES" />
-                        <RowConstraints fillHeight="false" maxHeight="260.80000534057615" minHeight="10.0" prefHeight="26.999993896484373" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="260.80000534057615" minHeight="10.0" prefHeight="206.20000610351562" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <TableView fx:id="sampleListTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-                          <columns>
-                            <TableColumn fx:id="SLSampleColumn" prefWidth="75.0" text="Sample" />
-                              <TableColumn fx:id="SLBackupNumberColumn" prefWidth="75.0" text="BK" />
-                            <TableColumn fx:id="SLGenerationColumn" prefWidth="75.0" text="Generation" />
-                              <TableColumn fx:id="SLBackupCountColumn" prefWidth="75.0" text="Backup #" />
-                              <TableColumn fx:id="SLResetCountColumn" prefWidth="75.0" text="Reset #" />
-                          </columns>
-                        </TableView>
-                        <Label text="Sample List" GridPane.halignment="CENTER">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <GridPane maxHeight="1000.0" prefHeight="600.0" vgap="5.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
+                          </rowConstraints>
                            <children>
-                              <Label text="Experimental Generation" textAlignment="CENTER" />
-                              <Spinner fx:id="SLGenerationSpinner" editable="true" />
-                              <MenuBar>
-                                <menus>
-                                  <Menu mnemonicParsing="false" text="Print">
-                                    <items>
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheet" text="Print Baer Sheet" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheetUpTo" text="Print Baer Sheet Up To:" />
-                                      <MenuItem mnemonicParsing="false" onAction="#PrintList" text="Print List" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintAdvancedList" text="Print Verbose List" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Print Backup Table" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintHistory" text="Print History" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Print Entries CSV" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential" />
-                                          <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential Excel" />
-                                    </items>
-                                  </Menu>
-                                </menus>
-                                 <effect>
-                                    <Blend opacity="0.28" />
-                                 </effect>
-                              </MenuBar>
-                              <ProgressIndicator fx:id="SLPrintProgress" progress="0.0" visible="false" />
+                              <TableView fx:id="sampleListTable" prefHeight="352.0" prefWidth="954.0" tableMenuButtonVisible="true" GridPane.rowIndex="2">
+                                <columns>
+                                  <TableColumn fx:id="SLSampleColumn" prefWidth="75.0" text="Sample" />
+                                    <TableColumn fx:id="SLBackupNumberColumn" prefWidth="75.0" text="BK" />
+                                  <TableColumn fx:id="SLGenerationColumn" prefWidth="75.0" text="Generation" />
+                                    <TableColumn fx:id="SLBackupCountColumn" prefWidth="75.0" text="Backup #" />
+                                    <TableColumn fx:id="SLResetCountColumn" prefWidth="75.0" text="Reset #" />
+                                </columns>
+                              </TableView>
+                              <Label text="Sample List" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label text="Experimental Generation" textAlignment="CENTER" />
+                                    <Spinner fx:id="SLGenerationSpinner" editable="true" />
+                                    <MenuBar>
+                                      <menus>
+                                        <Menu mnemonicParsing="false" text="Print">
+                                          <items>
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheet" text="Print Baer Sheet" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheetUpTo" text="Print Baer Sheet Up To:" />
+                                            <MenuItem mnemonicParsing="false" onAction="#PrintList" text="Print List" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintAdvancedList" text="Print Verbose List" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Print Backup Table" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintHistory" text="Print History" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Print Entries CSV" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential Excel" />
+                                          </items>
+                                        </Menu>
+                                      </menus>
+                                       <effect>
+                                          <Blend opacity="0.28" />
+                                       </effect>
+                                    </MenuBar>
+                                    <ProgressIndicator fx:id="SLPrintProgress" progress="0.0" visible="false" />
+                                 </children>
+                              </HBox>
                            </children>
-                        </HBox>
-                     </children>
-                  </GridPane>
-                  <AnchorPane prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
-                     <children>
-                        <HBox alignment="CENTER_LEFT" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                        </GridPane>
+                        <AnchorPane prefWidth="600.0">
                            <children>
-                              <Label text="Sample Number" textAlignment="CENTER" />
-                              <Spinner fx:id="EHSampleNumberSpinner" editable="true" />
+                              <HBox alignment="CENTER_LEFT" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <children>
+                                    <Label text="Sample Number" textAlignment="CENTER" />
+                                    <Spinner fx:id="EHSampleNumberSpinner" editable="true" />
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="EHTable" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                                 <columns>
+                                    <TableColumn fx:id="EHExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
+                                    <TableColumn fx:id="EHPickDateColumn" prefWidth="75.0" text="Pick Date" />
+                                    <TableColumn fx:id="EHBackupNumberColumn" prefWidth="60.0" text="Backup#" />
+                                    <TableColumn fx:id="EHSampleColumn" prefWidth="75.0" text="Sample" />
+                                    <TableColumn fx:id="EHBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
+                                    <TableColumn fx:id="EHBackupDateColumn" prefWidth="75.0" text="Backup Date" />
+                                    <TableColumn fx:id="EHNotesColumn" prefWidth="176.7999267578125" text="Notes" />
+                                 </columns>
+                              </TableView>
+                              <Label alignment="CENTER" text="Entry History" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
                            </children>
-                        </HBox>
-                        <TableView fx:id="EHTable" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
-                           <columns>
-                              <TableColumn fx:id="EHExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
-                              <TableColumn fx:id="EHPickDateColumn" prefWidth="75.0" text="Pick Date" />
-                              <TableColumn fx:id="EHBackupNumberColumn" prefWidth="60.0" text="Backup#" />
-                              <TableColumn fx:id="EHSampleColumn" prefWidth="75.0" text="Sample" />
-                              <TableColumn fx:id="EHBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
-                              <TableColumn fx:id="EHBackupDateColumn" prefWidth="75.0" text="Backup Date" />
-                              <TableColumn fx:id="EHNotesColumn" prefWidth="176.7999267578125" text="Notes" />
-                           </columns>
-                        </TableView>
-                        <Label alignment="CENTER" text="Entry History" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
                </children>
             </AnchorPane>
-         </children>
-      </HBox>
+         </items>
+      </SplitPane>
    </children>
 </AnchorPane>
