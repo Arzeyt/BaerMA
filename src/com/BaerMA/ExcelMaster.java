@@ -8,6 +8,7 @@ import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xddf.usermodel.*;
 import org.apache.poi.xddf.usermodel.chart.*;
 import org.apache.poi.xssf.usermodel.*;
+import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeProperties;
 
 import java.awt.*;
 import java.io.*;
@@ -249,7 +250,6 @@ public class ExcelMaster {
        };
        thread.start();
 
-
    }
 
     //generation visualizer excel sheet
@@ -259,9 +259,9 @@ public class ExcelMaster {
             public void run(){
                 XSSFWorkbook wb = new XSSFWorkbook();
                 XSSFSheet sheet = wb.createSheet();
-                File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Stats for Gen "+experimentalGeneration+".xlsx");
+                File statsFile = new File(MainStage.settings.outputDirectory+File.separator+"Average Generations Behind for Gen "+experimentalGeneration+".xlsx");
 
-                //rows to create = number of lines + 3ish
+                //rows to create = number of lines + buffer (is this necessary or helpful?)
                 for(int i=0;i<=MainStage.settings.lines.size()+100;i++){
                     for(int x=0;x<=experimentalGeneration+5;x++) {
                         sheet.createRow(i).createCell(x);
@@ -308,7 +308,6 @@ public class ExcelMaster {
                 legend.setPosition(LegendPosition.RIGHT);
                 XDDFCategoryAxis categoryAxis = chart.createCategoryAxis(AxisPosition.BOTTOM);
                 categoryAxis.setTitle("Experimental Generations");
-                //categoryAxis.setMajorUnit(5);
                 XDDFValueAxis valueAxis=chart.createValueAxis(AxisPosition.LEFT);
                 valueAxis.setTitle("Average Generations Behind");
                 valueAxis.setCrosses(AxisCrosses.AUTO_ZERO);
@@ -324,23 +323,19 @@ public class ExcelMaster {
                 XDDFNumericalDataSource<Double> line5 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(6,6,1,experimentalGeneration+1));
                 XDDFNumericalDataSource<Double> line6 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(7,7,1,experimentalGeneration+1));
 
-                XDDFChartData.Series series = chartData.addSeries(dataGenerations,line1);
-                series.setTitle(sheet.getRow(1).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),2,0,true,true));
-                series=chartData.addSeries(dataGenerations,line2);
-                series.setTitle(sheet.getRow(2).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),3,0,true,true));
-                series=chartData.addSeries(dataGenerations,line3);
-                series.setTitle(sheet.getRow(3).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),4,0,true,true));
-                series=chartData.addSeries(dataGenerations,line4);
-                series.setTitle(sheet.getRow(4).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),5,0,true,true));
-                series=chartData.addSeries(dataGenerations,line5);
-                series.setTitle(sheet.getRow(5).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),6,0,true,true));
-                series=chartData.addSeries(dataGenerations,line6);
-                series.setTitle(sheet.getRow(6).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),7,0,true,true));
+                XDDFChartData.Series allSeries = chartData.addSeries(dataGenerations,line1);
+                allSeries.setTitle(sheet.getRow(1).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),2,0,true,true));
+                allSeries=chartData.addSeries(dataGenerations,line2);
+                allSeries.setTitle(sheet.getRow(2).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),3,0,true,true));
+                allSeries=chartData.addSeries(dataGenerations,line3);
+                allSeries.setTitle(sheet.getRow(3).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),4,0,true,true));
+                allSeries=chartData.addSeries(dataGenerations,line4);
+                allSeries.setTitle(sheet.getRow(4).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),5,0,true,true));
+                allSeries=chartData.addSeries(dataGenerations,line5);
+                allSeries.setTitle(sheet.getRow(5).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),6,0,true,true));
+                allSeries=chartData.addSeries(dataGenerations,line6);
+                allSeries.setTitle(sheet.getRow(6).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),7,0,true,true));
 
-                for(XDDFChartData.Series seri : chartData.getSeries()){
-                    System.out.println(seri.getCategoryData().getPointCount());
-                    System.out.println(seri.getValuesData().getPointCount());
-                }
                 try {
                     chart.plot(chartData);
                 }catch (NullPointerException e){
