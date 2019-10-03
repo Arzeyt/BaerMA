@@ -10,12 +10,14 @@ import org.apache.poi.xddf.usermodel.chart.*;
 import org.apache.poi.xssf.usermodel.*;
 import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeProperties;
 
+import javax.xml.namespace.QName;
 import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Optional;
 
 public class ExcelMaster {
 
@@ -308,6 +310,10 @@ public class ExcelMaster {
                 legend.setPosition(LegendPosition.RIGHT);
                 XDDFCategoryAxis categoryAxis = chart.createCategoryAxis(AxisPosition.BOTTOM);
                 categoryAxis.setTitle("Experimental Generations");
+                categoryAxis.setMinorUnit(5);
+                categoryAxis.setMajorUnit(10);
+                categoryAxis.setMajorTickMark(AxisTickMark.CROSS);
+                categoryAxis.setMinorTickMark(AxisTickMark.OUT);
                 XDDFValueAxis valueAxis=chart.createValueAxis(AxisPosition.LEFT);
                 valueAxis.setTitle("Average Generations Behind");
                 valueAxis.setCrosses(AxisCrosses.AUTO_ZERO);
@@ -423,18 +429,4 @@ public class ExcelMaster {
         properties.setLineProperties(line);
         series.setShapeProperties(properties);
     }
-
-    public static void setCellValue(Sheet sheet, int row, int column, Object value){
-       if(value instanceof String){
-           sheet.getRow(row).getCell(column).setCellValue((String) value);
-       }else if(value instanceof Integer){
-           sheet.getRow(row).getCell(column).setCellValue((int)value);
-       }else if(value instanceof Double){
-           sheet.getRow(row).getCell(column).setCellValue((double)value);
-       }else{
-           System.out.println("Cannot write cell value");
-       }
-    }
-
-
 }
