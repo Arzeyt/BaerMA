@@ -34,7 +34,7 @@ public class Controller implements Initializable{
     @FXML private Label AEInfoLabel;
 
     @FXML private TableView allEntriesTable;
-    @FXML private TableColumn AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn, AEBackupNumberColumn;
+    @FXML private TableColumn AELineColumn, AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn, AEBackupNumberColumn;
 
     @FXML private ProgressIndicator SLPrintProgress;
     @FXML private Spinner<Integer> SLGenerationSpinner;
@@ -84,6 +84,7 @@ public class Controller implements Initializable{
     }
 
     private void initializeAllEntriesTable() {
+        AELineColumn.setCellValueFactory(new PropertyValueFactory<Entry,String>("linessp"));
         AESampleColumn.setCellValueFactory(new PropertyValueFactory<Entry,Integer>("sampleIDssp"));
         AEExperimentalGenerationColumn.setCellValueFactory(new PropertyValueFactory<Entry,Integer>("SexperimentalGeneration"));
         AEPickDateColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SpickDate"));

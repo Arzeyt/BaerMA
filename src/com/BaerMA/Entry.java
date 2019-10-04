@@ -29,6 +29,13 @@ public class Entry implements Serializable{
         return sampleIDssp;
     }
      */
+    transient SimpleStringProperty linessp;
+    public void setlinessp(String value){linesp().set(value);}
+    public String getlinessp(){return linesp().getValue();}
+    public StringProperty linesp(){
+        if(linessp==null)linessp=new SimpleStringProperty(this,"linessp");
+        return linessp;
+    }
 
     transient SimpleIntegerProperty sampleIDssp;
     public void setSampleIDssp(Integer value){ sampleIDsp().set(value);}
@@ -98,7 +105,7 @@ public class Entry implements Serializable{
         this.backupOfDate=backupOfDate;
         this.notes=notes;
 
-
+        this.linessp=new SimpleStringProperty(getLineLetter());
         this.sampleIDssp = new SimpleIntegerProperty(sampleID);
         this.SexperimentalGeneration= new SimpleIntegerProperty(experimentalGeneration);
         this.SpickDate=new SimpleStringProperty(pickDate.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
@@ -144,20 +151,14 @@ public class Entry implements Serializable{
     }
 
     public String getLineLetter(){
-        if(id >= 500 && id <= 599){
-            return "C";
-        }else if(id >= 600 && id <= 699){
-            return "M";
-        }else if(id >= 700 && id <= 799){
-            return "X";
-        }else if(id >= 800 && id <= 899){
-            return "J";
-        }else if(id >= 900 && id <= 999){
-            return "E";
-        }else if(id >= 1000 && id <= 1099){
-            return "J2";
+
+        ArrayList<LineObject> lines = MainStage.settings.lines;
+        for(LineObject line : lines){
+            if(id>=line.lineStartNumber && id <= line.lineEndNumber){
+                return line.lineName;
+            }
         }
-        return null;
+        return "NA";
     }
 
     /**
