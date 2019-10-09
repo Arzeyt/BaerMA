@@ -224,6 +224,22 @@
     "notes": ""
   },
   {
+    "id": 520,
+    "experimentalGeneration": 79,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 521,
     "experimentalGeneration": 16,
     "backupGeneration": 14,
@@ -768,6 +784,22 @@
     "notes": ""
   },
   {
+    "id": 550,
+    "experimentalGeneration": 79,
+    "backupGeneration": 77,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 552,
     "experimentalGeneration": 19,
     "backupGeneration": 17,
@@ -1052,6 +1084,22 @@
       "year": 2019,
       "month": 9,
       "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 565,
+    "experimentalGeneration": 78,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -1616,6 +1664,22 @@
     "notes": ""
   },
   {
+    "id": 590,
+    "experimentalGeneration": 79,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 592,
     "experimentalGeneration": 2,
     "backupGeneration": 0,
@@ -1884,6 +1948,22 @@
       "year": 2019,
       "month": 9,
       "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 597,
+    "experimentalGeneration": 78,
+    "backupGeneration": 60,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -2304,6 +2384,22 @@
     "notes": ""
   },
   {
+    "id": 631,
+    "experimentalGeneration": 77,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
     "id": 634,
     "experimentalGeneration": 22,
     "backupGeneration": 20,
@@ -2704,6 +2800,22 @@
     "notes": ""
   },
   {
+    "id": 648,
+    "experimentalGeneration": 79,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 650,
     "experimentalGeneration": 20,
     "backupGeneration": 17,
@@ -2784,6 +2896,38 @@
     "notes": ""
   },
   {
+    "id": 655,
+    "experimentalGeneration": 77,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
+    "id": 655,
+    "experimentalGeneration": 79,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 656,
     "experimentalGeneration": 66,
     "backupGeneration": 64,
@@ -2812,6 +2956,22 @@
       "year": 2019,
       "month": 5,
       "day": 5
+    },
+    "notes": ""
+  },
+  {
+    "id": 657,
+    "experimentalGeneration": 78,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -22288,6 +22448,22 @@
     "notes": ""
   },
   {
+    "id": 809,
+    "experimentalGeneration": 77,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
     "id": 811,
     "experimentalGeneration": 64,
     "backupGeneration": 62,
@@ -22412,6 +22588,38 @@
       "year": 2019,
       "month": 9,
       "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 811,
+    "experimentalGeneration": 77,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
+    "id": 811,
+    "experimentalGeneration": 78,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -22880,6 +23088,38 @@
     "notes": ""
   },
   {
+    "id": 825,
+    "experimentalGeneration": 77,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
+    "id": 825,
+    "experimentalGeneration": 79,
+    "backupGeneration": 69,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 826,
     "experimentalGeneration": 23,
     "backupGeneration": 20,
@@ -23344,6 +23584,22 @@
     "notes": ""
   },
   {
+    "id": 841,
+    "experimentalGeneration": 78,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
+    },
+    "notes": ""
+  },
+  {
     "id": 842,
     "experimentalGeneration": 68,
     "backupGeneration": 66,
@@ -23468,6 +23724,38 @@
       "year": 2019,
       "month": 9,
       "day": 18
+    },
+    "notes": ""
+  },
+  {
+    "id": 843,
+    "experimentalGeneration": 78,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
+    },
+    "notes": ""
+  },
+  {
+    "id": 843,
+    "experimentalGeneration": 79,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
     },
     "notes": ""
   },
@@ -23696,6 +23984,22 @@
     "notes": ""
   },
   {
+    "id": 850,
+    "experimentalGeneration": 79,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 853,
     "experimentalGeneration": 15,
     "backupGeneration": 13,
@@ -23804,6 +24108,22 @@
       "year": 2019,
       "month": 4,
       "day": 7
+    },
+    "notes": ""
+  },
+  {
+    "id": 861,
+    "experimentalGeneration": 77,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
     },
     "notes": ""
   },
@@ -24000,6 +24320,22 @@
     "notes": ""
   },
   {
+    "id": 871,
+    "experimentalGeneration": 77,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
     "id": 873,
     "experimentalGeneration": 76,
     "backupGeneration": 73,
@@ -24140,6 +24476,22 @@
       "year": 2019,
       "month": 9,
       "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 874,
+    "experimentalGeneration": 77,
+    "backupGeneration": -1,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
     },
     "notes": ""
   },
@@ -24300,6 +24652,22 @@
       "year": 2019,
       "month": 8,
       "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 882,
+    "experimentalGeneration": 78,
+    "backupGeneration": 73,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -24556,6 +24924,22 @@
       "year": 2019,
       "month": 8,
       "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 895,
+    "experimentalGeneration": 79,
+    "backupGeneration": 73,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
     },
     "notes": ""
   },
@@ -24848,6 +25232,38 @@
     "notes": ""
   },
   {
+    "id": 911,
+    "experimentalGeneration": 78,
+    "backupGeneration": 73,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 14
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
+    },
+    "notes": ""
+  },
+  {
+    "id": 911,
+    "experimentalGeneration": 79,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": "from population"
+  },
+  {
     "id": 914,
     "experimentalGeneration": 43,
     "backupGeneration": 41,
@@ -24876,6 +25292,22 @@
       "year": 2019,
       "month": 8,
       "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 914,
+    "experimentalGeneration": 79,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
     },
     "notes": ""
   },
@@ -25008,6 +25440,22 @@
     "notes": ""
   },
   {
+    "id": 926,
+    "experimentalGeneration": 77,
+    "backupGeneration": 74,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
     "id": 928,
     "experimentalGeneration": 58,
     "backupGeneration": 56,
@@ -25052,6 +25500,22 @@
       "year": 2019,
       "month": 8,
       "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 929,
+    "experimentalGeneration": 78,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
     },
     "notes": ""
   },
@@ -25504,6 +25968,22 @@
     "notes": ""
   },
   {
+    "id": 968,
+    "experimentalGeneration": 79,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
+  },
+  {
     "id": 969,
     "experimentalGeneration": 61,
     "backupGeneration": 59,
@@ -25760,6 +26240,22 @@
     "notes": ""
   },
   {
+    "id": 1003,
+    "experimentalGeneration": 77,
+    "backupGeneration": 4,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "notes": ""
+  },
+  {
     "id": 1012,
     "experimentalGeneration": 75,
     "backupGeneration": 2,
@@ -25870,6 +26366,22 @@
       "day": 4
     },
     "notes": "ancestral stock"
+  },
+  {
+    "id": 1017,
+    "experimentalGeneration": 79,
+    "backupGeneration": 6,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "notes": ""
   },
   {
     "id": 506,

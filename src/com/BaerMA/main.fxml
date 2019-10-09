@@ -140,7 +140,7 @@
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
-                              <RowConstraints fillHeight="false" maxHeight="30.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" maxHeight="25.0" minHeight="-Infinity" prefHeight="25.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="20.0" vgrow="ALWAYS" />
                           </rowConstraints>
                            <children>
@@ -180,8 +180,8 @@
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries (.txt)" />
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer (.xlsx)" />
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential CSV" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential Excel" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential (.xlsx)" />
                                           </items>
                                         </Menu>
                                       </menus>

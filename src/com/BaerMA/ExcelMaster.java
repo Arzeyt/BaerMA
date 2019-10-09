@@ -329,18 +329,31 @@ public class ExcelMaster {
                 XDDFNumericalDataSource<Double> line5 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(6,6,1,experimentalGeneration+1));
                 XDDFNumericalDataSource<Double> line6 = XDDFDataSourcesFactory.fromNumericCellRange(sheet,new CellRangeAddress(7,7,1,experimentalGeneration+1));
 
-                XDDFChartData.Series allSeries = chartData.addSeries(dataGenerations,line1);
+                XDDFLineChartData.Series allSeries;
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line1);
                 allSeries.setTitle(sheet.getRow(1).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),2,0,true,true));
-                allSeries=chartData.addSeries(dataGenerations,line2);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
+
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line2);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
                 allSeries.setTitle(sheet.getRow(2).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),3,0,true,true));
-                allSeries=chartData.addSeries(dataGenerations,line3);
+
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line3);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
                 allSeries.setTitle(sheet.getRow(3).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),4,0,true,true));
-                allSeries=chartData.addSeries(dataGenerations,line4);
+
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line4);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
                 allSeries.setTitle(sheet.getRow(4).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),5,0,true,true));
-                allSeries=chartData.addSeries(dataGenerations,line5);
+
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line5);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
                 allSeries.setTitle(sheet.getRow(5).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),6,0,true,true));
-                allSeries=chartData.addSeries(dataGenerations,line6);
+
+                allSeries= (XDDFLineChartData.Series) chartData.addSeries(dataGenerations,line6);
+                allSeries.setMarkerStyle(MarkerStyle.NONE);
                 allSeries.setTitle(sheet.getRow(6).getCell(0).getStringCellValue(),new CellReference(sheet.getSheetName(),7,0,true,true));
+
 
                 try {
                     chart.plot(chartData);
