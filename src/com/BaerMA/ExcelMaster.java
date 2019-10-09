@@ -1,6 +1,7 @@
 package com.BaerMA;
 
 import javafx.scene.control.Alert;
+import org.apache.poi.hssf.record.chart.CategorySeriesAxisRecord;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -314,6 +315,8 @@ public class ExcelMaster {
                 categoryAxis.setMajorUnit(10);
                 categoryAxis.setMajorTickMark(AxisTickMark.CROSS);
                 categoryAxis.setMinorTickMark(AxisTickMark.OUT);
+
+
                 XDDFValueAxis valueAxis=chart.createValueAxis(AxisPosition.LEFT);
                 valueAxis.setTitle("Average Generations Behind");
                 valueAxis.setCrosses(AxisCrosses.AUTO_ZERO);
