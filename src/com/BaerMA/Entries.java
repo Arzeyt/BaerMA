@@ -813,7 +813,7 @@ public class Entries {
 
     public void printBackupsPerLinePerGen(int experimentalGeneration){
         try {
-            File file = new File(MainStage.settings.outputDirectory + File.separator + "Number of backups per gen for gen " + experimentalGeneration + ".csv");
+            File file = new File(MainStage.settings.outputDirectory + File.separator + "Backups per line per gen up to gen " + experimentalGeneration + ".csv");
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
 
             //create backups per gen array
