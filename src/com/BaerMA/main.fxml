@@ -23,7 +23,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.Controller">
    <children>
       <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -110,11 +110,11 @@
                            <children>
                               <TableView fx:id="allEntriesTable" editable="true" prefWidth="600.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
                                 <columns>
-                                    <TableColumn fx:id="AELineColumn" prefWidth="75.0" text="Line" />
                                   <TableColumn fx:id="AEExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
                                     <TableColumn fx:id="AEPickDateColumn" prefWidth="75.0" text="Pick Date" />
                                     <TableColumn fx:id="AEBackupNumberColumn" prefWidth="75.0" text="Backup#" />
-                                  <TableColumn fx:id="AESampleColumn" prefWidth="75.0" text="Sample" />
+                                    <TableColumn fx:id="AELineColumn" prefWidth="30.0" text="Line" />
+                                  <TableColumn fx:id="AESampleColumn" prefWidth="60.0" text="Sample" />
                                     <TableColumn fx:id="AEBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
                                     <TableColumn fx:id="AEBackupDateColumn" prefWidth="75.0" text="Backup Date" />
                                     <TableColumn fx:id="AENotesColumn" prefWidth="150.0" text="Notes" />
@@ -183,6 +183,7 @@
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats (.csv)" />
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential (.csv)" />
                                                 <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential (.xlsx)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupsPerGenCSV" text="Print Number of Backups Per Gen (.csv)" />
                                           </items>
                                         </Menu>
                                       </menus>
@@ -211,6 +212,7 @@
                                     <TableColumn fx:id="EHExperimentalGenerationColumn" prefWidth="75.0" text="Experimental Generation" />
                                     <TableColumn fx:id="EHPickDateColumn" prefWidth="75.0" text="Pick Date" />
                                     <TableColumn fx:id="EHBackupNumberColumn" prefWidth="60.0" text="Backup#" />
+                                    <TableColumn fx:id="EHLineColumn" prefWidth="30.0" text="Line" />
                                     <TableColumn fx:id="EHSampleColumn" prefWidth="75.0" text="Sample" />
                                     <TableColumn fx:id="EHBackupGenerationColumn" prefWidth="75.0" text="Backup Generation" />
                                     <TableColumn fx:id="EHBackupDateColumn" prefWidth="75.0" text="Backup Date" />

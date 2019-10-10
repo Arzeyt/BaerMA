@@ -23,6 +23,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable{
 
 
+    //add entry panel
     @FXML private Spinner<Integer> experimentalGenerationSpinner;
     @FXML private DatePicker experimentalGenerationDatePicker;
     @FXML private Text experimentalGenerationDateText;
@@ -33,17 +34,20 @@ public class Controller implements Initializable{
     @FXML private TextArea notesField;
     @FXML private Label AEInfoLabel;
 
+    //all entries panel
     @FXML private TableView allEntriesTable;
     @FXML private TableColumn AELineColumn, AESampleColumn,AEExperimentalGenerationColumn,AEPickDateColumn,AEBackupGenerationColumn,AEBackupDateColumn,AENotesColumn, AEBackupNumberColumn;
 
+    //sample list panel
     @FXML private ProgressIndicator SLPrintProgress;
     @FXML private Spinner<Integer> SLGenerationSpinner;
     @FXML private TableView sampleListTable;
     @FXML private TableColumn SLSampleColumn, SLBackupNumberColumn, SLGenerationColumn, SLBackupCountColumn, SLResetCountColumn;
 
+    //entry history panel
     @FXML private Spinner<Integer> EHSampleNumberSpinner;
     @FXML private TableView EHTable;
-    @FXML private TableColumn EHSampleColumn, EHExperimentalGenerationColumn, EHPickDateColumn, EHBackupGenerationColumn, EHBackupDateColumn,EHNotesColumn,EHBackupNumberColumn;
+    @FXML private TableColumn EHLineColumn, EHSampleColumn, EHExperimentalGenerationColumn, EHPickDateColumn, EHBackupGenerationColumn, EHBackupDateColumn,EHNotesColumn,EHBackupNumberColumn;
 
     private Entries entriesClass = MainStage.entries;
 
@@ -119,6 +123,7 @@ public class Controller implements Initializable{
             entriesClass.createEntryHistoryList(newValue);
         });
 
+        EHLineColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("linessp"));
         EHSampleColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("sampleIDssp"));
         EHExperimentalGenerationColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SexperimentalGeneration"));
         EHPickDateColumn.setCellValueFactory(new PropertyValueFactory<Entry, String>("SpickDate"));
@@ -259,6 +264,10 @@ public class Controller implements Initializable{
             }
 
             public void PrintGenerationsBehindSequentialExcel(){ExcelMaster.createAverageBackupGraphingSheet(SLGenerationSpinner.getValue());}
+
+            public void PrintBackupsPerGenCSV(){
+                MainStage.entries.printBackupsPerLinePerGen(SLGenerationSpinner.getValue());
+            }
 
 
     //3. Miscellaneous Methods-------------

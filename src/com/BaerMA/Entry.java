@@ -19,23 +19,9 @@ public class Entry implements Serializable{
     public String notes, extra;
 
 
-    /**
-    //used to display data in the entryTable
-    transient SimpleStringProperty sampleIDssp;
-    public void setSampleIDssp(String value){ sampleIDsp().set(value);}
-    public String getSampleIDssp(){return sampleIDsp().getValue();}
-    public StringProperty sampleIDsp(){
-        if(sampleIDssp ==null) sampleIDssp =new SimpleStringProperty(this,"sampleIDssp");
-        return sampleIDssp;
-    }
-     */
     transient SimpleStringProperty linessp;
-    public void setlinessp(String value){linesp().set(value);}
-    public String getlinessp(){return linesp().getValue();}
-    public StringProperty linesp(){
-        if(linessp==null)linessp=new SimpleStringProperty(this,"linessp");
-        return linessp;
-    }
+    public void setLinessp(String value){linessp.setValue(getLineLetter());}
+    public String getLinessp(){return linessp.getValue();}
 
     transient SimpleIntegerProperty sampleIDssp;
     public void setSampleIDssp(Integer value){ sampleIDsp().set(value);}
@@ -106,6 +92,7 @@ public class Entry implements Serializable{
         this.notes=notes;
 
         this.linessp=new SimpleStringProperty(getLineLetter());
+        System.out.println("Line Property is: "+linessp.getValue());
         this.sampleIDssp = new SimpleIntegerProperty(sampleID);
         this.SexperimentalGeneration= new SimpleIntegerProperty(experimentalGeneration);
         this.SpickDate=new SimpleStringProperty(pickDate.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));

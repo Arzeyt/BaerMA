@@ -415,6 +415,7 @@ public class Entries {
         catch(IOException ex)
         {
             ex.printStackTrace();
+            MainStage.alertError("Write error","",ex.getLocalizedMessage());
         }
     }
 
@@ -462,6 +463,7 @@ public class Entries {
         catch(IOException ex)
         {
             ex.printStackTrace();
+            MainStage.alertError("Write error","",ex.getLocalizedMessage());
         }
     }
 
@@ -514,6 +516,7 @@ public class Entries {
         catch(IOException ex)
         {
             ex.printStackTrace();
+            MainStage.alertError("Write error","",ex.getLocalizedMessage());
         }
 
     }
@@ -563,6 +566,7 @@ public class Entries {
             Desktop.getDesktop().open(file);
         }catch(IOException ex) {
             ex.printStackTrace();
+            MainStage.alertError("Write error","",ex.getLocalizedMessage());
         }
     }
 
@@ -605,6 +609,7 @@ public class Entries {
             Desktop.getDesktop().open(file);
         }catch (Exception e){
             e.printStackTrace();
+            MainStage.alertError("Write error","",e.getLocalizedMessage());
         }
     }
 
@@ -654,6 +659,7 @@ public class Entries {
             Desktop.getDesktop().open(file);
         }catch (Exception e){
             e.printStackTrace();
+            MainStage.alertError("Write error","",e.getLocalizedMessage());
         }
     }
 
@@ -742,6 +748,7 @@ public class Entries {
             Desktop.getDesktop().open(file);
         }catch (Exception e){
             e.printStackTrace();
+            MainStage.alertError("Write error","",e.getLocalizedMessage());
         }
 
     }
@@ -755,7 +762,8 @@ public class Entries {
         try
         {
 
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("Sample Backups.csv"),"utf-8"));
+            File file = new File(MainStage.settings.outputDirectory+File.separator+"Sample Backups.csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
             //print header
             String header = "Sample ID";
             for(int i=1;i<=numberOfGenerations;i++){
@@ -798,8 +806,48 @@ public class Entries {
         catch(IOException ex)
         {
             ex.printStackTrace();
+            MainStage.alertError("Write error","",ex.getLocalizedMessage());
         }
 
+    }
+
+    public void printBackupsPerLinePerGen(int experimentalGeneration){
+        try {
+            File file = new File(MainStage.settings.outputDirectory + File.separator + "Number of backups per gen for gen " + experimentalGeneration + ".csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file),"utf-8"));
+
+            //create backups per gen array
+            ArrayList<Integer> backupsPerGen = new ArrayList<>();
+            for(int i=0;i<=experimentalGeneration;i++){
+                backupsPerGen.add(i,getEntriesForGeneration(i).size());
+            }
+
+            //header
+            writer.write(",Generation\n");
+            writer.write("Line,");
+            for(int i=0;i<=experimentalGeneration;i++){
+                writer.write(i+",");
+            }
+            writer.write("\n");
+
+            //data
+            //for each line, write number of backups
+            for(LineObject line : MainStage.settings.lines){
+                writer.write(line.lineName+",");
+                for(int i=0;i<=experimentalGeneration;i++){
+                    ArrayList<Entry> list = getEntriesForGeneration(i);
+                    list.removeIf(e -> e.getSampleIDssp()<line.lineStartNumber || e.getSampleIDssp()>=line.lineEndNumber);
+                    writer.write(list.size()+",");
+                }
+                writer.write("\n");
+            }
+
+            writer.close();
+            Desktop.getDesktop().open(file);
+        }catch (Exception e){
+            e.printStackTrace();
+            MainStage.alertError("Write error","",e.getLocalizedMessage());
+        }
     }
 
 
