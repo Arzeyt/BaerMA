@@ -15,6 +15,7 @@ public File dataDirectory = new File("Data");
 public File outputDirectory = new File("Output");
 public File entriesFile = new File(dataDirectory+File.separator+"Entries.json");
 public ArrayList<LineObject> lines = new ArrayList<>();
+public ArrayList<PickerObject> pickers = new ArrayList<>();
 
 
 
@@ -26,6 +27,10 @@ public ArrayList<LineObject> lines = new ArrayList<>();
         lines.add(new LineObject("J",800,899));
         lines.add(new LineObject("E",900,999));
         lines.add(new LineObject("J2",1000,1099));
+
+        //default pickers
+        pickers.add(new PickerObject("Nicholas Edenhoffer"));
+        pickers.add(new PickerObject("Vaishali Katju"));
     }
 
     public void initialize(){

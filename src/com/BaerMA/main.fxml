@@ -239,6 +239,7 @@
               <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#exit" text="Close" />
                   <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#loadEntriesFile_ButtonPressed" text="Load Entries File" />
                   <MenuItem mnemonicParsing="false" onAction="#openTerminal" text="Open Terminal" />
+                  <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#openPickers" text="Open Pickers" />
                   <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#ExportToCSV_ButtonPressed" text="Export To CSV" />
             </items>
           </Menu>

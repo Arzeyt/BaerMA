@@ -1,6 +1,7 @@
 package com.BaerMA;
 
 import com.Controllers.Controller;
+import com.Controllers.PickersController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -49,6 +50,7 @@ public class MainStage{
     public static Entries entries;
     public static Controller controller;
     public static Settings settings;
+    public static PickersController pickersController;
 
 
     //Entry Table Components

@@ -181,6 +181,20 @@ public class Controller implements Initializable{
                 }
             }
 
+            public void openPickers(){
+                System.out.println("opening pickers");
+                try{
+                    Parent root = FXMLLoader.load(getClass().getResource("Pickers.fxml"));
+                    Scene scene = new Scene(root);
+                    Stage stage = new Stage();
+                    stage.setScene(scene);
+                    stage.show();
+                }catch (Exception e){
+                    e.printStackTrace();
+                    MainStage.alertError("Failed to Load Picker Interface","","");
+                }
+            }
+
         //b. Entry Panel-------
             public void addEntryAction() {
                 Entry entry;
