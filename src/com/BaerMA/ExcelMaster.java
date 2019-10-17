@@ -1,7 +1,7 @@
 package com.BaerMA;
 
-import javafx.scene.control.Alert;
-import org.apache.poi.hssf.record.chart.CategorySeriesAxisRecord;
+import com.BaerMA.DataObjects.CalculatedEntry;
+import com.BaerMA.DataObjects.LineObject;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -9,16 +9,13 @@ import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xddf.usermodel.*;
 import org.apache.poi.xddf.usermodel.chart.*;
 import org.apache.poi.xssf.usermodel.*;
-import org.openxmlformats.schemas.drawingml.x2006.main.CTShapeProperties;
 
-import javax.xml.namespace.QName;
 import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Optional;
 
 public class ExcelMaster {
 

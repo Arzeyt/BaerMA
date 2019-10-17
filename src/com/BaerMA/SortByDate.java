@@ -1,5 +1,7 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.Entry;
+
 import java.time.LocalDate;
 import java.util.Comparator;
 

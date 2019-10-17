@@ -1,6 +1,8 @@
 package com.Controllers;
 
 import com.BaerMA.*;
+import com.BaerMA.DataObjects.CalculatedEntry;
+import com.BaerMA.DataObjects.Entry;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

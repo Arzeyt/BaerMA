@@ -1,5 +1,7 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.LineObject;
+import com.BaerMA.DataObjects.PickerObject;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -74,6 +76,17 @@ public ArrayList<PickerObject> pickers = new ArrayList<>();
         }catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    public void save(){
+        Gson gson = new GsonBuilder().serializeNulls().setPrettyPrinting().create();
+        System.out.println(gson.toJson(this));
+        try{
+            FileWriter writer = new FileWriter("Settings.json");
+            writer.write(gson.toJson(this));
+            writer.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

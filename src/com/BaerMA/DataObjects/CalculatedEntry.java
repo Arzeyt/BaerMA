@@ -1,5 +1,6 @@
-package com.BaerMA;
+package com.BaerMA.DataObjects;
 
+import com.BaerMA.*;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ObservableList;
@@ -16,7 +17,7 @@ public class CalculatedEntry {
     private static Settings settings;
 
 
-    SimpleIntegerProperty sampleID;
+    public SimpleIntegerProperty sampleID;
     public void setSampleID(Integer value){
         sampleIDProperty().set(value);}
     public Integer getsampleID(){return sampleIDProperty().getValue();}
@@ -25,7 +26,7 @@ public class CalculatedEntry {
         return sampleID;
     }
 
-    SimpleIntegerProperty calculatedGeneration;
+    public SimpleIntegerProperty calculatedGeneration;
     public void setcalculatedGeneration(Integer value){calculatedGenerationProperty().set(value);}
     public Integer getcalculatedGeneration(){return calculatedGenerationProperty().getValue();}
     public IntegerProperty calculatedGenerationProperty(){

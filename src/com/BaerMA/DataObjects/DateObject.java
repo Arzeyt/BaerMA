@@ -1,12 +1,12 @@
-package com.BaerMA;
+package com.BaerMA.DataObjects;
 
 /**
  * Created by Nick on 1/27/2019.
  */
-public class DateObj {
+public class DateObject {
     public int day, month, year;
 
-    public DateObj(int month, int day, int year){
+    public DateObject(int month, int day, int year){
         this.day=day;
         this.month=month;
         this.year=year;

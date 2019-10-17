@@ -1,5 +1,7 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.CalculatedEntry;
+import com.BaerMA.DataObjects.Entry;
 import com.Controllers.Controller;
 import com.Controllers.PickersController;
 import javafx.beans.value.ChangeListener;

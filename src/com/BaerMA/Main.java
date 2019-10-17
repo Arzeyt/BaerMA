@@ -1,5 +1,7 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.DateObject;
+import com.BaerMA.DataObjects.Entry;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -15,7 +17,7 @@ public class Main extends Application{
         public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     //terminal variables
-        public static DateObj currentDate = null;
+        public static DateObject currentDate = null;
         public static int currentGeneration = 0;
 
         public static String chelp="help",cnew = "new", clist="list", cserialize="serialize", cclear="clear entries", cedit="edit";
@@ -117,7 +119,7 @@ public class Main extends Application{
     public static void changeDate() throws IOException {
         System.out.println("Please enter the date in this format: Month Day Year");
         String[] date = reader.readLine().split(" ");
-        currentDate = new DateObj(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2]));
+        currentDate = new DateObject(Integer.parseInt(date[0]), Integer.parseInt(date[1]), Integer.parseInt(date[2]));
         System.out.println("Date set to: "+currentDate.month+" "+currentDate.day+" "+currentDate.year);
     }
 

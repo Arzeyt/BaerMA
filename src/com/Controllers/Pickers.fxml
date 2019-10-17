@@ -6,20 +6,31 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 
 <AnchorPane prefHeight="312.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.PickersController">
    <children>
-      <SplitPane dividerPositions="0.1166077738515901" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.23225806451612904" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Add Picker" />
-                        <TextField prefHeight="26.0" prefWidth="134.0" />
+                        <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addPicker" text="Add Picker" />
+                              <TextField fx:id="AddPickerField" prefHeight="26.0" prefWidth="134.0" />
+                           </children>
+                        </HBox>
+                        <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Button fx:id="PDeleteButton" disable="true" mnemonicParsing="false" onAction="#deletePicker" text="Delete" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="200.0" />
                      </children>
-                  </HBox>
+                  </VBox>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0">

@@ -1,5 +1,8 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.CalculatedEntry;
+import com.BaerMA.DataObjects.Entry;
+import com.BaerMA.DataObjects.LineObject;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;

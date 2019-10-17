@@ -1,5 +1,7 @@
-package com.BaerMA;
+package com.BaerMA.DataObjects;
 
+import com.BaerMA.Entries;
+import com.BaerMA.MainStage;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -14,8 +16,11 @@ import java.util.ArrayList;
  * Created by Nick on 1/27/2019.
  */
 public class Entry implements Serializable{
-    int id, experimentalGeneration, backupGeneration;
-    LocalDate backupOfDate, pickDate;
+    public int id;
+    public int experimentalGeneration;
+    public int backupGeneration;
+    public LocalDate backupOfDate;
+    public LocalDate pickDate;
     public String notes, extra;
 
 
@@ -23,7 +28,7 @@ public class Entry implements Serializable{
     public void setLinessp(String value){linessp.setValue(getLineLetter());}
     public String getLinessp(){return linessp.getValue();}
 
-    transient SimpleIntegerProperty sampleIDssp;
+    public transient SimpleIntegerProperty sampleIDssp;
     public void setSampleIDssp(Integer value){ sampleIDsp().set(value);}
     public Integer getSampleIDssp(){return sampleIDsp().getValue();}
     public IntegerProperty sampleIDsp(){
@@ -31,7 +36,7 @@ public class Entry implements Serializable{
         return sampleIDssp;
     }
 
-    transient SimpleStringProperty SpickDate;
+    public transient SimpleStringProperty SpickDate;
     public void setSpickDate(String value){SpickDateProperty().set(value);}
     public String getSpickDate(){return SpickDateProperty().getValue();}
     public StringProperty SpickDateProperty(){
@@ -41,7 +46,7 @@ public class Entry implements Serializable{
         return SpickDate;
     }
 
-    transient SimpleIntegerProperty SexperimentalGeneration;
+    public transient SimpleIntegerProperty SexperimentalGeneration;
     public void setSexperimentalGeneration(Integer value){SexperimentalGenerationProperty().set(value);}
     public Integer getSexperimentalGeneration(){return SexperimentalGenerationProperty().getValue();}
     public IntegerProperty SexperimentalGenerationProperty(){
@@ -49,7 +54,7 @@ public class Entry implements Serializable{
         return SexperimentalGeneration;
     }
 
-    transient SimpleIntegerProperty SbackupGeneration;
+    public transient SimpleIntegerProperty SbackupGeneration;
     public void setSbackupGeneration(Integer value){SbackupGenerationProperty().set(value);}
     public Integer getSbackupGenerationProperty(){return SbackupGenerationProperty().getValue();}
     public SimpleIntegerProperty SbackupGenerationProperty(){
@@ -57,7 +62,7 @@ public class Entry implements Serializable{
         return SbackupGeneration;
     }
 
-    transient SimpleStringProperty SbackupOfDate;
+    public transient SimpleStringProperty SbackupOfDate;
     public void setSbackupOfDate(String value){SbackupOfDateProperty().set(value);}
     public String getSbackupOfDate(){return SbackupOfDateProperty().getValue();}
     public StringProperty SbackupOfDateProperty(){
@@ -65,7 +70,7 @@ public class Entry implements Serializable{
         return SbackupOfDate;
     }
 
-    transient SimpleStringProperty Snotes;
+    public transient SimpleStringProperty Snotes;
     public void setSnotes(String value){SnotesProperty().set(value);}
     public String getSnotes(){return SnotesProperty().getValue();}
     public StringProperty SnotesProperty(){

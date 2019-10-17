@@ -1,8 +1,8 @@
-package com.BaerMA;
+package com.BaerMA.DataObjects;
 
 public class PickerObject {
 
-    String Name;
+    public String Name;
 
     public PickerObject(String Name){
         this.Name = Name;
