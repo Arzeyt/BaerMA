@@ -1,5 +1,6 @@
 package com.Controllers;
 
+import com.BaerMA.DataObjects.PickerGenerationObject;
 import com.BaerMA.MainStage;
 import com.BaerMA.DataObjects.PickerObject;
 import javafx.beans.value.ObservableValue;
@@ -10,22 +11,25 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class PickersController implements Initializable {
 
+    //Add Picker Objects
     public ListView<PickerObject> PListView;
     public Button PDeleteButton;
     public PickerObject selectedObject;
     public TextField AddPickerField;
 
+    //Generation Pickers
+    public ListView<PickerGenerationObject> PGenerationListView;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initializeListView();
+        initializeAddPickerList();
     }
 
-    private void initializeListView(){
+    private void initializeAddPickerList(){
         PListView.getItems().addAll(MainStage.settings.pickers);
         PListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         PListView.getSelectionModel().selectedItemProperty().addListener((ObservableValue<? extends PickerObject> observable, PickerObject oldValue, PickerObject newValue) -> {
@@ -36,6 +40,12 @@ public class PickersController implements Initializable {
             }
         });
     }
+
+    private void initializePickerGenerationList(){
+        PGenerationListView.getItems().addAll(MainStage.pickers.getPickersForGeneration(0));
+        PGenerationListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+    }
+
 
     public void addPicker(){
         PickerObject picker = new PickerObject(AddPickerField.getText());

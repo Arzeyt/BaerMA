@@ -53,6 +53,7 @@ public class MainStage{
     public static Controller controller;
     public static Settings settings;
     public static PickersController pickersController;
+    public static Pickers pickers;
 
 
     //Entry Table Components
@@ -75,6 +76,8 @@ public class MainStage{
         entries.parseEntriesJSON(settings.entriesFile);
         //entriesClass.loadEntriesFromCSV();
         entries.calcBackups();
+        pickers = new Pickers();
+        pickers.initialize();
 
         //this initializes controller
         System.out.println("Resource: "+getClass().getResource("main.fxml"));

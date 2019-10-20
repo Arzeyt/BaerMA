@@ -1,41 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="312.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.PickersController">
+<AnchorPane prefHeight="312.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.PickersController">
    <children>
-      <SplitPane dividerPositions="0.23225806451612904" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.4408014571948998" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                  <SplitPane dividerPositions="0.2172503242542153" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#addPicker" text="Add Picker" />
-                              <TextField fx:id="AddPickerField" prefHeight="26.0" prefWidth="134.0" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#addPicker" text="Add New Picker" />
+                                          <TextField fx:id="AddPickerField" prefHeight="26.0" prefWidth="134.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Button fx:id="PDeleteButton" disable="true" mnemonicParsing="false" onAction="#deletePicker" text="Delete" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="50.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
                            </children>
-                        </HBox>
-                        <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <Button fx:id="PDeleteButton" disable="true" mnemonicParsing="false" onAction="#deletePicker" text="Delete" />
+                              <ListView fx:id="PListView" layoutY="-17.0" prefHeight="219.0" prefWidth="234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
-                        </HBox>
-                        <HBox prefHeight="50.0" prefWidth="200.0" />
-                     </children>
-                  </VBox>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ListView fx:id="PListView" layoutY="-17.0" prefHeight="219.0" prefWidth="234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <VBox prefHeight="312.0" prefWidth="330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="35.0" prefWidth="329.0" spacing="10.0">
+                           <children>
+                              <Label text="Generation">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="PGenerationSpinner" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <ListView fx:id="PGenerationListView" prefWidth="305.0" />
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
         </items>
