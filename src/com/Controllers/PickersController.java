@@ -5,10 +5,7 @@ import com.BaerMA.MainStage;
 import com.BaerMA.DataObjects.PickerObject;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,11 +19,14 @@ public class PickersController implements Initializable {
     public TextField AddPickerField;
 
     //Generation Pickers
+    public Spinner<Integer> PGenerationSpinner;
     public ListView<PickerGenerationObject> PGenerationListView;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         initializeAddPickerList();
+        initializePickerGenerationList();
     }
 
     private void initializeAddPickerList(){
@@ -42,7 +42,8 @@ public class PickersController implements Initializable {
     }
 
     private void initializePickerGenerationList(){
-        PGenerationListView.getItems().addAll(MainStage.pickers.getPickersForGeneration(0));
+        PGenerationSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,1000,0) {});
+        PGenerationListView.getItems().addAll(MainStage.pickers.getPickersForGeneration(PGenerationSpinner.getValue()));
         PGenerationListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 

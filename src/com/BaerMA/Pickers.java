@@ -1,6 +1,7 @@
 package com.BaerMA;
 
 import com.BaerMA.DataObjects.PickerGenerationObject;
+import com.BaerMA.DataObjects.PickerObject;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -35,11 +36,23 @@ public class Pickers {
         return pickersForGen;
     }
 
+    /**
+     *
+     * @param pickers
+     * @return
+     */
     private ArrayList<PickerGenerationObject> fillList(ArrayList<PickerGenerationObject> pickers){
-        for(PickerGenerationObject picker : pickers){
-            
+        ArrayList<PickerGenerationObject> filledList = new ArrayList<>();
+        for(PickerObject pickerObject : MainStage.settings.pickers){
+            for(PickerGenerationObject pickerGenerationObject : pickers){
+                if(pickerGenerationObject.name==pickerObject.Name){
+
+                }
+            }
         }
+        return filledList;
     }
+
     public void save(){
         //only save if picker is selected
         pickers.removeIf(pickerGenerationObject -> {
