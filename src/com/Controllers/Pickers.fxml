@@ -14,16 +14,21 @@
 
 <AnchorPane prefHeight="312.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controllers.PickersController">
    <children>
-      <SplitPane dividerPositions="0.4408014571948998" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.44990892531876137" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <SplitPane dividerPositions="0.2172503242542153" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.27561608300907914" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
+                                    <Label alignment="CENTER" prefWidth="250.0" text="Available Pickers" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
                                     <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" VBox.vgrow="NEVER">
                                        <children>
                                           <Button mnemonicParsing="false" onAction="#addPicker" text="Add New Picker" />
@@ -56,6 +61,11 @@
                <children>
                   <VBox prefHeight="312.0" prefWidth="330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
+                        <Label alignment="CENTER" prefHeight="22.0" prefWidth="318.0" text="Pickers in each generation" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
                         <HBox prefHeight="35.0" prefWidth="329.0" spacing="10.0">
                            <children>
                               <Label text="Generation">
@@ -72,7 +82,11 @@
                               <Insets />
                            </opaqueInsets>
                         </HBox>
-                        <ListView fx:id="PGenerationListView" prefWidth="305.0" />
+                        <HBox>
+                           <children>
+                              <ListView fx:id="PGenerationListView" prefWidth="305.0" />
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                </children>
