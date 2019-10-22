@@ -19,6 +19,7 @@ with calclated generation of the sample
 
 
 ---Pickers Interface
+---clear Notes section after switching sample numbers
 ---averageBackupGraphingSheet has line info hard coded
 ---add column with line letter to all relevant tables and lists
 ---print stats sheet
