@@ -2,6 +2,7 @@ package com.BaerMA;
 
 import com.BaerMA.DataObjects.CalculatedEntry;
 import com.BaerMA.DataObjects.Entry;
+import com.BaerMA.DataObjects.PickerGenerationMapData;
 import com.Controllers.Controller;
 import com.Controllers.PickersController;
 import javafx.beans.value.ChangeListener;
@@ -52,8 +53,8 @@ public class MainStage{
     public static Entries entries;
     public static Controller controller;
     public static Settings settings;
+    public static PickerGenerationMapData pickerGenerationMapData;
     public static PickersController pickersController;
-    public static Pickers pickers;
 
 
     //Entry Table Components
@@ -76,8 +77,8 @@ public class MainStage{
         entries.parseEntriesJSON(settings.entriesFile);
         //entriesClass.loadEntriesFromCSV();
         entries.calcBackups();
-        pickers = new Pickers();
-        pickers.initialize();
+        pickerGenerationMapData = new PickerGenerationMapData();
+        pickerGenerationMapData.load();
 
         //this initializes controller
         System.out.println("Resource: "+getClass().getResource("main.fxml"));

@@ -1,6 +1,5 @@
 package com.Controllers;
 
-import com.BaerMA.DataObjects.PickerGenerationObject;
 import com.BaerMA.MainStage;
 import com.BaerMA.DataObjects.PickerObject;
 import javafx.beans.value.ObservableValue;
@@ -8,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class PickersController implements Initializable {
@@ -17,10 +17,16 @@ public class PickersController implements Initializable {
     public Button PDeleteButton;
     public PickerObject selectedObject;
     public TextField AddPickerField;
+    public Button PAddToGenButton;
 
     //Generation Pickers
     public Spinner<Integer> PGenerationSpinner;
-    public ListView<PickerGenerationObject> PGenerationListView;
+    public ListView<PickerObject> PGenerationListView;
+
+    //variables
+
+    public void addPickerToGeneration(int generation, PickerObject picker){
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -43,11 +49,28 @@ public class PickersController implements Initializable {
 
     private void initializePickerGenerationList(){
         PGenerationSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0,1000,0) {});
-        PGenerationListView.getItems().addAll(MainStage.pickers.getPickersForGeneration(PGenerationSpinner.getValue()));
+        PGenerationSpinner.setEditable(true);
+        PGenerationSpinner.valueProperty().addListener((observable, oldValue, newValue) -> {
+            PAddToGenButton.setText("Add to Gen: "+PGenerationSpinner.getValue());
+            PGenerationListView.getItems().clear();
+            PGenerationListView.getItems().addAll(MainStage.pickerGenerationMapData.getPickersForGen(observable.getValue()));
+        });
+
+        PGenerationListView.getItems().addAll(MainStage.pickerGenerationMapData.getPickersForGen(PGenerationSpinner.getValue()));
         PGenerationListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
     }
 
+    public void addToGenButtonPressed(){
+        PickerObject selected = PListView.getFocusModel().getFocusedItem();
+        MainStage.pickerGenerationMapData.addPickerToGeneration(selected, PGenerationSpinner.getValue());
+        PGenerationListView.getItems().add(selected);
+    }
 
+    public void removeFromGenButtonPressed(){
+        PickerObject selected = PGenerationListView.getFocusModel().getFocusedItem();
+        MainStage.pickerGenerationMapData.removePickerFromGeneration(selected, PGenerationSpinner.getValue());
+        PGenerationListView.getItems().remove(selected);
+    }
     public void addPicker(){
         PickerObject picker = new PickerObject(AddPickerField.getText());
         PListView.getItems().add(picker);
