@@ -35,7 +35,7 @@
                                           <TextField fx:id="AddPickerField" prefHeight="26.0" prefWidth="134.0" />
                                        </children>
                                     </HBox>
-                                    <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" spacing="106.0" VBox.vgrow="NEVER">
+                                    <HBox fillHeight="false" maxHeight="35.0" prefHeight="75.0" prefWidth="200.0" spacing="100.0" VBox.vgrow="NEVER">
                                        <children>
                                           <Button fx:id="PDeleteButton" disable="true" mnemonicParsing="false" onAction="#deletePicker" text="Delete" />
                                           <Button fx:id="PAddToGenButton" mnemonicParsing="false" onAction="#addToGenButtonPressed" text="Add to Gen: " HBox.hgrow="ALWAYS">
@@ -45,7 +45,7 @@
                                           </Button>
                                        </children>
                                        <VBox.margin>
-                                          <Insets top="5.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </HBox>
                                     <HBox prefHeight="50.0" prefWidth="200.0" />
