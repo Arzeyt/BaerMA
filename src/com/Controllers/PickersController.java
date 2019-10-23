@@ -23,10 +23,6 @@ public class PickersController implements Initializable {
     public Spinner<Integer> PGenerationSpinner;
     public ListView<PickerObject> PGenerationListView;
 
-    //variables
-
-    public void addPickerToGeneration(int generation, PickerObject picker){
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

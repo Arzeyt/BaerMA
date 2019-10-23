@@ -1,8 +1,8 @@
 package com.BaerMA.DataObjects;
 
 import com.BaerMA.MainStage;
-import com.BaerMA.Settings;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.File;
@@ -41,13 +41,13 @@ public class PickerGenerationMapData {
         }else{
             pickerGenerationMap.get(generation).add(picker);
         }
-        System.out.println("added: "+picker.Name+" to generation: "+generation+". Map size: "+pickerGenerationMap.size());
+        System.out.println("added: "+picker.name +" to generation: "+generation+". Map size: "+pickerGenerationMap.size());
         save();
     }
 
     public void removePickerFromGeneration(PickerObject picker, int generation){
         pickerGenerationMap.get(generation).remove(picker);
-        System.out.println("removed: "+picker.Name+" from gen: "+generation);
+        System.out.println("removed: "+picker.name +" from gen: "+generation);
         save();
     }
     public void load(){
@@ -64,7 +64,9 @@ public class PickerGenerationMapData {
     }
 
     public void save(){
-        Gson gson = new Gson();
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+        Gson gson = gsonBuilder.create();
         try{
             FileWriter writer = new FileWriter(path);
             writer.write(gson.toJson(this));

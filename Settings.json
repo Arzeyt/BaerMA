@@ -44,25 +44,28 @@
   ],
   "pickers": [
     {
-      "Name": "Vaishali Katju"
+      "name": "Nicholas Edenhoffer"
     },
     {
-      "Name": "Nicholas Edenhoffer"
+      "name": "Vaishali Katju"
     },
     {
-      "Name": "Rob Melde"
+      "name": "Joseph Dubie"
     },
     {
-      "Name": "Austin Daigle"
+      "name": "Rob Melde"
     },
     {
-      "Name": "Joe Dubie"
+      "name": "Austin Daigle"
     },
     {
-      "Name": "Meghan Brady"
+      "name": "Lauren Breazeale"
     },
     {
-      "Name": "Lauren Breazeale"
+      "name": "Meghan Brady"
+    },
+    {
+      "name": "McKenna Stout"
     }
   ]
 }

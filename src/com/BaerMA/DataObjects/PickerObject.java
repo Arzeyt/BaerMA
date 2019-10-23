@@ -2,15 +2,15 @@ package com.BaerMA.DataObjects;
 
 public class PickerObject {
 
-    public String Name;
+    public String name;
 
     public PickerObject(String Name){
-        this.Name = Name;
+        this.name = Name;
     }
 
     @Override
     public String toString() {
-        return Name;
+        return name;
     }
 
 }

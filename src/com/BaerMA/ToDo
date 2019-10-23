@@ -19,14 +19,18 @@ with calclated generation of the sample
 
 
 ---Pickers Interface
+    -adding everyone.
+    -Added Rob from gen 57 to current.
+    -added everyone from gen 0-26
+    -added everyone from gen 71 to current.
+    -missing everyone gen 27-56
 ---clear Notes section after switching sample numbers
 ---averageBackupGraphingSheet has line info hard coded
 ---add column with line letter to all relevant tables and lists
----print stats sheet
 ---make getLineLetter in Entry use settings
 --edit mode for entries
     https://gist.github.com/haisi/0a82e17daf586c9bab52
---option to load particular save file, including CSV
+---option to load particular save file, including CSV
 --Suggested date for each generation.
     Include this date in the Sample list panel
     Also include this during entry creation
@@ -38,8 +42,8 @@ with calclated generation of the sample
 
 --Add unique samples in anticipation of the X lines being thrown out.
     might require an explicit definition of all sample numbers, which are stored in an array that's used to build the sample list
---BAD CODING PRACTICE. Calculated Entry is an object of which hundreds of instances exist, yet each object is instantiated with a complete list of
-entries. Is this true?
+--BAD CODING. Calculated Entry is an object of which hundreds of instances exist, yet each object is instantiated with a complete list of
+entries. This may not be true depending on if the local vairable is just a pointer to the main list.
 --BAD CODING. make calculated entries list instead of requiring the calculated entries to build themselves. Complete?
 
 
@@ -54,10 +58,3 @@ Calculations
 
 APACHE DOC
 https://poi.apache.org/components/spreadsheet/quick-guide.html#NewWorkbook
-
-
-BRAINSTORM
-
-Need to find a way to account for X line termination. Need data on when each line went extinct.
-
-Would be cool to calculate stats as well.
