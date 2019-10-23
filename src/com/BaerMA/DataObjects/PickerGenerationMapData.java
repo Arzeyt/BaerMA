@@ -19,7 +19,7 @@ import java.util.HashMap;
 public class PickerGenerationMapData {
 
     HashMap<Integer,ArrayList<PickerObject>> pickerGenerationMap;
-    transient String path = MainStage.settings.dataDirectory+ File.separator+"Pickers Generation Data";
+    transient String path = MainStage.settings.dataDirectory+ File.separator+"Pickers Generation Data.json";
 
     public ArrayList<PickerObject> getPickersForGen(int generation){
         if(pickerGenerationMap==null){

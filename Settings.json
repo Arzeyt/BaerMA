@@ -1,0 +1,68 @@
+{
+  "XTerminationGeneration": 70,
+  "J2LineGenesisGeneration": 71,
+  "dataDirectory": {
+    "path": "Data"
+  },
+  "outputDirectory": {
+    "path": "Output"
+  },
+  "entriesFile": {
+    "path": "Data\\Entries.json"
+  },
+  "lines": [
+    {
+      "lineName": "C",
+      "lineStartNumber": 500,
+      "lineEndNumber": 599
+    },
+    {
+      "lineName": "M",
+      "lineStartNumber": 600,
+      "lineEndNumber": 699
+    },
+    {
+      "lineName": "X",
+      "lineStartNumber": 700,
+      "lineEndNumber": 799
+    },
+    {
+      "lineName": "J",
+      "lineStartNumber": 800,
+      "lineEndNumber": 899
+    },
+    {
+      "lineName": "E",
+      "lineStartNumber": 900,
+      "lineEndNumber": 999
+    },
+    {
+      "lineName": "J2",
+      "lineStartNumber": 1000,
+      "lineEndNumber": 1099
+    }
+  ],
+  "pickers": [
+    {
+      "Name": "Vaishali Katju"
+    },
+    {
+      "Name": "Nicholas Edenhoffer"
+    },
+    {
+      "Name": "Rob Melde"
+    },
+    {
+      "Name": "Austin Daigle"
+    },
+    {
+      "Name": "Joe Dubie"
+    },
+    {
+      "Name": "Meghan Brady"
+    },
+    {
+      "Name": "Lauren Breazeale"
+    }
+  ]
+}
