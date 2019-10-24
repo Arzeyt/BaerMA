@@ -2,6 +2,7 @@ package com.BaerMA;
 
 import com.BaerMA.DataObjects.CalculatedEntry;
 import com.BaerMA.DataObjects.LineObject;
+import com.BaerMA.DataObjects.PickerObject;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
@@ -33,9 +34,17 @@ public class ExcelMaster {
 
    //baer sheet----------------------
    public static void createBaerSheetUpTo(int experimentalGeneration){
-       for(int i = 0; i<=experimentalGeneration; i++){
-           createBaerSheet(i, false);
-       }
+       Thread thread = new Thread(){
+           @Override
+           public void run() {
+               for(int i = 0; i<=experimentalGeneration; i++){
+                   MainStage.controller.setSLPrintProgress(i/experimentalGeneration);
+                   createBaerSheet(i, false);
+               }
+           }
+       };
+       thread.start();
+
    }
    public static void createBaerSheet(int experimentalGeneration, boolean open){
        File baerSheet = createBaerSheetCopy(experimentalGeneration);
@@ -56,12 +65,23 @@ public class ExcelMaster {
            cell = row.getCell(0);
            cell.setCellValue("Date: " + date.getMonthValue() + "-" + date.getDayOfMonth() + "-" + date.getYear());
 
+           //worm workers
+           String wormWorkers="";
+           for(PickerObject picker : MainStage.pickerGenerationMapData.getPickersForGen(experimentalGeneration)){
+               wormWorkers=wormWorkers+picker.name+", ";
+           }
+           //sheet.getRow(2).createCell(11).setCellValue("Worm Workers: "+wormWorkers);
+           wb.getSheetAt(1).getRow(1).createCell(14).setCellValue("Worm Workers: "+wormWorkers);
+
+
            //Calc 1 page
            sheet = wb.getSheetAt(1);
 
            System.out.println("editing sheet: " + sheet.getSheetName());
 
 
+
+           sheet=wb.getSheetAt(1);
            //create an arraylist for each calculated entry
            ArrayList<CalculatedEntry> calculatedEntries = new ArrayList<>();
 
@@ -123,6 +143,7 @@ public class ExcelMaster {
            e.printStackTrace();
        }
    }
+
    public static File createBaerSheetCopy(int experimentalGen){
        File baerTemplate = null;
        if(experimentalGen< MainStage.settings.J2LineGenesisGeneration){
@@ -137,7 +158,15 @@ public class ExcelMaster {
        }
        //copy the file
        File baerFile = new File(Entries.outputFile+File.separator+"BaerMA Gen "+experimentalGen+".xlsx");
+       if(baerFile.exists()){
+           System.out.println("This file exists");
+       }else{
+           System.out.println("this file doesn't exist");
+       }
        try {
+           if(Entries.outputFile.exists()==false){
+               Entries.outputFile.mkdir();
+           }
            Files.copy(baerTemplate.toPath(),baerFile.toPath());
        } catch (IOException e) {
            e.printStackTrace();
