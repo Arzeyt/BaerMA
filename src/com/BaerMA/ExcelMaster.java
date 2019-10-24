@@ -2,6 +2,7 @@ package com.BaerMA;
 
 import com.BaerMA.DataObjects.CalculatedEntry;
 import com.BaerMA.DataObjects.LineObject;
+import com.BaerMA.DataObjects.PickerGenerationMapData;
 import com.BaerMA.DataObjects.PickerObject;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
@@ -38,7 +39,7 @@ public class ExcelMaster {
            @Override
            public void run() {
                for(int i = 0; i<=experimentalGeneration; i++){
-                   MainStage.controller.setSLPrintProgress(i/experimentalGeneration);
+                   MainStage.controller.setSLPrintProgress((float)i/experimentalGeneration);
                    createBaerSheet(i, false);
                }
            }
@@ -46,6 +47,7 @@ public class ExcelMaster {
        thread.start();
 
    }
+
    public static void createBaerSheet(int experimentalGeneration, boolean open){
        File baerSheet = createBaerSheetCopy(experimentalGeneration);
        try(InputStream inputStream = new FileInputStream(baerSheet)) {
@@ -66,21 +68,10 @@ public class ExcelMaster {
            cell.setCellValue("Date: " + date.getMonthValue() + "-" + date.getDayOfMonth() + "-" + date.getYear());
 
            //worm workers
-           String wormWorkers="";
-           for(PickerObject picker : MainStage.pickerGenerationMapData.getPickersForGen(experimentalGeneration)){
-               wormWorkers=wormWorkers+picker.name+", ";
-           }
-           //sheet.getRow(2).createCell(11).setCellValue("Worm Workers: "+wormWorkers);
-           wb.getSheetAt(1).getRow(1).createCell(14).setCellValue("Worm Workers: "+wormWorkers);
+           wb.getSheetAt(0).getRow(2).getCell(11).setCellValue("Worm Workers: "+ PickerGenerationMapData.getFormattedStringForGen(experimentalGeneration));
 
 
            //Calc 1 page
-           sheet = wb.getSheetAt(1);
-
-           System.out.println("editing sheet: " + sheet.getSheetName());
-
-
-
            sheet=wb.getSheetAt(1);
            //create an arraylist for each calculated entry
            ArrayList<CalculatedEntry> calculatedEntries = new ArrayList<>();

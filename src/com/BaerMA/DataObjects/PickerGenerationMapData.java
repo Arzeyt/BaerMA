@@ -75,4 +75,16 @@ public class PickerGenerationMapData {
             e.printStackTrace();
         }
     }
+
+    public static String getFormattedStringForGen(int generation){
+        String wormWorkers="";
+        for(PickerObject picker : MainStage.pickerGenerationMapData.getPickersForGen(generation)){
+            wormWorkers=wormWorkers+picker.name+", ";
+        }
+        //no pickers assigned to this generation
+        if(wormWorkers.contains(",")==false){
+            return "";
+        }
+        return wormWorkers.substring(0,wormWorkers.lastIndexOf(','));//remove last comma
+    }
 }
