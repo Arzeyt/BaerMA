@@ -592,6 +592,10 @@ public class Entries {
                     nonextinct.add(e);
                 }
             }
+
+            //header
+            writer.write(MainStage.settings.journal_generation_header);
+
             //if there are entries in the nonextinct list, print them
             if(nonextinct!=null) {
                 for (Entry e : nonextinct) {
@@ -625,6 +629,7 @@ public class Entries {
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
             for(int i=0; i<=experimentalGen; i++) {
                 //header for each generation
+                writer.write(MainStage.settings.journal_generation_header);
                 writer.write("Generation: "+i+"\r\n");
 
                 ArrayList<Entry> entries = getEntriesForGeneration(i);

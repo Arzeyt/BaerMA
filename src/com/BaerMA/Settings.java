@@ -11,13 +11,14 @@ import java.util.ArrayList;
 
 public class Settings implements Serializable{
 
-public int XTerminationGeneration=70;
-public int J2LineGenesisGeneration = 71;
-public File dataDirectory = new File("Data");
-public File outputDirectory = new File("Output");
-public File entriesFile = new File(dataDirectory+File.separator+"Entries.json");
-public ArrayList<LineObject> lines = new ArrayList<>();
-public ArrayList<PickerObject> pickers = new ArrayList<>();
+    public String journal_generation_header="";
+    public int XTerminationGeneration=70;
+    public int J2LineGenesisGeneration = 71;
+    public File dataDirectory = new File("Data");
+    public File outputDirectory = new File("Output");
+    public File entriesFile = new File(dataDirectory+File.separator+"Entries.json");
+    public ArrayList<LineObject> lines = new ArrayList<>();
+    public ArrayList<PickerObject> pickers = new ArrayList<>();
 
 
 
