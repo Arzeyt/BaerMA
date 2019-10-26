@@ -1,4 +1,4 @@
-package com.Controllers;
+package com.BaerMA.Controllers;
 
 import javafx.fxml.Initializable;
 

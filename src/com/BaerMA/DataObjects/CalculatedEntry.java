@@ -1,6 +1,7 @@
 package com.BaerMA.DataObjects;
 
 import com.BaerMA.*;
+import com.BaerMA.Sorting.SortByDate;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ObservableList;

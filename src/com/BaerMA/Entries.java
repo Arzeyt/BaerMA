@@ -3,6 +3,7 @@ package com.BaerMA;
 import com.BaerMA.DataObjects.CalculatedEntry;
 import com.BaerMA.DataObjects.Entry;
 import com.BaerMA.DataObjects.LineObject;
+import com.BaerMA.Sorting.SortByDate;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -594,7 +595,7 @@ public class Entries {
             }
 
             //header
-            writer.write(MainStage.settings.journal_generation_header);
+            writer.write(MainStage.settings.getFormattedEntriesListHeader(experimentalGen));
 
             //if there are entries in the nonextinct list, print them
             if(nonextinct!=null) {

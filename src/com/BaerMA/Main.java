@@ -2,6 +2,7 @@ package com.BaerMA;
 
 import com.BaerMA.DataObjects.DateObject;
 import com.BaerMA.DataObjects.Entry;
+import com.BaerMA.Sorting.SortByDate;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

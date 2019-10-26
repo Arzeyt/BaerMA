@@ -1,4 +1,4 @@
-package com.BaerMA;
+package com.BaerMA.Sorting;
 
 import com.BaerMA.DataObjects.Entry;
 

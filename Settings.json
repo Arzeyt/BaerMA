@@ -1,5 +1,4 @@
 {
-  "journal_generation_header": "$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names",
   "XTerminationGeneration": 70,
   "J2LineGenesisGeneration": 71,
   "dataDirectory": {
@@ -67,6 +66,16 @@
     },
     {
       "name": "McKenna Stout"
+    }
+  ],
+  "entriesJournalList": [
+    {
+      "header": "$date \r\n BaerMA Generation $generation \r\n Ancestral setup; done by $names",
+      "toGen": 0
+    },
+    {
+      "header": "$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names",
+      "toGen": 9999
     }
   ]
 }

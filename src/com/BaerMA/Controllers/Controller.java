@@ -1,4 +1,4 @@
-package com.Controllers;
+package com.BaerMA.Controllers;
 
 import com.BaerMA.*;
 import com.BaerMA.DataObjects.CalculatedEntry;
@@ -266,6 +266,10 @@ public class Controller implements Initializable{
             public void PrintFormattedEntries(){entriesClass.printFormattedEntries(SLGenerationSpinner.getValue());}
 
             public void PrintAllFormattedEntries(){entriesClass.printAllFormattedEntries(SLGenerationSpinner.getValue());}
+
+            public void PrintAllFormattedEntries_docx(){
+                WordMaster.printFormattedEntries(SLGenerationSpinner.getValue());
+            }
 
             public void PrintGenerationVisualizer(){
                 ExcelMaster.createGenerationVisualizer(SLGenerationSpinner.getValue());

@@ -1,7 +1,9 @@
 package com.BaerMA;
 
+import com.BaerMA.DataObjects.EntriesJournalObject;
 import com.BaerMA.DataObjects.LineObject;
 import com.BaerMA.DataObjects.PickerObject;
+import com.BaerMA.Sorting.SortByGen;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -9,11 +11,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Settings implements Serializable{
 
-    public String journal_generation_header="$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names";
     public int XTerminationGeneration=70;
     public int J2LineGenesisGeneration = 71;
     public File dataDirectory = new File("Data");
@@ -21,6 +21,7 @@ public class Settings implements Serializable{
     public File entriesFile = new File(dataDirectory+File.separator+"Entries.json");
     public ArrayList<LineObject> lines = new ArrayList<>();
     public ArrayList<PickerObject> pickers = new ArrayList<>();
+    public ArrayList<EntriesJournalObject> entriesJournalList = new ArrayList<>();
 
 
 
@@ -37,6 +38,8 @@ public class Settings implements Serializable{
         pickers.add(new PickerObject("Nicholas Edenhoffer"));
         pickers.add(new PickerObject("Vaishali Katju"));
 
+        //default  entriesJournalList
+        entriesJournalList.add(new EntriesJournalObject("$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names",400));
 
     }
 
@@ -97,7 +100,24 @@ public class Settings implements Serializable{
 
     public String getFormattedEntriesListHeader(int generation){
         String x = MainStage.pickerGenerationMapData.getFormattedStringForGen(generation);
-        String s = journal_generation_header.replace("$names",x);
+        entriesJournalList.sort(new SortByGen().reversed());
+        EntriesJournalObject journalObject=null;
+        if(entriesJournalList.size()<1){
+            journalObject=new EntriesJournalObject("",99999);
+        }else {
+            for (EntriesJournalObject j : entriesJournalList) {
+                if (j.getToGen() >= generation) {
+                    if(journalObject==null){
+                        journalObject=j;
+                    }else if (j.getToGen() - generation < journalObject.getToGen() - generation) {
+                        journalObject = j;
+                    }
+                }
+                //pick the journal object that's equal to, or closest to, but greater than, the other journalObjects.
+
+            }
+        }
+        String s = journalObject.getHeader().replace("$names",x);
         LocalDate date = MainStage.entries.getDateForGeneration(generation);
         s=s.replace("$date",date.getMonthValue()+"/"+date.getDayOfMonth()+"/"+date.getYear());
         s=s.replace("$generation",generation+"");

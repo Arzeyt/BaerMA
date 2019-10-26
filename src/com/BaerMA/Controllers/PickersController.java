@@ -1,4 +1,4 @@
-package com.Controllers;
+package com.BaerMA.Controllers;
 
 import com.BaerMA.MainStage;
 import com.BaerMA.DataObjects.PickerObject;
@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class PickersController implements Initializable {
