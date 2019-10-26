@@ -629,8 +629,8 @@ public class Entries {
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
             for(int i=0; i<=experimentalGen; i++) {
                 //header for each generation
-                writer.write(MainStage.settings.journal_generation_header);
-                writer.write("Generation: "+i+"\r\n");
+                writer.write(MainStage.settings.getFormattedEntriesListHeader(i)+"\r\n");
+                //writer.write("Generation: "+i+"\r\n");
 
                 ArrayList<Entry> entries = getEntriesForGeneration(i);
 

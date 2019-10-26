@@ -7,11 +7,13 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Settings implements Serializable{
 
-    public String journal_generation_header="";
+    public String journal_generation_header="$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names";
     public int XTerminationGeneration=70;
     public int J2LineGenesisGeneration = 71;
     public File dataDirectory = new File("Data");
@@ -34,6 +36,8 @@ public class Settings implements Serializable{
         //default pickers
         pickers.add(new PickerObject("Nicholas Edenhoffer"));
         pickers.add(new PickerObject("Vaishali Katju"));
+
+
     }
 
     public void initialize(){
@@ -89,5 +93,14 @@ public class Settings implements Serializable{
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public String getFormattedEntriesListHeader(int generation){
+        String x = MainStage.pickerGenerationMapData.getFormattedStringForGen(generation);
+        String s = journal_generation_header.replace("$names",x);
+        LocalDate date = MainStage.entries.getDateForGeneration(generation);
+        s=s.replace("$date",date.getMonthValue()+"/"+date.getDayOfMonth()+"/"+date.getYear());
+        s=s.replace("$generation",generation+"");
+        return s;
     }
 }

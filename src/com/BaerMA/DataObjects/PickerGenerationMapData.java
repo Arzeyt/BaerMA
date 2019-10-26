@@ -76,7 +76,7 @@ public class PickerGenerationMapData {
         }
     }
 
-    public static String getFormattedStringForGen(int generation){
+    public String getFormattedStringForGen(int generation){
         String wormWorkers="";
         for(PickerObject picker : MainStage.pickerGenerationMapData.getPickersForGen(generation)){
             wormWorkers=wormWorkers+picker.name+", ";

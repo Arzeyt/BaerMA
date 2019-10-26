@@ -68,7 +68,7 @@ public class ExcelMaster {
            cell.setCellValue("Date: " + date.getMonthValue() + "-" + date.getDayOfMonth() + "-" + date.getYear());
 
            //worm workers
-           wb.getSheetAt(0).getRow(2).getCell(11).setCellValue("Worm Workers: "+ PickerGenerationMapData.getFormattedStringForGen(experimentalGeneration));
+           wb.getSheetAt(0).getRow(2).getCell(11).setCellValue("Worm Workers: "+ MainStage.pickerGenerationMapData.getFormattedStringForGen(experimentalGeneration));
 
 
            //Calc 1 page

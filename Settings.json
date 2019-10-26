@@ -1,5 +1,5 @@
 {
-  "journal_generation_header": "Test",
+  "journal_generation_header": "$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names",
   "XTerminationGeneration": 70,
   "J2LineGenesisGeneration": 71,
   "dataDirectory": {
