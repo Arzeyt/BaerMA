@@ -630,7 +630,20 @@ public class Entries {
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
             for(int i=0; i<=experimentalGen; i++) {
                 //header for each generation
-                writer.write(MainStage.settings.getFormattedEntriesListHeader(i)+"\r\n");
+                String header = MainStage.settings.getFormattedEntriesListHeader(i);
+                String formattedHeader = "";
+                String[] firstSplit = header.split("<");
+                for(String s : firstSplit){
+                    if(s.contains(">")) {
+                        formattedHeader = formattedHeader + s.substring(s.lastIndexOf(">")+1, s.length());
+                        System.out.println(formattedHeader);
+                    }else{
+                        formattedHeader=formattedHeader+s;
+                    }
+                }
+                writer.write(formattedHeader+"\r\n");
+
+
                 //writer.write("Generation: "+i+"\r\n");
 
                 ArrayList<Entry> entries = getEntriesForGeneration(i);

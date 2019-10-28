@@ -70,11 +70,11 @@
   ],
   "entriesJournalList": [
     {
-      "header": "$date \r\n BaerMA Generation $generation \r\n Ancestral setup; done by $names",
+      "header": "<000000>$date \r\n<bd2109> BaerMA Generation $generation \r\n<000000> Ancestral setup; done by $names",
       "toGen": 0
     },
     {
-      "header": "$date \r\n BaerMA Generation $generation \r\n Transferred as per MA protocol; Done by $names",
+      "header": "<000000>$date \r\n<bd2109> BaerMA Generation $generation \r\n<000000> Transferred as per MA protocol; Done by $names",
       "toGen": 9999
     }
   ]

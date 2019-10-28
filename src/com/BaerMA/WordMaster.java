@@ -23,10 +23,35 @@ public class WordMaster {
                 XWPFParagraph paragraph = document.createParagraph();
                 XWPFRun run = paragraph.createRun();
 
+
                 //header for each generation
                 String header = MainStage.settings.getFormattedEntriesListHeader(i)+"\r\n";
-                run.setText(header);
-                run.setBold(true);
+
+                System.out.println("Header: "+header);
+                String[] headers = header.split("<");
+                //comment
+                int hhh=0;
+                for(String hh : headers){
+                    System.out.println(hhh+"]"+hh);
+                    hhh++;
+                }
+                for(String h : headers){
+                    if(h.length()>=2) {
+                        String[] splitagain = h.split(">");
+                        if(splitagain.length>=2) {
+                            String colorString = splitagain[0];
+                            System.out.println("ColorString: " + colorString);
+                            XWPFRun headerRun = paragraph.createRun();
+                            headerRun.setColor(colorString);
+                            headerRun.setBold(true);
+                            headerRun.setText(splitagain[1]);
+                        }else{
+                            XWPFRun headerRun = paragraph.createRun();
+                            headerRun.setBold(true);
+                            headerRun.setText(splitagain[0]);
+                        }
+                    }
+                }
 
                 ArrayList<Entry> entries = MainStage.entries.getEntriesForGeneration(i);
 
@@ -69,6 +94,7 @@ public class WordMaster {
 
             }
             document.write(outputStream);
+            outputStream.close();
             Desktop.getDesktop().open(file);
         }catch (Exception e){
             e.printStackTrace();
