@@ -1,21 +1,5 @@
 [
   {
-    "id": 512,
-    "experimentalGeneration": 61,
-    "backupGeneration": 59,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 7,
-      "day": 20
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 7,
-      "day": 28
-    },
-    "notes": ""
-  },
-  {
     "id": 1025,
     "experimentalGeneration": 76,
     "backupGeneration": 3,
@@ -32,6 +16,518 @@
     "notes": ""
   },
   {
+    "id": 1027,
+    "experimentalGeneration": 80,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 1028,
+    "experimentalGeneration": 84,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 1029,
+    "experimentalGeneration": 80,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 1038,
+    "experimentalGeneration": 84,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 1040,
+    "experimentalGeneration": 76,
+    "backupGeneration": 3,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 18
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 1046,
+    "experimentalGeneration": 84,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 1047,
+    "experimentalGeneration": 75,
+    "backupGeneration": 2,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 14
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 1059,
+    "experimentalGeneration": 83,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 1063,
+    "experimentalGeneration": 81,
+    "backupGeneration": 8,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 8
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 1069,
+    "experimentalGeneration": 85,
+    "backupGeneration": 12,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 1073,
+    "experimentalGeneration": 83,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 1086,
+    "experimentalGeneration": 83,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 1088,
+    "experimentalGeneration": 84,
+    "backupGeneration": 11,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 1089,
+    "experimentalGeneration": 83,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 1094,
+    "experimentalGeneration": 82,
+    "backupGeneration": 9,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 13,
+    "backupGeneration": 10,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 9
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 17
+    },
+    "notes": ""
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 68,
+    "backupGeneration": 64,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 8,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 8,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 500,
+    "experimentalGeneration": 75,
+    "backupGeneration": 70,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 14
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 502,
+    "experimentalGeneration": 22,
+    "backupGeneration": 20,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 503,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 504,
+    "experimentalGeneration": 82,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 506,
+    "experimentalGeneration": 2,
+    "backupGeneration": 0,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 11,
+      "day": 30
+    },
+    "pickDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 4
+    },
+    "notes": "ancestral stock"
+  },
+  {
+    "id": 506,
+    "experimentalGeneration": 22,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 507,
+    "experimentalGeneration": 9,
+    "backupGeneration": 7,
+    "backupOfDate": {
+      "year": 2018,
+      "month": 12,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 1,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 507,
+    "experimentalGeneration": 22,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 509,
+    "experimentalGeneration": 20,
+    "backupGeneration": 18,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 6
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 509,
+    "experimentalGeneration": 57,
+    "backupGeneration": 54,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 7,
+      "day": 4
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 7,
+      "day": 12
+    },
+    "notes": ""
+  },
+  {
+    "id": 510,
+    "experimentalGeneration": 68,
+    "backupGeneration": 66,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 8,
+      "day": 17
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 8,
+      "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 511,
+    "experimentalGeneration": 22,
+    "backupGeneration": 19,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 14
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 2,
+      "day": 22
+    },
+    "notes": ""
+  },
+  {
+    "id": 511,
+    "experimentalGeneration": 71,
+    "backupGeneration": 68,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 8,
+      "day": 29
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 512,
+    "experimentalGeneration": 61,
+    "backupGeneration": 59,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 7,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 7,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 513,
     "experimentalGeneration": 56,
     "backupGeneration": 54,
@@ -44,6 +540,38 @@
       "year": 2019,
       "month": 7,
       "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 513,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 513,
+    "experimentalGeneration": 84,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -124,38 +652,6 @@
       "year": 2019,
       "month": 9,
       "day": 10
-    },
-    "notes": ""
-  },
-  {
-    "id": 1027,
-    "experimentalGeneration": 80,
-    "backupGeneration": 7,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 4
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 12
-    },
-    "notes": ""
-  },
-  {
-    "id": 1029,
-    "experimentalGeneration": 80,
-    "backupGeneration": 7,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 4
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 12
     },
     "notes": ""
   },
@@ -284,6 +780,22 @@
       "year": 2019,
       "month": 1,
       "day": 29
+    },
+    "notes": ""
+  },
+  {
+    "id": 521,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -432,18 +944,34 @@
     "notes": ""
   },
   {
-    "id": 1040,
-    "experimentalGeneration": 76,
-    "backupGeneration": 3,
+    "id": 525,
+    "experimentalGeneration": 83,
+    "backupGeneration": 71,
     "backupOfDate": {
       "year": 2019,
-      "month": 9,
-      "day": 18
+      "month": 10,
+      "day": 16
     },
     "pickDate": {
       "year": 2019,
-      "month": 9,
-      "day": 26
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 525,
+    "experimentalGeneration": 85,
+    "backupGeneration": 72,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -576,6 +1104,22 @@
     "notes": ""
   },
   {
+    "id": 532,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 533,
     "experimentalGeneration": 59,
     "backupGeneration": 57,
@@ -636,22 +1180,6 @@
       "year": 2019,
       "month": 8,
       "day": 1
-    },
-    "notes": ""
-  },
-  {
-    "id": 1047,
-    "experimentalGeneration": 75,
-    "backupGeneration": 2,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 9,
-      "day": 14
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 9,
-      "day": 22
     },
     "notes": ""
   },
@@ -752,6 +1280,22 @@
     "notes": ""
   },
   {
+    "id": 541,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 542,
     "experimentalGeneration": 66,
     "backupGeneration": 64,
@@ -816,6 +1360,22 @@
     "notes": ""
   },
   {
+    "id": 543,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 544,
     "experimentalGeneration": 10,
     "backupGeneration": 8,
@@ -876,22 +1436,6 @@
       "year": 2019,
       "month": 10,
       "day": 8
-    },
-    "notes": ""
-  },
-  {
-    "id": 1063,
-    "experimentalGeneration": 81,
-    "backupGeneration": 8,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 8
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 16
     },
     "notes": ""
   },
@@ -992,6 +1536,38 @@
     "notes": ""
   },
   {
+    "id": 554,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 555,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 557,
     "experimentalGeneration": 41,
     "backupGeneration": 38,
@@ -1004,6 +1580,38 @@
       "year": 2019,
       "month": 5,
       "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 558,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 558,
+    "experimentalGeneration": 85,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -1296,6 +1904,22 @@
     "notes": ""
   },
   {
+    "id": 569,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 570,
     "experimentalGeneration": 12,
     "backupGeneration": 10,
@@ -1356,6 +1980,22 @@
       "year": 2019,
       "month": 2,
       "day": 14
+    },
+    "notes": ""
+  },
+  {
+    "id": 573,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -1440,6 +2080,22 @@
     "notes": ""
   },
   {
+    "id": 575,
+    "experimentalGeneration": 84,
+    "backupGeneration": 78,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 576,
     "experimentalGeneration": 9,
     "backupGeneration": 7,
@@ -1488,6 +2144,22 @@
     "notes": ""
   },
   {
+    "id": 576,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 577,
     "experimentalGeneration": 71,
     "backupGeneration": 69,
@@ -1500,6 +2172,22 @@
       "year": 2019,
       "month": 9,
       "day": 6
+    },
+    "notes": ""
+  },
+  {
+    "id": 577,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -1548,6 +2236,22 @@
       "year": 2019,
       "month": 9,
       "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 579,
+    "experimentalGeneration": 84,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -1616,22 +2320,6 @@
     "notes": ""
   },
   {
-    "id": 1094,
-    "experimentalGeneration": 82,
-    "backupGeneration": 9,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 12
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 20
-    },
-    "notes": ""
-  },
-  {
     "id": 583,
     "experimentalGeneration": 35,
     "backupGeneration": 33,
@@ -1696,6 +2384,22 @@
     "notes": ""
   },
   {
+    "id": 585,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 586,
     "experimentalGeneration": 35,
     "backupGeneration": 33,
@@ -1708,6 +2412,22 @@
       "year": 2019,
       "month": 4,
       "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 586,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -1808,6 +2528,22 @@
     "notes": ""
   },
   {
+    "id": 591,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 592,
     "experimentalGeneration": 2,
     "backupGeneration": 0,
@@ -1840,6 +2576,22 @@
     "notes": ""
   },
   {
+    "id": 593,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 595,
     "experimentalGeneration": 76,
     "backupGeneration": 74,
@@ -1852,6 +2604,22 @@
       "year": 2019,
       "month": 9,
       "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 595,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -1884,6 +2652,22 @@
       "year": 2019,
       "month": 8,
       "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 596,
+    "experimentalGeneration": 84,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -2128,6 +2912,38 @@
     "notes": ""
   },
   {
+    "id": 597,
+    "experimentalGeneration": 83,
+    "backupGeneration": 61,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 597,
+    "experimentalGeneration": 84,
+    "backupGeneration": 61,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 9,
+      "day": 26
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 598,
     "experimentalGeneration": 17,
     "backupGeneration": 15,
@@ -2368,6 +3184,38 @@
     "notes": ""
   },
   {
+    "id": 613,
+    "experimentalGeneration": 83,
+    "backupGeneration": 78,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 613,
+    "experimentalGeneration": 84,
+    "backupGeneration": 78,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 12
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 615,
     "experimentalGeneration": 57,
     "backupGeneration": 55,
@@ -2540,6 +3388,22 @@
       "year": 2019,
       "month": 8,
       "day": 21
+    },
+    "notes": ""
+  },
+  {
+    "id": 624,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -2960,6 +3824,22 @@
     "notes": ""
   },
   {
+    "id": 647,
+    "experimentalGeneration": 85,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
     "id": 648,
     "experimentalGeneration": 64,
     "backupGeneration": 62,
@@ -3164,6 +4044,22 @@
       "year": 2019,
       "month": 10,
       "day": 8
+    },
+    "notes": ""
+  },
+  {
+    "id": 655,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -3388,6 +4284,22 @@
       "year": 2019,
       "month": 8,
       "day": 9
+    },
+    "notes": ""
+  },
+  {
+    "id": 666,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -22544,6 +23456,22 @@
     "notes": ""
   },
   {
+    "id": 801,
+    "experimentalGeneration": 83,
+    "backupGeneration": 73,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 802,
     "experimentalGeneration": 9,
     "backupGeneration": 7,
@@ -22720,6 +23648,22 @@
     "notes": ""
   },
   {
+    "id": 810,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 811,
     "experimentalGeneration": 64,
     "backupGeneration": 62,
@@ -22880,6 +23824,38 @@
     "notes": ""
   },
   {
+    "id": 811,
+    "experimentalGeneration": 83,
+    "backupGeneration": 72,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 811,
+    "experimentalGeneration": 85,
+    "backupGeneration": 73,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
+    },
+    "notes": ""
+  },
+  {
     "id": 812,
     "experimentalGeneration": 4,
     "backupGeneration": 2,
@@ -22908,6 +23884,22 @@
       "year": 2019,
       "month": 7,
       "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 813,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -22972,6 +23964,22 @@
       "year": 2019,
       "month": 6,
       "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 819,
+    "experimentalGeneration": 85,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -23216,6 +24224,22 @@
     "notes": ""
   },
   {
+    "id": 823,
+    "experimentalGeneration": 83,
+    "backupGeneration": 70,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 824,
     "experimentalGeneration": 48,
     "backupGeneration": 46,
@@ -23408,6 +24432,38 @@
     "notes": ""
   },
   {
+    "id": 825,
+    "experimentalGeneration": 83,
+    "backupGeneration": 70,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 825,
+    "experimentalGeneration": 84,
+    "backupGeneration": 70,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 826,
     "experimentalGeneration": 23,
     "backupGeneration": 20,
@@ -23568,6 +24624,22 @@
     "notes": ""
   },
   {
+    "id": 829,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 830,
     "experimentalGeneration": 30,
     "backupGeneration": 28,
@@ -23664,6 +24736,22 @@
     "notes": ""
   },
   {
+    "id": 831,
+    "experimentalGeneration": 83,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 832,
     "experimentalGeneration": 31,
     "backupGeneration": 29,
@@ -23728,6 +24816,22 @@
     "notes": ""
   },
   {
+    "id": 833,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 834,
     "experimentalGeneration": 7,
     "backupGeneration": 5,
@@ -23739,6 +24843,22 @@
     "pickDate": {
       "year": 2018,
       "month": 12,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 834,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
       "day": 24
     },
     "notes": ""
@@ -23840,6 +24960,22 @@
     "notes": ""
   },
   {
+    "id": 839,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 840,
     "experimentalGeneration": 30,
     "backupGeneration": 28,
@@ -23900,6 +25036,22 @@
       "year": 2019,
       "month": 10,
       "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 841,
+    "experimentalGeneration": 85,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -24092,6 +25244,22 @@
       "year": 2019,
       "month": 10,
       "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 843,
+    "experimentalGeneration": 83,
+    "backupGeneration": 69,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -24352,6 +25520,22 @@
     "notes": ""
   },
   {
+    "id": 850,
+    "experimentalGeneration": 83,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 853,
     "experimentalGeneration": 15,
     "backupGeneration": 13,
@@ -24380,6 +25564,22 @@
       "year": 2019,
       "month": 5,
       "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 853,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -24416,6 +25616,22 @@
     "notes": ""
   },
   {
+    "id": 856,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 857,
     "experimentalGeneration": 27,
     "backupGeneration": 25,
@@ -24444,6 +25660,22 @@
       "year": 2019,
       "month": 5,
       "day": 13
+    },
+    "notes": ""
+  },
+  {
+    "id": 857,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -24640,6 +25872,22 @@
     "notes": ""
   },
   {
+    "id": 866,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 867,
     "experimentalGeneration": 9,
     "backupGeneration": 7,
@@ -24652,6 +25900,38 @@
       "year": 2019,
       "month": 1,
       "day": 1
+    },
+    "notes": ""
+  },
+  {
+    "id": 867,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 868,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -24718,6 +25998,22 @@
       "day": 26
     },
     "notes": "Written as BK2?"
+  },
+  {
+    "id": 873,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
   },
   {
     "id": 874,
@@ -24912,6 +26208,22 @@
     "notes": ""
   },
   {
+    "id": 876,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 877,
     "experimentalGeneration": 18,
     "backupGeneration": 14,
@@ -24940,6 +26252,22 @@
       "year": 2019,
       "month": 8,
       "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 878,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -25216,6 +26544,22 @@
     "notes": ""
   },
   {
+    "id": 893,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 894,
     "experimentalGeneration": 4,
     "backupGeneration": 2,
@@ -25408,6 +26752,22 @@
     "notes": ""
   },
   {
+    "id": 897,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 898,
     "experimentalGeneration": 38,
     "backupGeneration": 36,
@@ -25436,6 +26796,38 @@
       "year": 2019,
       "month": 7,
       "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 898,
+    "experimentalGeneration": 83,
+    "backupGeneration": 75,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 899,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -25484,6 +26876,22 @@
       "year": 2019,
       "month": 3,
       "day": 30
+    },
+    "notes": ""
+  },
+  {
+    "id": 905,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -25564,6 +26972,22 @@
       "year": 2019,
       "month": 7,
       "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 910,
+    "experimentalGeneration": 85,
+    "backupGeneration": 83,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -25676,6 +27100,22 @@
       "year": 2019,
       "month": 10,
       "day": 20
+    },
+    "notes": ""
+  },
+  {
+    "id": 911,
+    "experimentalGeneration": 84,
+    "backupGeneration": 76,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -25840,6 +27280,54 @@
     "notes": ""
   },
   {
+    "id": 918,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 918,
+    "experimentalGeneration": 84,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
+    "id": 919,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 922,
     "experimentalGeneration": 81,
     "backupGeneration": 79,
@@ -25852,6 +27340,22 @@
       "year": 2019,
       "month": 10,
       "day": 16
+    },
+    "notes": ""
+  },
+  {
+    "id": 922,
+    "experimentalGeneration": 84,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -25968,6 +27472,22 @@
     "notes": ""
   },
   {
+    "id": 930,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 932,
     "experimentalGeneration": 11,
     "backupGeneration": 9,
@@ -26016,6 +27536,38 @@
     "notes": ""
   },
   {
+    "id": 935,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 935,
+    "experimentalGeneration": 84,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 936,
     "experimentalGeneration": 23,
     "backupGeneration": 21,
@@ -26028,6 +27580,22 @@
       "year": 2019,
       "month": 2,
       "day": 26
+    },
+    "notes": ""
+  },
+  {
+    "id": 937,
+    "experimentalGeneration": 84,
+    "backupGeneration": 82,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 20
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   },
@@ -26092,6 +27660,22 @@
       "year": 2019,
       "month": 9,
       "day": 10
+    },
+    "notes": ""
+  },
+  {
+    "id": 941,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
     },
     "notes": ""
   },
@@ -26368,6 +27952,22 @@
     "notes": ""
   },
   {
+    "id": 956,
+    "experimentalGeneration": 83,
+    "backupGeneration": 79,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 961,
     "experimentalGeneration": 72,
     "backupGeneration": 70,
@@ -26576,6 +28176,38 @@
     "notes": ""
   },
   {
+    "id": 986,
+    "experimentalGeneration": 83,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 986,
+    "experimentalGeneration": 84,
+    "backupGeneration": 80,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 28
+    },
+    "notes": ""
+  },
+  {
     "id": 987,
     "experimentalGeneration": 72,
     "backupGeneration": 70,
@@ -26620,6 +28252,22 @@
       "year": 2019,
       "month": 8,
       "day": 25
+    },
+    "notes": ""
+  },
+  {
+    "id": 988,
+    "experimentalGeneration": 85,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 11,
+      "day": 1
     },
     "notes": ""
   },
@@ -26704,6 +28352,38 @@
     "notes": ""
   },
   {
+    "id": 998,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
+    "id": 999,
+    "experimentalGeneration": 83,
+    "backupGeneration": 81,
+    "backupOfDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 16
+    },
+    "pickDate": {
+      "year": 2019,
+      "month": 10,
+      "day": 24
+    },
+    "notes": ""
+  },
+  {
     "id": 1002,
     "experimentalGeneration": 73,
     "backupGeneration": 0,
@@ -26736,70 +28416,6 @@
     "notes": ""
   },
   {
-    "id": 500,
-    "experimentalGeneration": 2,
-    "backupGeneration": 0,
-    "backupOfDate": {
-      "year": 2018,
-      "month": 11,
-      "day": 30
-    },
-    "pickDate": {
-      "year": 2018,
-      "month": 12,
-      "day": 4
-    },
-    "notes": "ancestral stock"
-  },
-  {
-    "id": 500,
-    "experimentalGeneration": 13,
-    "backupGeneration": 10,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 1,
-      "day": 9
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 1,
-      "day": 17
-    },
-    "notes": ""
-  },
-  {
-    "id": 500,
-    "experimentalGeneration": 68,
-    "backupGeneration": 64,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 8,
-      "day": 17
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 8,
-      "day": 25
-    },
-    "notes": ""
-  },
-  {
-    "id": 500,
-    "experimentalGeneration": 75,
-    "backupGeneration": 70,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 9,
-      "day": 14
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 9,
-      "day": 22
-    },
-    "notes": ""
-  },
-  {
     "id": 1012,
     "experimentalGeneration": 75,
     "backupGeneration": 2,
@@ -26812,54 +28428,6 @@
       "year": 2019,
       "month": 9,
       "day": 22
-    },
-    "notes": ""
-  },
-  {
-    "id": 502,
-    "experimentalGeneration": 22,
-    "backupGeneration": 20,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 6
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 22
-    },
-    "notes": ""
-  },
-  {
-    "id": 503,
-    "experimentalGeneration": 2,
-    "backupGeneration": 0,
-    "backupOfDate": {
-      "year": 2018,
-      "month": 11,
-      "day": 30
-    },
-    "pickDate": {
-      "year": 2018,
-      "month": 12,
-      "day": 4
-    },
-    "notes": "ancestral stock"
-  },
-  {
-    "id": 504,
-    "experimentalGeneration": 82,
-    "backupGeneration": 80,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 12
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 10,
-      "day": 20
     },
     "notes": ""
   },
@@ -26880,146 +28448,18 @@
     "notes": ""
   },
   {
-    "id": 506,
-    "experimentalGeneration": 2,
-    "backupGeneration": 0,
-    "backupOfDate": {
-      "year": 2018,
-      "month": 11,
-      "day": 30
-    },
-    "pickDate": {
-      "year": 2018,
-      "month": 12,
-      "day": 4
-    },
-    "notes": "ancestral stock"
-  },
-  {
-    "id": 506,
-    "experimentalGeneration": 22,
-    "backupGeneration": 19,
+    "id": 1018,
+    "experimentalGeneration": 84,
+    "backupGeneration": 11,
     "backupOfDate": {
       "year": 2019,
-      "month": 2,
-      "day": 6
+      "month": 10,
+      "day": 20
     },
     "pickDate": {
       "year": 2019,
-      "month": 2,
-      "day": 22
-    },
-    "notes": ""
-  },
-  {
-    "id": 507,
-    "experimentalGeneration": 9,
-    "backupGeneration": 7,
-    "backupOfDate": {
-      "year": 2018,
-      "month": 12,
-      "day": 24
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 1,
-      "day": 1
-    },
-    "notes": ""
-  },
-  {
-    "id": 507,
-    "experimentalGeneration": 22,
-    "backupGeneration": 19,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 14
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 22
-    },
-    "notes": ""
-  },
-  {
-    "id": 509,
-    "experimentalGeneration": 20,
-    "backupGeneration": 18,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 6
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 14
-    },
-    "notes": ""
-  },
-  {
-    "id": 509,
-    "experimentalGeneration": 57,
-    "backupGeneration": 54,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 7,
-      "day": 4
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 7,
-      "day": 12
-    },
-    "notes": ""
-  },
-  {
-    "id": 510,
-    "experimentalGeneration": 68,
-    "backupGeneration": 66,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 8,
-      "day": 17
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 8,
-      "day": 25
-    },
-    "notes": ""
-  },
-  {
-    "id": 511,
-    "experimentalGeneration": 22,
-    "backupGeneration": 19,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 14
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 2,
-      "day": 22
-    },
-    "notes": ""
-  },
-  {
-    "id": 511,
-    "experimentalGeneration": 71,
-    "backupGeneration": 68,
-    "backupOfDate": {
-      "year": 2019,
-      "month": 8,
-      "day": 29
-    },
-    "pickDate": {
-      "year": 2019,
-      "month": 9,
-      "day": 6
+      "month": 10,
+      "day": 28
     },
     "notes": ""
   }

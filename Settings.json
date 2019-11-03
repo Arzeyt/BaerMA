@@ -66,15 +66,21 @@
     },
     {
       "name": "McKenna Stout"
+    },
+    {
+      "name": "Breann Richey"
+    },
+    {
+      "name": "Abigail Sequeira"
     }
   ],
   "entriesJournalList": [
     {
-      "header": "<000000>$date \r\n<bd2109> BaerMA Generation $generation \r\n<000000> Ancestral setup; done by $names",
+      "header": "\u003c000000\u003e$date \r\n\u003cbd2109\u003e BaerMA Generation $generation \r\n\u003c000000\u003e Ancestral setup; done by $names",
       "toGen": 0
     },
     {
-      "header": "<000000>$date \r\n<bd2109> BaerMA Generation $generation \r\n<000000> Transferred as per MA protocol; Done by $names",
+      "header": "\u003c000000\u003e$date \r\n\u003cbd2109\u003e BaerMA Generation $generation \r\n\u003c000000\u003e Transferred as per MA protocol; Done by $names",
       "toGen": 9999
     }
   ]
