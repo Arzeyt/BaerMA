@@ -8,7 +8,7 @@
     "path": "Output"
   },
   "entriesFile": {
-    "path": "Data\\Entries.json"
+    "path": "Data/Entries.json"
   },
   "lines": [
     {
