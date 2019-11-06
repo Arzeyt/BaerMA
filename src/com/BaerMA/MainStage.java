@@ -20,6 +20,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.time.LocalDate;
@@ -54,8 +55,7 @@ public class MainStage{
     public static Controller controller;
     public static Settings settings;
     public static PickerGenerationMapData pickerGenerationMapData;
-    public static PickersController pickersController;
-
+    public static GoogleCloud googleCloud;
 
     //Entry Table Components
     TableView entryTable;
@@ -72,6 +72,12 @@ public class MainStage{
         //settings
         settings=new Settings();
         settings.initialize();
+        //google cloud
+        if(settings.useCloudStorage) {
+            googleCloud = new GoogleCloud();
+            googleCloud.initialize();
+        }
+        //googleCloud.initialize();
         //entries
         entries =new Entries();
         entries.parseEntriesJSON(settings.entriesFile);
@@ -79,6 +85,7 @@ public class MainStage{
         entries.calcBackups();
         pickerGenerationMapData = new PickerGenerationMapData();
         pickerGenerationMapData.load();
+
 
         //this initializes controller
         System.out.println("Resource: "+getClass().getResource("main.fxml"));
@@ -98,7 +105,7 @@ public class MainStage{
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.setContentText(text);
-        alert.showAndWait();
+        alert.show();
     }
 
     public static void alertInfo(String title, String headerText, String text){
@@ -106,7 +113,7 @@ public class MainStage{
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.setContentText(text);
-        alert.showAndWait();
+        alert.show();
     }
     //---------deprecated code. It's all handled by javafx now.
     private Pane createSuperPane(){

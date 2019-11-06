@@ -30,6 +30,7 @@ public class Entries {
 
     //variables-------------
     public static int numberOfInstaces = 0;
+    public static int parseTries = 0;
 
     public static final ObservableList<Entry> entriesList = FXCollections.observableArrayList();
     public static final ObservableList<CalculatedEntry> calculatedEntries = FXCollections.observableArrayList();
@@ -146,9 +147,10 @@ public class Entries {
 
             reader.close();
             Main.dividingFlair();
-            //none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
-            // within the Entry that enables JavaFX tables to populate the list.
-            // The solution is to create new object based on the JSON data, and place these new Entry objects in the entries list
+            /**none of these deserialized entries are initialized properly, which is currently required to create StringProperty objects
+            within the Entry that enables JavaFX tables to populate the list.
+            The solution is to create new object based on the JSON data, and place these new Entry objects in the entries list
+             */
             for(Entry e : entries){
                 Entry iEntry = new Entry(e.id,e.experimentalGeneration,e.pickDate,e.backupGeneration,e.backupOfDate,e.notes);
                 entriesList.add(iEntry);
@@ -156,7 +158,23 @@ public class Entries {
             Main.dividingFlair();
             System.out.println("Loaded "+entriesList.size()+" entries");
         } catch (FileNotFoundException e) {
-           e.printStackTrace();
+            e.printStackTrace();
+            if(parseTries==0) {
+                System.out.println("File not found. Attempting to load from cloud storage.");
+                if(MainStage.settings.useCloudStorage) {
+                    try {
+                        Files.copy(MainStage.googleCloud.cloudEntries.toPath(), MainStage.settings.entriesFile.toPath());
+                        parseEntriesJSON(MainStage.settings.entriesFile);
+                        parseTries++;
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }else{
+                    System.out.println("Cloud Storage disabled in settings");
+                }
+            }else{
+                System.out.println("Could not create a copy of Entries.json the file from cloud storage");
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -183,7 +201,8 @@ public class Entries {
     //CSV
     public static void writeEntriesCSV(){
         try{
-            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(dataFile+File.separator+"Entries.csv"),"utf-8"));
+            File entriesCSVfile = new File(dataFile+File.separator+"Entries.csv");
+            Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(entriesCSVfile),"utf-8"));
 
             String header = "Sample ID,Pick Date,Experimental Generation,Backup Generation,Backup Date,Notes\n";
             writer.write(header);
@@ -204,6 +223,7 @@ public class Entries {
             }
             System.out.println("Wrote "+entriesCounter+" entries to Entries.csv");
             writer.close();
+            Desktop.getDesktop().open(entriesCSVfile);
 
         }catch (Exception e){
             e.printStackTrace();

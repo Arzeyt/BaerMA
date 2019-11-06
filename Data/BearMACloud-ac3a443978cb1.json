@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bearmacloud",
+  "private_key_id": "ac3a443978cb8de711ddc315aee85ba77e06917d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCgVdWdPGw85FEh\nWdqZArIWbNB0S7veBkFjwzIngGL9g0RpNcTmqXMg26TpQk8rLY3QB96n4BM4KV8O\nvson6GSyLmA4O4G6k8mu7rdVgZkj9QSqUEcdDjsLuBZ9hRnQXiYVN4w25PvaD9D9\nDYIbQ4IEQ+Bpx8S/EvKyq49ZI7xgYtsDOSEtT5jKWmJPLFGAokNxBaBM+lPLnABQ\ng1M0hCtvgBjPEXQ1tEXl3yNNRKhYplnhIxWUHWFq1Vuvy2MHwafCGAV7AKYm9A9O\nBTBbHpiVQk7B3k54xSFDL1fnHCb5KmmsY9K0wYMQS7UgV+wiFMc1j9mov8ry2NeU\nFnmMziXLAgMBAAECggEAB93eQr41s1Eid+fwNUSwFzCUk7gpig21hJ8NpWmDsduQ\nbjcQp56Vwv1z3Gv/9WbhR90y+/qfBsjk3JTY11dsJV/oIaotxck9goM85ImcyWpa\npb6VlqPdmsgX9mWi7BnKdY0JqKHYh4zyHJBem1bXGL1508bU7OkRllmbiWya8AGl\nvoJBf1vTu+lOi4p9JvcYWwqUR+2PJC06jZAQo4rjDuxr2pAZayyqMyGZGEI8cqtY\nkmZt2F0N+MZgjmEJyCDcYvYh3yORNSWUhVJOXIUqbURa0ISLPc2HFyvplz1zmKxg\nwuGYNM8VKrPv1TdstfeyetNyPBSpzZ47ROXZi9b1LQKBgQDZLBWeULs7HdM2Nmy2\n+/UTJZtFeaS39CcRcHtCcBJzZ+bZuG8Se+SyJPddNWWR9Impojanvypv32u0y91s\naGlyCMi9lvFqZKhULpNo2YSWGdyGZiO4/oEfEOPeOfBvRZU/iKYE8FLX0c1whk3w\nkLx4ljB0rRpT3ZAOtkgoy/gDHQKBgQC9AFbSd4XolP+sDJCTb62uO9DzuW7C6duo\nO+Wn8kzPQJqoTNDMYyTaqpbyfVp5KQPKLjRXUUZaSnWbhmAJt3TUfTMH8F1jHHna\nqG9L9WYGlmd85OA4ij8pHK3lx9aVQiJdq1YPLZ6jdX+eWs3/wY8L0wIpRSN20mfN\nrDyLxbFQBwKBgQCxVaE1jIDGzhzpONnfNbCyeNPokGMj3xeD0xCjeLZoTGCiSktQ\nkaB2o17mWrLc0w0SWqY8pgo2Hf9qO8pMOppYBro8riPmF9moG/w88tmkY+vCR2dG\nKXQwdO9NSIx/oBc2MRQ4FjHfj68tAk5kcRulcCaTL8K+1r5KdShJP/z+NQKBgDdY\n+hP4XIaX26eOpmgGtF3ptm8pRn5d7a1+nOpp0oR+7suKczrnbct7WWj5vJzuneV/\nUmSfsHKQi5BX8Zfm2ZfAcklI4pA7rpOR78XWv2H+eZ/hhqgIFCb99w7rTrO3Aklb\n+3/GZEaKCi1deiYDkNhtmpxrWs9ZHnzki3aDFkHRAoGBAIhIgfjFzWuvVRPEbjjq\nBCXFSMz0Jtdgf1tLV1mIwcOxOtzEA49aKTEPT6qBaj9vl5/DwzvE7plI0lgKb2yb\ns6eTlXrQz/8dlVkXbgnWWeO2Jxpe5v937R8tb1ZJYvqgNqyAloruHdjKBbMZwFg7\n3URtGgL6Jokiwq0nnNOoy84a\n-----END PRIVATE KEY-----\n",
+  "client_email": "owner-390@bearmacloud.iam.gserviceaccount.com",
+  "client_id": "104805459474308335834",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/owner-390%40bearmacloud.iam.gserviceaccount.com"
+}

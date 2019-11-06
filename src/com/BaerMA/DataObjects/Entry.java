@@ -97,7 +97,6 @@ public class Entry implements Serializable{
         this.notes=notes;
 
         this.linessp=new SimpleStringProperty(getLineLetter());
-        System.out.println("Line Property is: "+linessp.getValue());
         this.sampleIDssp = new SimpleIntegerProperty(sampleID);
         this.SexperimentalGeneration= new SimpleIntegerProperty(experimentalGeneration);
         this.SpickDate=new SimpleStringProperty(pickDate.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));

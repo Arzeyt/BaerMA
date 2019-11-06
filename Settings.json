@@ -1,4 +1,5 @@
 {
+  "useCloudStorage": false,
   "XTerminationGeneration": 70,
   "J2LineGenesisGeneration": 71,
   "dataDirectory": {

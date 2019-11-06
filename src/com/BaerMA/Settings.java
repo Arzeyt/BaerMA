@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class Settings implements Serializable{
 
+    public boolean useCloudStorage=false;
     public int XTerminationGeneration=70;
     public int J2LineGenesisGeneration = 71;
     public File dataDirectory = new File("Data");
