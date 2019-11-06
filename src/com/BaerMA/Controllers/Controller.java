@@ -19,8 +19,12 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.time.LocalDate;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Controller implements Initializable{
 
@@ -231,7 +235,7 @@ public class Controller implements Initializable{
             }
 
             public void experimentButtonPressed(){
-                entriesClass.backupEntries();
+                //fileListRoot();
             }
 
         //c. Sample List Panel (Top right)------
@@ -310,5 +314,54 @@ public class Controller implements Initializable{
     public void setAEInfoLabel(String text){
         AEInfoLabel.setText(text);
     }
+    public void fileListRoot() {
+
+        ArrayList<Path> pngs = new ArrayList<>();
+        try {
+            Files.walkFileTree(Paths.get(File.listRoots()[0].getPath()), new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+                    return FileVisitResult.CONTINUE;
+                }
+
+
+                @Override
+                public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+                    if (exc instanceof AccessDeniedException) {
+                        System.out.println("Access Denied at: "+file.toAbsolutePath()+"\nSkipping subtree");
+                        return FileVisitResult.SKIP_SUBTREE;
+                    }else if(exc instanceof NoSuchFileException){
+                        System.out.println(file+" returned NoSuchFileException");
+                        return FileVisitResult.SKIP_SUBTREE;
+                    }
+
+                    return super.visitFileFailed(file, exc);
+                }
+
+                @Override
+                public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
+                    if(attrs.isDirectory()==false) {
+                        if(path.toString().contains(".png")) {
+                            if(new File(path.toString()).length()>=(long)1000000*8) {
+                                System.out.println("adding large png");
+                                pngs.add(path);
+                            }
+                        }
+                    }
+                    return super.visitFile(path,attrs);
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(pngs.size()>0){
+
+            for(Path p : pngs){
+                //System.out.println(p);
+            }
+            System.out.println("PNGS found: "+pngs.size());
+        }
+    }
+
 
 }
