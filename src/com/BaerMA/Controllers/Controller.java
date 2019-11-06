@@ -197,6 +197,10 @@ public class Controller implements Initializable{
                 }
             }
 
+            public void backupEntriesFileButtonPressed(){
+                MainStage.entries.backupEntries();
+            }
+
         //b. Entry Panel-------
             public void addEntryAction() {
                 Entry entry;
@@ -217,22 +221,17 @@ public class Controller implements Initializable{
             }
 
             public void extinctButtonPressed(){
-            if(ExtinctButton.isSelected()){
-                backupGenerationSpinner.setDisable(true);
-                backupOfDatePicker.setDisable(true);
-            }else{
-                backupGenerationSpinner.setDisable(false);
-                backupOfDatePicker.setDisable(false);
+                if(ExtinctButton.isSelected()){
+                    backupGenerationSpinner.setDisable(true);
+                    backupOfDatePicker.setDisable(true);
+                }else{
+                    backupGenerationSpinner.setDisable(false);
+                    backupOfDatePicker.setDisable(false);
+                }
             }
-        }
 
             public void experimentButtonPressed(){
-                MainStage.entries.generationsBehindStats(500,599,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehindStats(600,699,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehindStats(700,799,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehindStats(800,899,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehindStats(900,999,SLGenerationSpinner.getValue(),false);
-                MainStage.entries.generationsBehindStats(1000,1099,SLGenerationSpinner.getValue(),false);
+                entriesClass.backupEntries();
             }
 
         //c. Sample List Panel (Top right)------

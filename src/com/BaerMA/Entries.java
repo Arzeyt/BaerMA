@@ -16,6 +16,7 @@ import org.apache.commons.math3.stat.descriptive.rank.Median;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.file.Files;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -98,7 +99,7 @@ public class Entries {
 
         //Date builder
         LocalDate localDate = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         String dateString = localDate.format(formatter);
 
         //TimeBuilder
@@ -106,11 +107,12 @@ public class Entries {
         String timeString = localTime.format(DateTimeFormatter.ofPattern("HHmmss"));
 
 
-        String backupPath = MainStage.settings.dataDirectory+"Entries"+dateString+timeString+".json");
+        String backupPath = MainStage.settings.dataDirectory+File.separator+"Entries_"+dateString+"_"+timeString+".json";
         File file = new File(backupPath);
+        System.out.println("Creating a dummy file at: "+file.getPath());
         try {
-            FileOutputStream os = new FileOutputStream(file);
-
+            Files.copy(MainStage.settings.entriesFile.toPath(),file.toPath());
+            System.out.println("Creating a copy of: "+MainStage.settings.entriesFile.getPath()+" to: "+file.toPath());
         } catch (IOException e) {
             e.printStackTrace();
         }

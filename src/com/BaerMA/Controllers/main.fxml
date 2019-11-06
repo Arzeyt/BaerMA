@@ -242,6 +242,7 @@
                   <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#openPickers" text="Open Pickers" />
                   <MenuItem id="TopBar_Close" mnemonicParsing="false" onAction="#ExportToCSV_ButtonPressed" text="Export To CSV" />
                   <MenuItem mnemonicParsing="false" onAction="#experimentButtonPressed" text="Experiment" />
+                  <MenuItem mnemonicParsing="false" onAction="#backupEntriesFileButtonPressed" text="Backup Entries File" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
