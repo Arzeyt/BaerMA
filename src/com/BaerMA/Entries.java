@@ -17,6 +17,8 @@ import org.apache.commons.math3.stat.descriptive.rank.Median;
 import java.awt.*;
 import java.io.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.List;
 
@@ -91,6 +93,28 @@ public class Entries {
 
     //Data Storage----------------
     //JSON
+    public void backupEntries(){
+        jsonizeEntries();
+
+        //Date builder
+        LocalDate localDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dateString = localDate.format(formatter);
+
+        //TimeBuilder
+        LocalTime localTime = LocalTime.now();
+        String timeString = localTime.format(DateTimeFormatter.ofPattern("HHmmss"));
+
+
+        String backupPath = MainStage.settings.dataDirectory+"Entries"+dateString+timeString+".json");
+        File file = new File(backupPath);
+        try {
+            FileOutputStream os = new FileOutputStream(file);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public void jsonizeEntries(){
         ArrayList<Entry> entries = new ArrayList<>();
         for(Entry e : entriesList){

@@ -27,5 +27,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.google.cloud:google-cloud-storage:1.76.0" level="project" />
   </component>
 </module>

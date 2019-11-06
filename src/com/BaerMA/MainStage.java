@@ -82,7 +82,7 @@ public class MainStage{
 
         //this initializes controller
         System.out.println("Resource: "+getClass().getResource("main.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Controllers/main.fxml"));
         primaryStage.setTitle("BaerMA");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

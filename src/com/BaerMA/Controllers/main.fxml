@@ -169,21 +169,21 @@
                                       <menus>
                                         <Menu mnemonicParsing="false" text="Print">
                                           <items>
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheet" text="Print Baer Sheet (.xlsx)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheetUpTo" text="Print ALL Formatted Sheets (.xlsx) " />
-                                            <MenuItem mnemonicParsing="false" onAction="#PrintList" text="Print List (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintAdvancedList" text="Print Verbose List (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Print Backup Table (.csv)" visible="false" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintHistory" text="Print History (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Print Entries (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Print Formatted Entries (.txt)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="Print All Formatted Entries (.txt)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries_docx" text="Print All Formatted Entries (.docx)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Print Generation Visualizer (.xlsx)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Print Generation Stats (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Print Generations Behind Sequential (.csv)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Print Generations Behind Sequential (.xlsx)" />
-                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupsPerGenCSV" text="Print Number of Backups Per Gen (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheet" text="Formatted Sheet (.xlsx)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBaerSheetUpTo" text="ALL Formatted Sheets (.xlsx) " />
+                                            <MenuItem mnemonicParsing="false" onAction="#PrintList" text="List (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintAdvancedList" text="Verbose List (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupTable" text="Backup Table (.csv)" visible="false" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintHistory" text="History (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintEntriesCSV" text="Entries (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintFormattedEntries" text="Formatted Entries (.txt)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries" text="All Formatted Entries (.txt)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintAllFormattedEntries_docx" text="All Formatted Entries (.docx)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationVisualizer" text="Generation Visualizer (.xlsx)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationStats" text="Generation Stats (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequential" text="Generations Behind Sequential (.csv)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintGenerationsBehindSequentialExcel" text="Generations Behind Sequential (.xlsx)" />
+                                                <MenuItem mnemonicParsing="false" onAction="#PrintBackupsPerGenCSV" text="Number of Backups Per Gen (.csv)" />
                                           </items>
                                         </Menu>
                                       </menus>
