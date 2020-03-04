@@ -17,7 +17,8 @@ with calclated generation of the sample
 <COMPLETE>account for 1000-1099 in spinners and in gen calculation (starting at gen 71).
 <Complete>Add ability to export all entries in comma delimited format
 
-
+---Add "Line" column to each list that's relevant
+---Add "Line" column to each printed list that's relevant
 ---Pickers Interface
     -adding everyone.
     -Added Rob from gen 57 to current.

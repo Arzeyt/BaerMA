@@ -441,11 +441,7 @@ public class ExcelMaster {
            }
        }
 
-       if(triesLeft==0){
-           return false;
-       }else {
-           return true;
-       }
+        return triesLeft != 0;
     }
 
     private static void solidLineSeries(XDDFChartData data, int index, PresetColor color) {

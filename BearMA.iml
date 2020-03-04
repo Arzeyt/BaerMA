@@ -27,6 +27,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="com.google.cloud:google-cloud-storage:1.76.0" level="project" />
+    <orderEntry type="library" name="com.atlassian.jgitflow:jgit-flow-core:0.21" level="project" />
   </component>
 </module>

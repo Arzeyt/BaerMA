@@ -55,7 +55,6 @@ public class MainStage{
     public static Controller controller;
     public static Settings settings;
     public static PickerGenerationMapData pickerGenerationMapData;
-    public static GoogleCloud googleCloud;
 
     //Entry Table Components
     TableView entryTable;
@@ -74,8 +73,7 @@ public class MainStage{
         settings.initialize();
         //google cloud
         if(settings.useCloudStorage) {
-            googleCloud = new GoogleCloud();
-            googleCloud.initialize();
+
         }
         //googleCloud.initialize();
         //entries

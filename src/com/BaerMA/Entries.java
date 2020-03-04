@@ -46,7 +46,7 @@ public class Entries {
         System.out.println("Entries instances: "+numberOfInstaces);
 
         System.out.print("Checking for data file: ");
-        if (dataFile.exists()==false){
+        if (!dataFile.exists()){
             dataFile.mkdir();
             System.out.println("Made data directory");
         }else{
@@ -162,13 +162,10 @@ public class Entries {
             if(parseTries==0) {
                 System.out.println("File not found. Attempting to load from cloud storage.");
                 if(MainStage.settings.useCloudStorage) {
-                    try {
-                        Files.copy(MainStage.googleCloud.cloudEntries.toPath(), MainStage.settings.entriesFile.toPath());
-                        parseEntriesJSON(MainStage.settings.entriesFile);
-                        parseTries++;
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
+                    //Files.copy(MainStage.googleCloud.cloudEntries.toPath(), MainStage.settings.entriesFile.toPath());
+                    parseEntriesJSON(MainStage.settings.entriesFile);
+                    parseTries++;
+
                 }else{
                     System.out.println("Cloud Storage disabled in settings");
                 }
